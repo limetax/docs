@@ -65,9 +65,11 @@
               "rechnungen/eingangsrechnungen-pruefen",
               "rechnungen/belegansicht",
               "rechnungen/splitbuchungen",
+              "rechnungen/manuell-buchen",
+              "rechnungen/kreditor-anlegen",
               "rechnungen/ausgangsrechnungen",
-              "rechnungen/ki-fragen",
-              "rechnungen/auslandsbelege"
+              "rechnungen/wiederkehrende-buchungen",
+              "rechnungen/ki-fragen"
             ]
           },
           {

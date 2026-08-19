@@ -1,55 +1,75 @@
 ---
 title: "Eingangsrechnungen prüfen und freigeben"
 sidebarTitle: "Eingangsrechnungen prüfen"
-description: "Der Arbeits-Loop in der Belegansicht: durchgehen, prüfen, korrigieren, freigeben — mit Tastenkürzeln in wenigen Sekunden pro Beleg."
+description: "Der Arbeits-Loop in der Belegansicht: KI-Analyse lesen, Buchungssätze und Belegdaten prüfen, freigeben — plus die Fälle, in denen du anders vorgehst."
 ---
 
-Die Prüfung der Eingangsrechnungen ist die zeitintensivste Aufgabe im Monatslauf. Wenn du diesen Ablauf gut im Griff hast, ist der Rest des Monats fast von selbst gemacht. Der Kern: nicht jedes Feld einzeln durchdenken, sondern in einem festen Rhythmus über die Belege gehen und nur da eingreifen, wo die KI wirklich einen Fehler gemacht hat.
+Nach dem Import liegen die Belege vorkontiert in der App. Du prüfst jeden einzeln und gibst ihn frei. Mit der Freigabe wird aus dem KI-Vorschlag deine Buchung — sie geht beim nächsten Export in den Buchungsstapel und ist ab dann in DATEV.
 
-Der Bereich liegt unter **Buchhaltung → 2 Eingangsrechnung**. Filtre die Liste auf Status **Prüfen** — die Belege im Status **Freigegeben** sind schon fertig, die willst du beim Loop nicht anfassen.
+<Note>
+  Alle Kosten laufen über **Kreditoren** im 70000er-Bereich. Gehört ein Beleg dort nicht hin, buchst du ihn manuell.
+</Note>
 
-## Vor dem Start: einmal die Zahlen ansehen
+Gehe in der Seitenleiste zu **Buchhaltung → 2 Eingangsrechnung**. Der Reiter **Prüfen** zeigt die Belege, die die KI kontiert hat, bei denen sie sich aber nicht sicher war. Klicke einen Beleg an. Es öffnet sich die Detailansicht: links das Belegbild, rechts die Kontierung.
 
-Bevor du einen Beleg öffnest, wirf einen Blick auf die Zähler oben: **Prüfen (n)**, **Manuell (n)**, **Freigegeben (n)**. Wenn du weißt, dass du gerade 40 Belege im Prüfen-Status hast, planst du dafür 15–20 Minuten und arbeitest sie am Stück ab. Das ist wichtiger als es klingt — Unterbrechungen mitten in einem Loop führen dazu, dass du hinterher nicht mehr weißt, welchen Beleg du zuletzt gesehen hast.
-
-## Der Loop
-
-Klick den ersten Beleg an. Es öffnet sich die [Belegansicht](/rechnungen/belegansicht) — links das Original-PDF, rechts der KI-Vorschlag.
-
-Geh die Felder in einer festen Reihenfolge durch: **Gegenpartei → Datum → Beträge → Sachkonto → Steuerschlüssel → ggf. Kostenstelle**. Bei der KI-Vorkontierung sitzen die ersten vier Felder in 90\+ % der Fälle. Sachkonto und Steuerschlüssel sind die häufigsten Korrekturfälle — Beleg auf einem Sachkonto, das für den Mandanten nicht passt, oder Sonderfälle bei der Vorsteuer.
-
-Wenn alles passt, drückst du **F** — Beleg freigegeben, der nächste öffnet sich. Wenn du korrigieren musst, klick ins Feld, überschreib den Wert, dann **F**. Die App merkt sich deine Korrektur pro Lieferant: beim nächsten Beleg desselben Lieferanten schlägt sie den korrigierten Wert vor. Wenn du zurück willst, drückst du **P** (previous), wenn du erstmal auslassen willst, **N** (next). Die vollständige Kürzelliste steht in [Tastenkürzel](/stammdaten/tastenkuerzel).
-
-<Frame caption="Belegansicht während des Prüf-Loops">
-  ![Belegansicht mit PDF links und KI-Vorschlag rechts, während der Prüfung](/images/rechnungen/belegansicht-pruefen.png)
+<Frame caption="Belegliste im Reiter Prüfen">
+  ![Liste der Belege im Status Prüfen](/images/rechnungen/pruefen-liste.png)
 </Frame>
 
-## Was du bewusst prüfst
+## Zuerst die KI-Analyse lesen
 
-Nicht alles muss auf jedem Beleg geprüft werden. Konzentriere dich auf die vier Punkte, wo Fehler wehtun:
+Der Abschnitt **KI-Analyse** nennt den Grund, warum dieser Beleg überhaupt auf **Prüfen** liegt — und dieser Grund ist dein Prüfauftrag. Die häufigsten drei:
 
-- **Vorsteuerabzug korrekt.** Bei ausländischen Rechnungen ohne deutsche USt-ID ist der Vorsteuerabzug ausgeschlossen. Wenn die KI hier trotzdem 19 % vorschlägt, korrigiere.
-- **Steuerschlüssel bei §13b und i. g. Erwerb.** Auslandsbelege landen zwar meist in **Manuell**, aber nicht immer — bei einem eingespielten Lieferanten kann die App zu unrecht in **Prüfen** setzen. Kurz kontrollieren.
-- **Sachkonto beim Erstbeleg eines neuen Lieferanten.** Der erste Beleg legt fest, worauf zukünftige Belege desselben Lieferanten laufen. Wenn du hier falsch kontierst, korrigierst du später jeden Beleg einzeln.
-- **Skonto und Rabatte.** Wenn die Rechnung Skonto ausweist, prüf, ob der Betrag korrekt gebucht wird — je nach Mandant und Kontenrahmen läuft das anders.
+- **§13b-Verdacht** — die KI hält den Fall für Reverse Charge. Prüf, ob der Sachverhalt das wirklich ist und ob der BU-Schlüssel dazu passt.
+- **Abweichender Leistungsempfänger** — auf der Rechnung steht ein anderer Name als der Mandant. Kann eine Betriebsstätte sein, kann eine private Rechnung sein.
+- **Monatsübergreifender Leistungszeitraum** — die Leistung läuft über den Monatswechsel. Entscheide, in welche Periode sie gehört.
 
-## Wenn du unsicher bist
+Bei Auslandsbelegen gibt die KI grundsätzlich nie automatisch frei.
 
-Statt einen unsicheren Beleg freizugeben, nutze zwei Wege:
+<Frame caption="Detailansicht mit der KI-Analyse">
+  ![Belegansicht mit dem Bereich KI-Analyse und der Begründung für den Status Prüfen](/images/rechnungen/belegansicht-pruefen.png)
+</Frame>
 
-- **[Otto fragen](/rechnungen/ki-fragen).** Der Chat-Assistent kennt den Beleg im Kontext und antwortet auf steuerliche Fragen mit einer Einschätzung inklusive Quelle. „Wie buche ich eine AWS-Rechnung mit Reverse-Charge?" — Otto antwortet mit dem passenden Muster und den Sachkonten.
-- **Auf Manuell setzen.** Wenn du gerade keine Zeit hast, den Fall zu klären, setz den Beleg auf **Manuell** mit einer kurzen Notiz. Beim nächsten Monatsende arbeitest du die Manuell-Liste gebündelt ab.
+## Dann Buchungssätze und Belegdaten
+
+Im Bereich **Buchungssätze** prüfst du Sachkonto, BU-Schlüssel, Betrag und gegebenenfalls die Kostenstelle. Der **Restbetrag** unter den Zeilen muss auf 0,00 € stehen. Steht dort noch etwas, geht die Buchung nicht auf — bei mehreren Kostenarten teilst du sie über [Splitbuchungen](/rechnungen/splitbuchungen) auf.
+
+Darunter gleichst du die **Belegdaten** gegen das Belegbild ab. Zwei Felder sind dabei wichtiger als die anderen: Das **Belegdatum** bestimmt die Periode — ein falsches Datum verschiebt die Buchung in den falschen Monat und damit in die falsche UStVA. **Belegfeld 1** trägt die Rechnungsnummer des Lieferanten; fehlt sie, wird die Offene-Posten-Verwaltung in DATEV unbrauchbar und die App erkennt Dubletten schlechter.
+
+## Deine Checkliste pro Beleg
+
+- Passt das Sachkonto zum Lieferanten und zur Leistung?
+- Stimmt der BU-Schlüssel, besonders bei Auslandsbelegen?
+- Ist der richtige Kreditor hinterlegt?
+- Stimmen Belegdatum und Rechnungsnummer mit dem Belegbild?
+- Steht der Restbetrag auf 0,00 €?
+
+Passt alles, drücke `Enter` oder klicke auf **Freigeben**. Der Beleg bekommt einen grünen Haken und verschwindet aus der Prüfliste. Weiter geht es mit `Pfeil runter` zum nächsten — bei einer sauberen Liste arbeitest du so mehrere Belege pro Minute ab.
+
+## Wenn du nicht weiterkommst
+
+Du brauchst eine **Rückfrage beim Mandanten**: **Überspringen**. Der Beleg bleibt im Workflow, wandert aber nicht in den Stapel.
+
+Der Beleg ist eine **Dublette**: **Archivieren**. Nicht wegbuchen — sonst hast du den Aufwand doppelt und die Zahlung findet später keinen eindeutigen Beleg.
+
+Der Beleg ist **unleserlich oder der Sachverhalt unklar**: Reiter **Manuell**, von Hand buchen.
+
+Die **Belegart ist falsch erkannt** — in der Eingangsrechnungsliste liegt eine Ausgangsrechnung oder ein Kontoauszug: In der Kopfzeile über **Belegart ändern** auf die richtige Art umstellen. Nicht archivieren; der Beleg ist nicht falsch, nur falsch einsortiert, und beim Archivieren fällt er aus dem Prozess.
+
+Der **Kreditor ist nicht eindeutig zugeordnet** — im Gegenkonto steht **70000 · Sammelkonto**: Über **\+ Kreditor anlegen** im Hinweis der KI-Analyse ein eigenes Kreditorenkonto erzeugen. Der Ablauf steht in [Kreditor in DATEV anlegen](/rechnungen/kreditor-anlegen). Nicht auf dem Sammelkonto freigeben — sonst ist die Offene-Posten-Verwaltung für diesen Lieferanten hin.
+
+Die Rechnung betrifft **mehrere Monate** — Jahreslizenz, Versicherung, Wartungsvertrag: An der Buchungsposition eine **Rechnungsabgrenzung** einrichten statt den vollen Betrag in einen Monat zu buchen. Der Ablauf steht in [Wiederkehrende Buchungen](/rechnungen/wiederkehrende-buchungen).
 
 <Warning>
-  Gib keinen Beleg frei, den du nicht wirklich verstehst. Ein einmal freigegebener Beleg im Buchungsstapel landet nach dem [Export](/export/stapel-uebertragen) und [Festschreiben in DATEV](/export/stapel-in-datev) — dann ist die Korrektur ein Storno statt einer Änderung.
+  **Beachte!** Lass Rückfragen nicht liegen. Jeder übersprungene Beleg blockiert am Monatsende den Abschluss, weil er nicht in den Stapel geht und der Monat damit unvollständig bleibt. Sammle die Fälle und fordere sie gebündelt an.
 </Warning>
 
 <Columns cols={2}>
-  <Card title="Belegansicht" icon="table-columns" href="/rechnungen/belegansicht">
-    Die Aufteilung PDF links, Felder rechts im Detail.
+  <Card title="Aufbau der Belegansicht" icon="table-columns" href="/rechnungen/belegansicht">
+    Die fünf Bereiche des Bearbeitungsfelds im Detail.
   </Card>
 
-  <Card title="Tastenkürzel" icon="keyboard" href="/stammdaten/tastenkuerzel">
-    Die Kürzel, die den Loop schnell machen.
+  <Card title="Fehlende Belege anfordern" icon="envelope" href="/belege/fehlende-belege-anfordern">
+    Rückfragen gebündelt an den Mandanten schicken.
   </Card>
 </Columns>

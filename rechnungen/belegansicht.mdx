@@ -1,59 +1,67 @@
 ---
 title: "Die Belegansicht: PDF links, Kontierung rechts"
 sidebarTitle: "Belegansicht"
-description: "Wie die Belegansicht aufgebaut ist und welche Felder du im Alltag brauchst."
+description: "Wie die Belegansicht aufgebaut ist, welche fünf Bereiche das Bearbeitungsfeld hat und in welcher Reihenfolge du sie abarbeitest."
 ---
 
-Die Belegansicht ist das Fenster, in dem du 90 % deiner Zeit mit Limetax verbringst. Sie ist bewusst zweigeteilt: **links das Original-PDF**, damit du die Rechnung visuell prüfen kannst, **rechts die strukturierten Felder**, in denen die Kontierung entsteht. Diese Aufteilung hat einen Zweck — du willst nie „im Kopf" prüfen, ob ein Betrag stimmt. Du willst ihn auf der Rechnung sehen und rechts vergleichen.
+Klickst du einen Beleg an, öffnet sich die Detailansicht: links das Belegbild im PDF-Viewer, rechts das Bearbeitungsfeld. Das Bearbeitungsfeld hat fünf Bereiche, und ihre Anordnung von oben nach unten ist gleichzeitig die sinnvolle Arbeitsreihenfolge.
 
-Der Artikel ist eine Referenz: was steht wo, was tut welches Feld. Der eigentliche Arbeits-Loop steht in [Eingangsrechnungen prüfen](/rechnungen/eingangsrechnungen-pruefen).
-
-## Linke Seite: das PDF
-
-Auf der linken Hälfte des Fensters siehst du den Beleg im Original. Du kannst mit dem Scrollrad zoomen, mit gedrückter Maustaste verschieben und die Miniaturansicht am unteren Rand für Multi-Seiten-Belege nutzen.
-
-<Frame caption="Belegansicht mit vergrößertem PDF">
-  ![Vergrößerte PDF-Anzeige mit erkennbaren Beträgen](/images/rechnungen/belegansicht-pdf-zoom.png)
+<Frame caption="Detailansicht mit den fünf Bereichen des Bearbeitungsfelds">
+  ![Belegansicht mit PDF links und den nummerierten Bereichen des Bearbeitungsfelds rechts](/images/rechnungen/belegansicht-bereiche.png)
 </Frame>
 
-Bei ZUGFeRD-, XRechnung- und Factur-X-Belegen zeigt die Ansicht sowohl die visuelle PDF als auch die eingebetteten strukturierten Daten. Die KI nutzt die strukturierten Daten primär — die PDF-Anzeige ist für deine visuelle Kontrolle da.
+## 1 · Kopfzeile
 
-## Rechte Seite: die Kontierungsfelder
+Status, Gegenpartei, Betrag und Belegdatum. Dazu der Button **KI fragen** und das X zum Schließen.
 
-Auf der rechten Hälfte stehen die Felder in einer festen Reihenfolge von oben nach unten. Die Reihenfolge ist bewusst gewählt: jedes Feld greift auf die vorherigen zurück.
+Zwischen beiden steht die erkannte **Belegart** als Aufklappmenü. Über **Belegart ändern** stellst du sie auf **Eingangsrechnung**, **Ausgangsrechnung** oder **Kontoauszug** um; die aktuell gesetzte Art ist mit einem Häkchen markiert. Das ist der richtige Griff, wenn ein Beleg im falschen Bereich gelandet ist — ein Kontoauszug, der unter Eingangsrechnung auftaucht, wird nicht archiviert, sondern umgestellt.
 
-### Belegkopf
+Die Kopfzeile ist für die schnelle Einordnung da: wer, wie viel, wann. Bei einem Beleg, den du in zwei Sekunden erkennst, reicht sie schon, um zu entscheiden, ob es ein Routinefall ist oder einer, bei dem du genauer hinschauen musst.
 
-- **Gegenpartei** — Lieferant bei Eingangsrechnungen, Kunde bei Ausgangsrechnungen. Die KI zieht den Namen aus dem Beleg und legt den Debitor oder Kreditor automatisch an, falls er noch nicht existiert.
-- **Rechnungsdatum** und **Rechnungsnummer** — aus dem Beleg. Bei fehlenden oder unklaren Datumsangaben nimmt die KI das Rechnungsdatum, nicht das Leistungsdatum. Bei abweichendem Leistungsdatum gibt es ein Zusatzfeld.
-- **Fälligkeitsdatum** — errechnet aus Rechnungsdatum \+ Zahlungsziel, wenn auf der Rechnung ausgewiesen. Sonst leer.
+## 2 · KI-Analyse
 
-### Beträge und Steuer
+Hier steht, was die KI geprüft hat und **warum** der Beleg auf **Prüfen** liegt — zum Beispiel ein §13b-Verdacht, ein abweichender Leistungsempfänger oder ein monatsübergreifender Leistungszeitraum.
 
-- **Bruttobetrag**, **Nettobetrag**, **USt-Betrag** — aus dem Beleg gelesen und rechnerisch geprüft. Wenn die Beträge nicht aufgehen (Rundungsdifferenzen), warnt die App.
-- **Steuersatz** und **Steuerschlüssel** — abgeleitet aus dem Ausweis auf der Rechnung. Standardfälle: 19 %, 7 %, 0 % oder steuerfrei. Sonderfälle: **RC** für Reverse-Charge, **IG** für innergemeinschaftlichen Erwerb. Für Details siehe [Auslandsbelege](/rechnungen/auslandsbelege).
+Unter den Analysepunkten kann ein eigener Hinweisblock mit **Aktions-Button** stehen. Der häufigste ist **Kreditor nicht eindeutig zugeordnet** mit dem Button **\+ Kreditor anlegen** — der Ablauf steht in [Kreditor in DATEV anlegen](/rechnungen/kreditor-anlegen). Ein solcher Block ist kein Text zum Wegklicken, sondern eine Aufgabe.
 
-### Kontierung
+Lies das zuerst. Die KI-Analyse ist keine Zusammenfassung des Belegs, sondern eine Begründung für ihren Zweifel. Damit ist sie deine Prüf-Checkliste für genau diesen einen Beleg — und sie erspart dir, alle Felder gleich intensiv zu kontrollieren.
 
-- **Sachkonto** — das Aufwands- oder Ertragskonto. Die KI wählt anhand der Gegenpartei, des Verwendungszwecks und der Historie mit demselben Mandanten.
-- **Gegenkonto** — das Kreditoren- oder Debitorenkonto der Gegenpartei. Meist automatisch anhand des Namens erkannt oder neu angelegt.
-- **Kostenstelle** — optional, wenn der Mandant Kostenstellen führt. Details in [Kostenstellen](/stammdaten/kostenstellen).
+## 3 · Buchungssätze
 
-### Split und Sonstiges
+BU-Schlüssel, Konto, Betrag und darunter der **Restbetrag**. Über **\+ Buchung hinzufügen** und **\+ Letzte kopieren** legst du weitere Zeilen an, wenn ein Beleg aufgeteilt werden muss.
 
-- **Splitbuchungen** — wenn ein Beleg auf mehrere Sachkonten aufgeteilt werden muss (z. B. eine Rechnung mit Software und Hardware auf zwei Sachkonten), klickst du auf **Split** und legst weitere Zeilen an. Details in [Splitbuchungen](/rechnungen/splitbuchungen).
-- **Notiz** — freies Textfeld pro Beleg, für Kanzlei-interne Hinweise. Sichtbar nur für Kanzleinutzer.
+Der Restbetrag ist die Kontrollzahl dieses Bereichs: Rechnungsbetrag minus Summe aller Buchungszeilen. Er muss vor der Freigabe auf 0,00 € stehen, sonst geht die Buchung nicht auf.
 
-## Aktionen unten
+An einer einzelnen Buchungsposition kannst du zusätzlich eine **Rechnungsabgrenzung** einrichten. Der Betrag wird dann nicht sofort als Aufwand gebucht, sondern in monatlichen Raten aufgelöst. Der Ablauf steht in [Wiederkehrende Buchungen](/rechnungen/wiederkehrende-buchungen).
 
-Unter den Feldern liegen die Aktionen: **Freigeben**, **Auf Manuell setzen**, **Nächster/Vorheriger Beleg**, **Splitten**, **Otto fragen**. Die häufigsten Aktionen (Freigeben, Nächster, Vorheriger) haben eigene [Tastenkürzel](/stammdaten/tastenkuerzel).
+## 4 · Belegdaten
+
+Gegenkonto, Belegdatum, Belegfeld 1 und 2, Währung, Rechnungsbetrag und Notiz. Diesen Bereich gleichst du gegen das Belegbild links ab.
+
+Zwei Details, die im Alltag stören, wenn man sie nicht kennt: Das Feld heißt **Gegenkonto (Kreditor)** und zeigt bei einem unbekannten Lieferanten **70000 · Sammelkonto**. Und **Belegfeld 2** ist ein **Datumsfeld** (tt.mm.jjjj), kein Freitextfeld — die Rechnungsnummer gehört ausschließlich in Belegfeld 1.
+
+Zwei Felder wirken dabei stärker als die anderen. Das **Belegdatum** bestimmt die Periode — ein falsches Datum verschiebt die Buchung in den falschen Monat und damit in die falsche UStVA. **Belegfeld 1** trägt die Rechnungsnummer; fehlt sie, wird die Offene-Posten-Verwaltung in DATEV unbrauchbar und die Dublettenerkennung arbeitet schlechter.
+
+## 5 · Aktionen
+
+Freigeben, Überspringen, Archivieren.
+
+Darunter zeigt die App die zugehörigen Tastenkürzel als Leiste an: `Enter` Freigeben · `#` Überspringen · `Strg + A` Archivieren · `Esc` Schließen. Du musst sie also nicht auswendig lernen — sie stehen dort, wo du sie brauchst.
+
+<Frame caption="Buchungssätze mit Restbetrag und die Belegdaten darunter">
+  ![Bereich Buchungssätze mit Restbetrag und der Bereich Belegdaten](/images/rechnungen/belegansicht-buchungssaetze.png)
+</Frame>
+
+<Tip>
+  Arbeite von oben nach unten: einordnen, KI-Analyse lesen, Buchungssätze prüfen, Belegdaten abgleichen, entscheiden. Wer mit den Belegdaten anfängt, prüft oft Felder, auf die die KI gar nicht hingewiesen hat — und übersieht den einen Punkt, der wirklich unklar war.
+</Tip>
 
 <Columns cols={2}>
   <Card title="Eingangsrechnungen prüfen" icon="clipboard-check" href="/rechnungen/eingangsrechnungen-pruefen">
-    Wie du die Belegansicht im Loop nutzt.
+    Der Arbeits-Loop, der auf dieser Ansicht aufsetzt.
   </Card>
 
-  <Card title="Splitbuchungen" icon="arrows-split-up-and-left" href="/rechnungen/splitbuchungen">
-    Wenn ein Beleg auf mehrere Sachkonten aufgeteilt werden muss.
+  <Card title="Tastenkürzel" icon="keyboard" href="/stammdaten/tastenkuerzel">
+    Die vollständige Liste der Kürzel.
   </Card>
 </Columns>

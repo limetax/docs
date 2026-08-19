@@ -1,54 +1,43 @@
 ---
 title: "Splitbuchungen: einen Beleg auf mehrere Sachkonten aufteilen"
 sidebarTitle: "Splitbuchungen"
-description: "Wenn eine Rechnung mehrere Kostenarten enthält, teilst du sie in der Belegansicht auf einzelne Buchungszeilen auf."
+description: "Wie du eine Rechnung mit mehreren Kostenarten oder Steuersätzen in einzelne Buchungszeilen aufteilst und was der Restbetrag dir dabei sagt."
 ---
 
-Nicht jede Rechnung passt auf ein einzelnes Sachkonto. Eine Amazon-Rechnung mit Büromaterial und einem Laptop, eine Handwerkerrechnung mit Material und Arbeitszeit, eine Provider-Rechnung mit Software und einer Beratungsstunde — das sind alles Fälle für eine Splitbuchung. In Limetax legst du dafür pro Sachkonto eine eigene Buchungszeile an, die Summen müssen am Ende dem Belegtotal entsprechen.
+Manche Belege gehören nicht auf ein einzelnes Konto: eine Restaurantrechnung mit Bewirtung und Trinkgeld, eine Sammelrechnung über mehrere Kostenarten, Positionen mit 19 % und 7 % auf demselben Beleg. In diesen Fällen legst du mehrere Buchungszeilen an.
 
-Die App macht die einfacheren Splits selbst: bei zwei ausgewiesenen Steuersätzen auf einer Rechnung (7 % und 19 %) splittet sie automatisch. Alles darüber hinaus — vor allem inhaltliche Aufteilungen auf verschiedene Sachkonten oder Kostenstellen — ist deine Aufgabe.
+## So teilst du auf
 
-## Wann du splittest
+Klicke im Bereich **Buchungssätze** auf **\+ Buchung hinzufügen**. Ändert sich zwischen den Zeilen nur der Betrag, geht es schneller über **\+ Letzte kopieren** — Konto und BU-Schlüssel werden dabei übernommen.
 
-Splitte, wenn eine Rechnung zwei oder mehr klar unterscheidbare Kostenarten enthält:
+Setz pro Zeile Konto, BU-Schlüssel und Betrag. Bei unterschiedlichen Steuersätzen gehört jeder Satz in eine eigene Zeile mit dem passenden BU-Schlüssel; eine Mischzeile mit einem Durchschnittssatz führt zu einer falschen Vorsteuer.
 
-- **Verschiedene Sachkonten.** Software und Hardware, Büromaterial und Anlagevermögen, Warenkauf und Fracht.
-- **Verschiedene Kostenstellen.** Eine Rechnung, die anteilig auf mehrere Kostenstellen läuft — etwa eine Hotelrechnung mit Zimmer (Reisekosten Kostenstelle A) und Bewirtung (Bewirtungskosten Kostenstelle B).
-- **Aktivierungspflichtiger Anteil.** Wenn ein Teil des Rechnungsbetrags aktivierungspflichtig ist (Anlagevermögen ab 800 €), musst du diesen Anteil separat auf das Anlagenkonto buchen.
-
-Nicht splitten musst du bei reinen Steuersplits — das macht Limetax automatisch. Auch bei kleinen Nebenpositionen (5 € Versand auf einer 200-€-Warenrechnung) ist ein Split nur sinnvoll, wenn die interne Auswertung das braucht.
-
-## So splittest du in der Belegansicht
-
-Öffne den Beleg. Rechts, unter der Standardzeile, findest du den Button **Splitten**. Klick den — es erscheint eine zweite Buchungszeile mit denselben Feldern.
-
-<Frame caption="Belegansicht mit zwei Splitzeilen">
-  ![Belegansicht mit dem Beleg links und zwei Buchungszeilen rechts](/images/rechnungen/split-zeilen.png)
+<Frame caption="Buchungszeilen vor und nach dem Aufteilen">
+  ![Bereich Buchungssätze mit Restbetrag ungleich null und nach dem Split mit 0,00 Euro](/images/rechnungen/split-zeilen.png)
 </Frame>
 
-Pro Zeile trägst du ein: **Nettobetrag**, **Sachkonto**, **Steuerschlüssel**, optional **Kostenstelle** und **Notiz**. Der USt-Betrag wird pro Zeile automatisch errechnet. Die App zeigt oberhalb der Zeilen die **Summenkontrolle**: **Summe Netto**, **Summe USt**, **Summe Brutto**, und daneben den **Rechnungsbetrag** vom Beleg. Beide müssen übereinstimmen, sonst kannst du nicht freigeben.
+## Was der Restbetrag dir sagt
 
-Wenn dir eine dritte Zeile fehlt (Rechnung hat drei Positionen), klickst du erneut **Splitten**. Umgekehrt kannst du eine Zeile über das kleine **X** wieder entfernen.
+Der **Restbetrag** unter den Buchungszeilen ist der Rechnungsbetrag minus die Summe aller Zeilen. Er ist deine laufende Kontrolle beim Aufteilen: Solange er nicht 0,00 € beträgt, ist der Beleg nicht vollständig verbucht.
 
-## Der klassische Fall: Rechnung mit aktivierungspflichtigem Anlagevermögen
+Ist er positiv, fehlt noch eine Zeile. Ist er negativ, hast du zu viel verteilt — meist, weil eine Zeile den Bruttobetrag statt des Teilbetrags trägt.
 
-Angenommen, du bekommst eine Rechnung über 1.500 € netto: ein Laptop für 1.200 € und Zubehör für 300 €. Der Laptop ist aktivierungspflichtig, das Zubehör nicht.
+<Warning>
+  **Beachte!** Eine Freigabe bei einem Restbetrag ungleich 0,00 € ist der häufigste Fehler in diesem Schritt. Auffallen wird es erst in DATEV, wenn der Stapel nicht sauber durchläuft — und dann musst du zurück in die App, den Beleg suchen, korrigieren und neu übertragen.
+</Warning>
 
-- **Zeile 1**: 1.200 € netto, Sachkonto **BGA** (0410 SKR 03 / 0650 SKR 04), Steuerschlüssel 19 %.
-- **Zeile 2**: 300 € netto, Sachkonto **Bürobedarf** (4930 SKR 03 / 6815 SKR 04), Steuerschlüssel 19 %.
+## Wenn nur Centbeträge übrig bleiben
 
-Summenkontrolle: 1.500 € netto, 285 € USt, 1.785 € brutto — muss mit dem Bruttobetrag der Rechnung übereinstimmen. Freigeben. Der Laptop landet als Zugang im Anlagenkonto und muss anschließend in der [Anlagenbuchhaltung](/export/anlagenzugaenge) in DATEV ergänzt werden.
+Beträgt der Restbetrag ein paar Cent, liegt es fast immer an einer Rundung im **erkannten Rechnungsbetrag**, nicht an deiner Aufteilung. Prüf den Betrag oben in den Belegdaten gegen das Belegbild und korrigier ihn dort.
 
-<Note>
-  Ein Split lässt sich später korrigieren, solange der Beleg noch nicht exportiert und in DATEV festgeschrieben ist. Nach dem Festschreiben ist es ein Storno mit Neubuchung.
-</Note>
+Buche die Differenz nicht irgendwo hin. Ein Cent auf einem Aufwandskonto ist harmlos, aber ein falscher Rechnungsbetrag im Belegfeld führt dazu, dass die Zahlung später nicht gematcht wird — der Abgleich läuft über genau diesen Betrag.
 
 <Columns cols={2}>
-  <Card title="Belegansicht" icon="table-columns" href="/rechnungen/belegansicht">
-    Wo die Splitzeilen sitzen.
+  <Card title="Kostenstellen" icon="chart-pie" href="/stammdaten/kostenstellen">
+    Pro Buchungszeile eine eigene Kostenstelle setzen.
   </Card>
 
-  <Card title="Manuell buchen" icon="pen-to-square" href="/rechnungen/manuell-buchen">
-    Wenn die KI-Vorkontierung nicht greift.
+  <Card title="Matching" icon="link" href="/bank/matching">
+    Warum der Rechnungsbetrag für den Zahlungsabgleich zählt.
   </Card>
 </Columns>

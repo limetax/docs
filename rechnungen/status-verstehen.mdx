@@ -1,39 +1,59 @@
 ---
-title: "Was die Status Offen, Prüfen, Manuell, Freigegeben bedeuten"
+title: "Die Status verstehen: von Offen bis Eingereicht"
 sidebarTitle: "Status verstehen"
-description: "Der Ampelsatz in Limetax — was der jeweilige Status heißt, wer ihn setzt und was er für den Export bedeutet."
+description: "Was die Reiter über der Belegliste bedeuten, welche Arbeit dahintersteckt und warum ein Zähler auf null noch nicht heißt, dass der Monat fertig ist."
 ---
 
-Jeder Beleg in Limetax hat einen Status. Der Status ist die zentrale Steuerungsgröße: er entscheidet, ob ein Beleg zum Buchen ansteht, ob er nachgeprüft werden muss und ob er beim nächsten Export mitgeht.
+Über der Belegliste stehen die Status als Reiter mit Zähler. Sie sind keine Sortierung, sondern deine Arbeitsliste: Der Zähler sagt dir, wie viel noch zu tun ist, und der Status sagt dir, welche Art von Arbeit es ist.
 
-Es gibt vier Status, die sich in einer festen Reihenfolge ablösen: **Offen → Prüfen oder Manuell → Freigegeben**. Was welchen Status auslöst und was du darin machst, steht unten.
+Die Reihenfolge der Reiter ist immer dieselbe: **Offen · Manuell · Prüfen · Freigegeben · Übersprungen · Eingereicht**. Da **Offen** die Summe aus Manuell und Prüfen ist, ergibt die Zeile gelesen von links nach rechts genau deinen Arbeitsweg.
 
-## Offen
+<Frame caption="Status-Leiste über der Belegliste mit den Zählern">
+  ![Reiter Offen, Manuell, Prüfen, Freigegeben, Übersprungen und Eingereicht mit Zählern](/images/rechnungen/status-leiste.png)
+</Frame>
 
-Unter **Offen** liegen alle Belege, die noch nicht freigegeben sind unabhängig davon, wo sie im Ablauf stehen. Der Status ist also die Summe der Belege die noch bearbeitet werden müssen **(Manuell \+ Prüfen).**
+## Die Status, die Arbeit bedeuten
 
-## Freigegeben
+**Offen** ist die Summe aus Manuell und Prüfen — also alles, was noch dein Zutun braucht. Das ist die Zahl, die am Monatsende auf null stehen muss.
 
-**Die KI hat kontiert und ist sich sicher.** Der Beleg ist fertig und geht beim nächsten Export mit. Du musst nichts tun außer stichprobenartig prüfen, ob die KI-Freigabe tatsächlich sitzt. 
+**Manuell** heißt: Die KI konnte keine sichere Buchung erstellen. Sie hat es nicht schlecht gemacht, sie hat es gar nicht gemacht. Typische Gründe sind ein unleserlicher Beleg, fehlende wesentliche Angaben oder eine erkannte Dublette. Diese Belege erfasst du vollständig selbst.
 
-## Prüfen
+**Prüfen** heißt: Die KI hat kontiert, ist sich aber nicht sicher. Der Unterschied zu Manuell ist wichtig — hier liegt ein vollständiger Vorschlag vor, du kontrollierst und korrigierst nur. Warum sie unsicher war, steht in der KI-Analyse am Beleg, und das ist dein Prüfauftrag.
 
-**Die KI hat kontiert, ist sich aber nicht sicher.** Das ist der Arbeits-Status für dich: alle Belege in **Prüfen** brauchen deinen Blick. Die App zeigt dir pro Beleg den KI-Vorschlag und einen Grund, warum sie sich nicht traut freizugeben — häufig „ungewöhnlicher Betrag", „neuer Lieferant", „steuerlich unklar", „mehrere Sachverhalte auf einem Beleg".
+## Die Status, die keine Arbeit bedeuten
 
-Was du machst: durchgehen, korrigieren wo nötig → freigeben. Der Standard-Loop steht in [Eingangsrechnungen prüfen und freigeben](/rechnungen/eingangsrechnungen-pruefen). Der Trick ist, den Loop mit [Tastenkürzeln](/stammdaten/tastenkuerzel) zu fahren.
+**Freigegeben** ist fertig und geht beim nächsten Export in den Stapel. Bei automatischen Freigaben ziehst du trotzdem Stichproben.
 
-Was du machst: die Manuell-Liste am Ende des Monatslaufs einmal durchgehen. Dublette bestätigen (archivieren, nichts weiter tun), Sonderfall bearbeiten (Steuerschlüssel setzen, freigeben).
+**Eingereicht** heißt, der Beleg ist per Stapel an Kanzlei-Rechnungswesen übergeben. Ab hier arbeitest du in DATEV weiter, nicht mehr hier.
 
-<Info>
-  Belege in **Offen**, **Prüfen** und **Manuell** gehen nicht in den DATEV-Export mit. Erst wenn sie in **Freigegeben** stehen, tauchen sie im Buchungsstapel auf. Am Monatsende bedeutet ein leerer „nicht freigegeben"-Zähler: alles ist im Export.
-</Info>
+Dieser Reiter sieht anders aus als die übrigen: Statt der Belegliste bekommst du eine Tabelle der übergebenen Buchungen mit den DATEV-Feldern — **Kreditor**, **Betrag**, **Konto**, **Gegenkonto**, **BU**, **Belegfeld 1** und **Belegdatum**. Jede Zeile trägt einen doppelten Haken.
+
+Nutze diese Ansicht als Gegenkontrolle nach dem Export: Was hier steht, ist genau das, was in der Primanota ankommen muss. Ein leeres **Belegfeld 1** oder ein Gegenkonto, das du nicht erwartest, fällt in dieser Tabelle deutlich schneller auf als in der Einzelansicht.
+
+## Die zwei Status, die man leicht übersieht
+
+**Übersprungen** sind Belege, die du bewusst zurückgestellt hast, meist wegen einer Rückfrage beim Mandanten. Sie sind **nicht** erledigt und werden **nicht** übertragen. Sie zählen aber auch nicht mehr unter Offen — deshalb ist es möglich, einen Monat mit einem Offen-Zähler auf null abzuschließen und trotzdem unvollständig zu sein. Geh die Übersprungenen vor dem Export einmal durch.
+
+**Dubletten** sind doppelte oder bereits gebuchte Rechnungen. Die archivierst du. Nicht wegbuchen — eine weggebuchte Dublette verfälscht den Aufwand und die zugehörige Zahlung findet später keinen eindeutigen Beleg.
+
+## Blauer und grüner Haken
+
+Bei **Freigegeben** gibt es zwei Farben, und der Unterschied ist nicht kosmetisch.
+
+**Blau** heißt: Die KI hat automatisch freigegeben. Das passiert nur bei sehr eindeutigen Fällen — bekannter Kreditor, klarer Sachverhalt, plausibler Betrag. Bei Auslandssachverhalten und Fremdwährung passiert es grundsätzlich nicht.
+
+**Grün** heißt: Ein Mensch hat freigegeben.
+
+<Note>
+  Dein Ziel für den Monat ist immer dasselbe: **Offen auf 0**, und die Übersprungenen aufgelöst. Alles andere ergibt sich daraus.
+</Note>
 
 <Columns cols={2}>
   <Card title="Eingangsrechnungen prüfen" icon="clipboard-check" href="/rechnungen/eingangsrechnungen-pruefen">
-    Der Standard-Loop für Belege im Status Prüfen.
+    Der Arbeits-Loop für alles, was unter Offen steht.
   </Card>
 
   <Card title="Auslandsbelege" icon="globe" href="/rechnungen/auslandsbelege">
-    Warum §13b und Co. auf Manuell landen.
+    Warum §13b und Fremdwährung auf Manuell landen.
   </Card>
 </Columns>
