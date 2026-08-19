@@ -110,8 +110,8 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
+    "light": "/images/logo_mark_black.png",
+    "dark": "/images/logo_mark_white.png",
     "href": "https://www.limetax.de"
   },
   "navbar": {
@@ -137,7 +137,7 @@
   },
   "footer": {
     "socials": {
-      "website": "https://www.limetax.de"
+      "website": "https://www.app.limetax.de"
     }
   },
   "search": {
