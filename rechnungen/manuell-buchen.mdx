@@ -1,0 +1,45 @@
+---
+title: "Belege manuell buchen"
+sidebarTitle: "Manuell buchen"
+description: "Was im Reiter Manuell liegt, wie du diese Belege von Hand erfasst und wann Archivieren die richtige Entscheidung ist."
+---
+
+Im Reiter **Manuell** liegen die Belege, bei denen die KI **keine** Buchung erstellt hat — nicht die, bei denen sie unsicher war. Der Unterschied ist praktisch: Hier findest du ein leeres Buchungsfeld, nicht einen Vorschlag zum Korrigieren.
+
+Typische Gründe: Der Beleg ist unleserlich oder unvollständig, wesentliche Angaben fehlen, oder es handelt sich um eine erkannte Dublette.
+
+## So gehst du vor
+
+Öffne den Reiter **Manuell** und klicke den Beleg an. Sieh dir das Belegbild links an und klär zuerst den Sachverhalt — bei diesen Belegen ist die Frage meist nicht, auf welches Konto es geht, sondern was überhaupt abgerechnet wurde.
+
+Erfasse dann die **Buchungssätze** selbst mit Konto, BU-Schlüssel und Betrag und ergänze die **Belegdaten**: Gegenkonto, Belegdatum, Belegfeld 1 und Rechnungsbetrag. Der **Restbetrag** muss auch hier auf 0,00 € stehen.
+
+Klicke anschließend auf **Freigeben**. Ab dann verhält sich der Beleg wie jeder andere freigegebene.
+
+<Frame caption="Reiter Manuell mit leerem Buchungssatz-Feld">
+  ![Belegansicht im Status Manuell mit leeren Buchungsfeldern](/images/rechnungen/manuell-buchen.png)
+</Frame>
+
+## Die drei Sonderfälle
+
+**Dublette → Archivieren.** Nicht wegbuchen. Eine weggebuchte Dublette verfälscht den Aufwand, und die zugehörige Zahlung findet später zwei Kandidaten statt einem.
+
+**Rückfrage beim Mandanten nötig → Überspringen.** Der Beleg bleibt im Workflow, geht aber nicht in den Stapel. Denk daran, dass übersprungene Belege nicht mehr unter **Offen** zählen — geh sie vor dem Export noch einmal durch.
+
+**Beleg gehört gar nicht hierher → Archivieren.** Private Rechnungen, Belege eines anderen Mandanten, Werbung im Belegeingang. Archivieren ist hier richtig, nicht auf ein Privatkonto buchen.
+
+<Tip>
+  Bist du dir bei einem Sachverhalt unsicher, nutz **KI fragen** direkt am Beleg. Otto kennt den Belegkontext, kann eine Buchung vorschlagen und den steuerlichen Hintergrund erklären — das ist bei genau diesen schwierigen Belegen nützlicher als beim Routinefall.
+</Tip>
+
+Wenn sich ein Belegtyp bei einem Mandanten wiederholt und regelmäßig unter Manuell landet, ist das ein Hinweis für den [Funktionsstand](/funktionsstand/funktionsstand) — meld es, statt es jeden Monat neu von Hand zu buchen.
+
+<Columns cols={2}>
+  <Card title="KI fragen (Otto)" icon="sparkles" href="/rechnungen/ki-fragen">
+    Den Assistenten am schwierigen Beleg nutzen.
+  </Card>
+
+  <Card title="Status verstehen" icon="list-check" href="/rechnungen/status-verstehen">
+    Der Unterschied zwischen Manuell und Prüfen.
+  </Card>
+</Columns>

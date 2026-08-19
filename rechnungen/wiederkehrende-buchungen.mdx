@@ -1,0 +1,67 @@
+---
+title: "Wiederkehrende Buchungen: Rechnungsabgrenzung und Dauerbuchungen"
+sidebarTitle: "Wiederkehrende Buchungen"
+description: "Wie du Jahreslizenzen, Versicherungen und Wartungsverträge über eine Rechnungsabgrenzung auf monatliche Raten verteilst und Dauerbuchungen verwaltest."
+---
+
+Manche Aufwendungen gehören nicht in den Monat, in dem die Rechnung eingeht: eine Jahreslizenz, eine Versicherungsprämie, ein Wartungsvertrag über zwölf Monate. Für diese Fälle legst du eine **Rechnungsabgrenzung** an. Die Position wird dann nicht in einem Betrag als Aufwand gebucht, sondern auf das Konto der aktiven Rechnungsabgrenzung — und von dort in gleichen monatlichen Raten aufgelöst.
+
+Verwaltet wird das unter **Buchhaltung → 4 Wiederkehrende Buchungen**.
+
+<Frame caption="Der Bereich Wiederkehrende Buchungen mit den Reitern Freigabe und Verwalten">
+  ![Menüpunkt 4 Wiederkehrende Buchungen mit den beiden Reitern](/images/rechnungen/wiederkehrende-uebersicht.png)
+</Frame>
+
+## Die zwei Reiter
+
+**Verwalten** listet alle Dauerbuchungen des Mandanten: **Art**, **Konto**, **Gegenkonto**, **Betrag**, **Turnus**, **Abgrenzungsart**, der verknüpfte **Beleg** und der **Status**. Eine Zeile mit Status **Aktiv** läuft weiter, bis die Seriendauer erreicht ist — sie braucht kein monatliches Zutun von dir.
+
+Der Turnus steht dabei als komplette Angabe in einer Spalte, zum Beispiel „30.04.2026 · alle 1 Monat · 12 Läufe“. Damit siehst du auf einen Blick, ab wann die Serie läuft, wie oft und wie lange noch.
+
+**Freigabe** ist der Reiter für den Monatslauf: Hier liegen die fälligen Läufe, die in den Buchungsstapel gehen sollen.
+
+Anders als in der Belegliste steht der Filter oben rechts hier auf **Alle Zeiträume**. Du siehst also standardmäßig alle Dauerbuchungen und nicht nur die des gewählten Monats — praktisch beim Anlegen, aber achte darauf, wenn du eine bestimmte Periode kontrollieren willst.
+
+## Eine Abgrenzung anlegen
+
+Der Weg führt über den Beleg: An der Buchungsposition öffnest du den Abschnitt **Rechnungsabgrenzung**. Alternativ legst du eine Serie direkt unter **Verwalten → \+ Neue Dauerbuchung** an, wenn kein Beleg dahinter hängt.
+
+Diese Felder füllst du:
+
+- **Fälligkeit** — das Datum des ersten Laufs, zum Beispiel 30.04.2026.
+- **Turnus** — „Am 30. Tag jedes 1. Monats“. Die erste Zahl ist der Tag im Monat, die zweite der Monatsabstand. Für vierteljährlich trägst du hier eine 3 ein.
+- **Abgrenzungsart** — **Linear verteilen** verteilt den Betrag gleichmäßig über die Laufzeit. **In Folgejahr verschieben** bucht den Betrag stattdessen komplett in die nächste Periode; das ist der Fall für eine Vorauszahlung, die ausschließlich das kommende Jahr betrifft.
+- **Seriendauer** — entweder **Endet nach** einer Anzahl Ausführungen oder **Endet am** einem festen Datum. Bei einer Jahresrechnung ist „Endet nach 12 Ausführungen“ der Normalfall.
+- **Auflösen auf** — das Aufwands- oder Ertragskonto, auf das die Raten laufen. Ohne dieses Konto weiß die App nicht, wohin aufgelöst wird.
+
+<Frame caption="Panel Rechnungsabgrenzung an der Buchungsposition">
+  ![Felder Fälligkeit, Turnus, Abgrenzungsart und Seriendauer im Panel Rechnungsabgrenzung](/images/rechnungen/rechnungsabgrenzung-panel.png)
+</Frame>
+
+## Die Aufteilung ist deine Kontrollzahl
+
+Unter den Feldern rechnet die App die Verteilung vor, zum Beispiel: 217,97 € → 12 × 18,16 € (Rest 0,05 € in Periode 1). Lies diese Zeile, bevor du speicherst — sie ist die einzige Stelle, an der du die Serie vor dem ersten Lauf gegenprüfen kannst.
+
+Der Rundungsrest landet immer in der ersten Periode. Das ist gewollt und richtig: Die Summe der Raten entspricht am Ende exakt dem Belegbetrag, statt eine Restdifferenz auf dem Abgrenzungskonto stehen zu lassen.
+
+<Warning>
+  **Beachte!** Liegt die Fälligkeit in einem vergangenen Monat, warnt die App, dass bereits verstrichene Raten im ersten Lauf nachgeholt werden. Der erste Lauf ist dann größer als die reguläre Rate. Prüf in diesem Fall, ob die betroffenen Monate schon in DATEV festgeschrieben sind — dann gehört die Nachholung fachlich in die laufende Periode und nicht rückwirkend.
+</Warning>
+
+## Was am Monatsende zu tun ist
+
+Eine aktive Serie läuft automatisch, du musst sie nicht jeden Monat neu anlegen. Zwei Dinge kontrollierst du trotzdem: ob die Serien mit Status **Aktiv** tatsächlich noch laufen sollen, und ob eine auslaufende Serie zum Jahreswechsel verlängert werden muss.
+
+Das Konto der Abgrenzung ist dabei die verlässlichere Kontrolle als die Liste. Steht dort am Jahresende ein Rest, ist eine Serie zu kurz, zu lang oder gar nicht angelegt worden.
+
+{/* TODO Chris: (1) Was passiert im Reiter Freigabe — werden Läufe einzeln freigegeben oder nur angezeigt? (2) Gibt es auch eine passive Rechnungsabgrenzung (pRAP) oder nur aRAP? (3) Wie wird eine aktive Serie beendet oder korrigiert, wenn sich der Vertrag ändert? */}
+
+<Columns cols={2}>
+  <Card title="Aufbau der Belegansicht" icon="table-columns" href="/rechnungen/belegansicht">
+    Wo die Rechnungsabgrenzung am Beleg sitzt.
+  </Card>
+
+  <Card title="Stapel übertragen" icon="arrow-right-from-bracket" href="/export/stapel-uebertragen">
+    Wie die Läufe in den Buchungsstapel kommen.
+  </Card>
+</Columns>
