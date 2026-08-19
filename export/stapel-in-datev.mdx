@@ -1,0 +1,68 @@
+---
+title: "Stapel in DATEV einspielen, kontrollieren, festschreiben"
+sidebarTitle: "Stapel in DATEV"
+description: "Der letzte Schritt in DATEV Kanzlei-Rechnungswesen: den übertragenen Stapel einspielen, in der Primanota kontrollieren, verbuchen und festschreiben."
+icon: "lock"
+---
+
+Der aus Limetax übertragene Buchungsstapel liegt in DATEV Kanzlei-Rechnungswesen bereit. Jetzt spielst du ihn dort ein, kontrollierst die Primanota und schreibst den Zeitraum fest. Ab dem Festschreiben ist der Monat aus — Buchungen lassen sich nur noch stornieren, nicht mehr ändern. Deshalb ist die Kontrolle zwischen Einspielen und Festschreiben der wichtigste Schritt: das ist der letzte Punkt, an dem eine Korrektur billig ist.
+
+Der Artikel geht davon aus, dass du mit DATEV Kanzlei-Rechnungswesen grundsätzlich vertraut bist — die konkreten Menüpunkte pro DATEV-Version können abweichen. Was hier steht, ist die inhaltliche Reihenfolge, in der du arbeitest.
+
+<Danger>
+  **Festschreiben ist irreversibel.** Nach dem Festschreiben sind Buchungen unveränderlich. Korrekturen laufen dann nur noch über Storno mit Neubuchung — mit allen Konsequenzen für Historie, UStVA und Abstimmung. Schreib erst fest, wenn du die Primanota geprüft hast und der Monat inhaltlich sitzt.
+</Danger>
+
+## 1. Am Mandanten anmelden
+
+Öffne DATEV Kanzlei-Rechnungswesen (Rewe) und melde dich am Mandanten an. Wechsle in den Bereich **Buchführung** und in das Wirtschaftsjahr, in das der Stapel gehört. Wenn du am falschen Wirtschaftsjahr arbeitest, importierst du den Stapel in einen Zeitraum, in dem er nichts zu suchen hat — das passiert vor allem am Jahreswechsel, wenn du am 3. Januar noch den Dezember buchst.
+
+## 2. Stapel einspielen
+
+Im Bereich **Stapelverarbeitung** liegt der von Limetax übertragene Stapel. Öffne ihn und schau dir kurz die Kopfdaten an: Anzahl Buchungen, Summe, Kennung des Mandanten. Wenn die Kennung nicht zum aktuell geöffneten Mandanten passt, hast du entweder den falschen Mandanten geöffnet oder der Stapel gehört zu einem anderen — abbrechen, klären.
+
+Ist alles stimmig, spielst du den Stapel in die **Primanota** ein. Er landet dort als vorgeschlagene Buchungen, noch nicht verbucht.
+
+{/* TODO: Screenshot mit Demo-DATEV-Mandant im Stapel-Import */}
+
+## 3. Primanota kontrollieren
+
+Das ist der eigentliche Prüfschritt. Geh die Primanota Position für Position durch und achte auf:
+
+- **Steuerliche Sonderfälle.** §13b-Buchungen und i. g. Erwerb erzeugen jeweils zwei Buchungssätze (USt und VSt). Prüf, ob beide korrekt gebucht sind.
+- **Gerundete Beträge.** Wenn du Positionen mit Netto plus USt zusammengerechnet siehst und der Bruttobetrag um 1 Cent von der Rechnung abweicht, ist es meist eine Rundungsdifferenz aus der Umrechnung. Bei Bedarf manuell nachbuchen.
+- **Sammelbuchungen.** Wenn Limetax einen [Split](/rechnungen/splitbuchungen) übertragen hat, siehst du in der Primanota mehrere Zeilen zum selben Beleg. Prüf, ob die Summen aufgehen.
+- **Auslandsbelege in Fremdwährung.** Die EUR-Umrechnung ist an dieser Stelle in DATEV erfolgt — ist der Kurs plausibel? Bei extremen Kursschwankungen im Verlaufsjahr lohnt sich ein Sanity-Check.
+- **Anlagenzugänge.** Buchungen auf Sachkonten des Anlagevermögens (0400/0410 bei SKR 03, 0650/0690 bei SKR 04) sind Zugänge, die anschließend in der [Anlagenbuchhaltung](/export/anlagenzugaenge) ergänzt werden müssen. Markier sie dir.
+
+<Frame caption="Primanota nach dem Stapel-Import">
+  ![Primanota in DATEV Kanzlei-Rechnungswesen mit importierten Buchungen aus Limetax](/images/export/primanota.png)
+</Frame>
+
+Wenn du in der Primanota etwas findest, das nicht stimmt: **jetzt** korrigieren. Du kannst einzelne Buchungen ändern, ergänzen oder herausnehmen, solange der Stapel nicht verbucht ist.
+
+## 4. Verbuchen
+
+Wenn die Primanota sitzt, verbuch den Stapel. Ab jetzt sind die Buchungen im Bestand — sie erscheinen in Kontoauszügen, in der Summen-Salden-Liste, in der BWA. Änderungen sind bis zum Festschreiben noch als Korrektur möglich, ab dem Festschreiben nur noch als Storno.
+
+## 5. Festschreiben
+
+Wenn du sicher bist, dass der Monat inhaltlich stimmt, schreibst du den Zeitraum fest. Meist läuft das mandantenweit über eine Festschreib-Funktion, die dir den letzten festschreibbaren Monat vorschlägt. Bestätige den Monat, gib die Begründung (falls in DATEV eingerichtet) und lass festschreiben.
+
+<Check>
+  Nach dem Festschreiben ist der Monat abgeschlossen. Die UStVA und die BWA rechnen mit den finalen Zahlen. Der nächste Monatslauf in Limetax kann starten.
+</Check>
+
+<Note>
+  Der Festschreib-Zeitpunkt ist eine Kanzlei-Entscheidung. Manche Kanzleien schreiben monatlich fest, andere quartalsweise, andere erst zum Jahresabschluss. Innerhalb eines Mandanten sollte der Rhythmus fest sein — sonst weiß niemand, ob eine Korrektur eine Änderung oder ein Storno ist.
+</Note>
+
+<Columns cols={2}>
+  <Card title="Stapel übertragen" icon="paper-plane" href="/export/stapel-uebertragen">
+    Der Schritt aus Limetax heraus.
+  </Card>
+
+  <Card title="Anlagenzugänge" icon="building" href="/export/anlagenzugaenge">
+    Zugänge in die Anlagenbuchhaltung übernehmen.
+  </Card>
+</Columns>

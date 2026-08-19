@@ -1,0 +1,51 @@
+---
+title: "Fehlende Belege beim Mandanten anfordern"
+sidebarTitle: "Fehlende Belege anfordern"
+description: "Limetax bereitet dir eine E-Mail mit Excel-Liste vor, damit der Mandant genau weiß, was noch fehlt."
+---
+
+Am Ende jedes Monatslaufs bleibt ein Rest an offenen Sachverhalten übrig: Umsätze auf der Bank ohne Beleg, angeforderte Rechnungen, die nicht aufgetaucht sind, Dokumente, die der Mandant zugesagt und dann vergessen hat. Damit du nicht in jeder Kanzlei eine eigene Bastellösung baust, hat Limetax dafür einen fertigen Ablauf: du klickst „fehlende Belege anfordern", die App bereitet dir eine E-Mail mit Excel-Anhang vor, du schickst sie raus.
+
+Der Kernpunkt: die Liste kommt aus den durchlaufenden Posten. Alles, was auf **1590** (SKR 03) oder **1370** (SKR 04) hängt, ist ein Zahlungsvorgang ohne passenden Beleg — und damit ein Kandidat für die Nachforderung.
+
+## E-Mail vorbereiten
+
+Öffne den Bereich **Durchlaufende Posten** oder direkt die entsprechende Sachkonten-Ansicht. Oben rechts findest du den Button **Fehlende Belege anfordern**.
+
+<Frame caption="Button für die Belegnachforderung">
+  ![Sachkonten-Ansicht mit Button Fehlende Belege anfordern oben rechts](/images/belege/fehlende-belege-button.png)
+</Frame>
+
+Limetax nimmt alle Umsätze aus dem gewählten Zeitraum, die auf den durchlaufenden Posten liegen, und packt sie als Tabelle in eine Excel-Datei: Belegdatum, Betrag, Gegenpartei, Verwendungszweck. Dazu kommt ein E-Mail-Text mit einer freundlichen, präzisen Bitte um die fehlenden Belege — vorbereitet für die im Mandantenprofil hinterlegte Kontakt-E-Mail.
+
+<Frame caption="Vorbereitete E-Mail mit Excel-Anhang">
+  ![Fertige E-Mail an den Mandanten mit angehängter Excel-Liste](/images/belege/fehlende-belege-mail.png)
+</Frame>
+
+## Vor dem Absenden anpassen
+
+Der Text ist als Ausgangspunkt gedacht, nicht als starre Vorlage. Meist passt er direkt — bei einigen Mandanten willst du aber:
+
+- **Ton anpassen.** „Sehr geehrter Herr Müller" ist bei manchen Mandanten korrekt, bei anderen absurd. Ändere die Anrede so, wie du sonst mit ihm schreibst.
+- **Kontext ergänzen.** Wenn ihr diese Woche schon geschrieben habt, verweis darauf statt der Standardanrede. Bei wiederholt fehlenden Belegen kannst du kurz die Konsequenz erklären („ohne diese Belege bekommt der Monat keine BWA rechtzeitig").
+- **Frist setzen.** Der Standardtext ist offen formuliert. Wenn du eine konkrete Deadline brauchst — Voranmeldungstermin, Jahresabschluss — schreib sie rein.
+
+Die Excel-Datei musst du in der Regel nicht anfassen. Wenn du weißt, dass zwei Positionen bereits geklärt sind (Klärung im Chat, mündlich am Telefon), lösch sie vor dem Versand.
+
+## Nach dem Versand
+
+Sobald die Belege reinkommen, importierst du sie über den normalen Weg — [SmartLogin-Agent](/belege/smartlogin-agent) oder [manuellen Upload](/belege/manuell-herunterladen). Beim nächsten [Matching](/bank/matching) fallen die Zahlungen von den durchlaufenden Posten runter und werden korrekt gegen den Beleg gebucht.
+
+<Note>
+  Führ die Belegnachforderung **einmal** pro Monatslauf durch, nicht mehrfach. Wenn du erst am Bank-Matching, dann nach dem ersten Rechnungscheck und dann nochmal vor dem Export schickst, kommt der Mandant nicht mehr hinterher und ignoriert am Ende alle Mails. Feste Position am Monatsende: prüfen, was fehlt, einmal sammeln, einmal senden.
+</Note>
+
+<Columns cols={2}>
+  <Card title="Durchlaufende Posten auflösen" icon="shuffle" href="/bank/durchlaufende-posten">
+    Woher die Liste der fehlenden Belege kommt.
+  </Card>
+
+  <Card title="Matching" icon="link" href="/bank/matching">
+    Was mit den nachgereichten Belegen passiert.
+  </Card>
+</Columns>

@@ -1,0 +1,61 @@
+---
+title: "Kartenabrechnungen und Kontoauszüge in Limetax importieren"
+sidebarTitle: "Umsätze importieren"
+description: "Wie du die Umsätze der Datei-Konten in die App bringst — über den QR-Sync oder manuell — und wie du die Vollständigkeit prüfst."
+icon: "file-import"
+---
+
+Wenn die [Finanzkonten](/bank/finanzkonten-anlegen) angelegt sind, geht es um die eigentlichen Umsätze: die monatlichen Kartenabrechnungen, die PayPal-Auszüge, die Kassenberichte. Es gibt zwei Wege, wie sie in Limetax landen, und beide führen ans selbe Ziel — die Umsätze erscheinen in der Transaktionsliste, bereit fürs [Matching](/bank/matching) mit den bereits gebuchten Belegen.
+
+Der Bereich für alles rund um Transaktionen und Bank liegt unter **Buchhaltung → 4 Transaktionen**. Vor dem Matching arbeitest du immer erst die Import-Seite ab, damit du sicher bist, dass die Umsätze vollständig sind.
+
+## Weg 1 — QR-Sync (Standard)
+
+Wenn du in einem Monatslauf ohnehin den [SmartLogin-Agent](/belege/smartlogin-agent) für die Belege startest, kommen die Kartenabrechnungen mit. Der Agent zieht neben den Belegen auch die im Belegeingang liegenden Abrechnungen (Kartenauszüge als PDF, Moss-Monatsauszüge) und legt sie im Importer unter **Sonstiges** ab. Beim Sync wird jeder Auszug automatisch dem passenden **Finanzkonto** zugeordnet — vorausgesetzt, das Konto ist im Namen erkennbar (Kartennummer, Inhaber).
+
+<Frame caption="Importer mit dem Bereich Sonstiges">
+  ![Importbildschirm mit dem Bereich Sonstiges für Kartenabrechnungen](/images/bank/importer-sonstiges.png)
+</Frame>
+
+Danach erscheinen die Abrechnungen unter **Transaktionen** und du kannst sie öffnen.
+
+## Weg 2 — Manueller Upload
+
+Wenn eine Umsatzdatei nicht über DUO kommt (Sparkassen-CSV, PayPal-Export als Excel, Moss-Export direkt aus dem Vorsystem), lädst du sie manuell hoch. In den Transaktionen findest du dafür einen Upload-Bereich.
+
+{/* TODO: Konkreten Klickpfad für den manuellen Upload von Chris ergänzen */}
+
+Zieh die Datei rein oder klick den Bereich an und wähle sie aus. Wenn Limetax das Finanzkonto anhand des Dateinamens erkennt, ordnet es die Datei automatisch zu. Wenn nicht, wählst du das Finanzkonto im Dialog manuell.
+
+## Die Dokumentenansicht
+
+Nach dem Import öffnest du das Dokument. Die Ansicht ist zweigeteilt: **links das Original-PDF** oder die CSV in Tabellenform, **rechts die Metadaten und die erkannten Transaktionen**.
+
+<Frame caption="Dokumentenansicht mit PDF links und Transaktionen rechts">
+  ![Dokumentenansicht einer Kartenabrechnung mit PDF links und erkannten Transaktionen rechts](/images/bank/dokumentenansicht.png)
+</Frame>
+
+Oben rechts steht ein grüner oder gelber Hinweis: **Saldo stimmt** oder **Saldo weicht ab**. Diese Prüfsumme ist deine Sicherheit für den Import: Limetax nimmt den Anfangs- und Schlussbestand aus dem Auszug und prüft, ob die erkannten Transaktionen dazwischen aufgehen. Wenn ja: der Auszug ist vollständig eingelesen. Wenn nein: irgendwo fehlt eine Transaktion oder ein Betrag wurde falsch erkannt.
+
+Wenn der Saldo nicht stimmt, klick **Bearbeiten** und ergänze oder korrigiere die Zeilen, bis der Saldo passt.
+
+## Das gelbe Warnsymbol vor dem Matching
+
+Auf der Übersichtsseite der Dokumente kann neben einer Zeile ein gelbes Warnsymbol stehen. Zwei Ursachen — und beide arbeitest du **vor** dem Matching ab:
+
+- **Finanzkonto nicht zugeordnet.** Der Auszug ist da, aber Limetax weiß nicht, zu welchem Finanzkonto er gehört. Klick auf das Symbol, wähle das Konto oder leg es neu an (siehe [Finanzkonten anlegen](/bank/finanzkonten-anlegen)).
+- **Transaktionen nicht vollständig erkannt.** Der Saldo geht nicht auf. Öffne den Auszug, prüf, welche Zeilen fehlen, und ergänze sie über **Bearbeiten**.
+
+<Warning>
+  Ein unvollständig erkannter Auszug führt beim Matching zu Zahlungen ohne Beleg, die dann auf die [durchlaufenden Posten](/bank/durchlaufende-posten) laufen. Du hast dann später eine Liste, die du eigentlich nicht bräuchtest — mit hoher Wahrscheinlichkeit sind das gar keine „fehlenden Belege", sondern nicht erkannte Zeilen aus dem Auszug. Warnsymbole vor dem Matching gründlich abarbeiten.
+</Warning>
+
+<Columns cols={2}>
+  <Card title="Matching" icon="link" href="/bank/matching">
+    Der nächste Schritt, wenn der Import steht.
+  </Card>
+
+  <Card title="Finanzkonten anlegen" icon="plus" href="/bank/finanzkonten-anlegen">
+    Voraussetzung für die automatische Zuordnung.
+  </Card>
+</Columns>

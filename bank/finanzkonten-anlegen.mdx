@@ -1,0 +1,65 @@
+---
+title: "Finanzkonten in Limetax anlegen"
+description: "Einmalige Einrichtung pro Mandant: Kartenkonten, Kassen und Zahlungskonten in Limetax anlegen, bevor du den ersten Umsatz importierst."
+icon: "plus"
+sidebarTitle: "Finanzkonten anlegen"
+---
+
+Ein **Finanzkonto** in Limetax ist ein Zahlungskonto in der App: eine Kreditkarte, ein PayPal-Konto, eine Kasse, ein virtuelles Wallet. Jedes Finanzkonto ist einer **Bankkonto-Nummer (Sachkonto in DATEV)** zugeordnet — also einem regulären Buchungskonto im Kontenrahmen. Diese Zuordnung ist wichtig, weil beim späteren Export der Buchungsstapel in DATEV genau dieses Sachkonto anspricht.
+
+Die Einrichtung machst du einmal pro Mandant, bevor der erste Bankumsatz importiert wird. Wenn du erst importierst und dann die Zuordnung nachziehst, bekommst du gelbe Warnsymbole und musst pro Datei einzeln aufräumen — ein paar Minuten Vorarbeit sparen dir das.
+
+## Bevor du anlegst
+
+Kläre für den Mandanten:
+
+- **Welche Datei-Konten gibt es?** Kreditkarten pro Karteninhaber, PayPal, Kasse, virtuelle Karten von Moss oder Pleo. Alles, was nicht über DUO oder RZ-Bankinfo läuft — siehe [Welche Konten wo](/bank/welche-konten-wo).
+- **Welches DATEV-Sachkonto pro Datei-Konto?** Standardmäßig hat jede Karte ein eigenes Konto im Bereich 1200–1290 (SKR 03) oder 1800–1889 (SKR 04). Wenn ihr eine feste Vergabe habt, hol dir die Liste. Wenn nicht, leg pro Karte ein eigenes an — das erleichtert die spätere Kontenabstimmung enorm.
+- **Aktuelles Wirtschaftsjahr.** Bei einem neuen Wirtschaftsjahr muss die Zuordnung neu gemacht werden, das trägt sich nicht automatisch mit.
+
+## So legst du ein Finanzkonto an
+
+Öffne im Mandanten den Bereich **Finanzkonten** unter **Buchhaltung → 4 Transaktionen**. Du siehst eine Übersicht der bereits angelegten Finanzkonten.
+
+<Frame caption="Übersicht der angelegten Finanzkonten">
+  ![Übersichtsliste der angelegten Finanzkonten pro Mandant](/images/bank/finanzkonten-uebersicht.png)
+</Frame>
+
+Klick oben rechts auf **\+ Finanzkonto hinzufügen**. Es öffnet sich ein Dialog mit vier Feldern.
+
+<Frame caption="Dialog zum Anlegen eines Finanzkontos">
+  ![Dialog mit Feldern für Typ, Name, Bankkonto und Wirtschaftsjahr](/images/bank/finanzkonten-anlegen-dialog.png)
+</Frame>
+
+- **Typ** — Kreditkarte, PayPal, Kasse, Bank (für Datei-Bankkonten) oder Sonstige.
+- **Name** — der Name, den du in der Auswahl später siehst. Bei Karten gehören **Kartennummer (letzte 4 Ziffern) und Inhaber** in den Namen. Bei fünf AMEX-Karten mit Namen „AMEX 1", „AMEX 2" weißt du in drei Monaten nicht mehr, welche welche ist. „AMEX Müller 1234" reicht als Konvention.
+- **Bankkonto (Buchungskonto)** — die DATEV-Sachkonto-Nummer, auf die dieses Finanzkonto beim Export bucht.
+- **Wirtschaftsjahr** — das aktuelle Wirtschaftsjahr des Mandanten.
+
+Klick **Hinzufügen**. Das Konto steht in der Übersicht, du legst das nächste an.
+
+## Was du beim Namen unbedingt beachtest
+
+Der Name des Finanzkontos ist die einzige Identifikation im Alltag. Wenn du beim Import eines Kartenauszugs mehrere Karten desselben Anbieters siehst und einer davon zugeordnet werden musst, siehst du nur den Namen. Deshalb:
+
+- **Karteninhaber immer rein.** „AMEX 1234" ist nutzlos, „AMEX Müller 1234" ist eindeutig.
+- **Kartennummer nur die letzten 4 Ziffern.** Aus Datenschutz-Gründen und weil das reicht.
+- **Kein „Neu" oder „Alt".** Nach einem Kartenwechsel steht in vier Monaten niemand mehr da und weiß, welche „alt" ist.
+
+<Warning>
+  Wenn du eine Datei hochlädst, bevor das passende Finanzkonto existiert, bekommst du auf dem Import ein gelbes Warnsymbol und musst die Zuordnung nachträglich per Klick machen. Bei vielen Karten kann das minutenlang dauern. Erst anlegen, dann importieren.
+</Warning>
+
+## Bei neuem Wirtschaftsjahr
+
+Zum Jahreswechsel prüfst du bei jedem Mandanten die Wirtschaftsjahr-Zuordnung der Finanzkonten. Wenn du sie nicht mit umziehst, buchst du im neuen Jahr weiter auf das alte Wirtschaftsjahr — und dann steht der Januar-Umsatz plötzlich noch in der Dezember-Bilanz.
+
+<Columns cols={2}>
+  <Card title="Welche Konten wo" icon="arrows-split-up-and-left" href="/bank/welche-konten-wo">
+    Die Grundregel vor dem ersten Anlegen.
+  </Card>
+
+  <Card title="Umsätze importieren" icon="file-import" href="/bank/umsaetze-importieren">
+    Der nächste Schritt.
+  </Card>
+</Columns>

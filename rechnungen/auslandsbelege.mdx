@@ -1,0 +1,56 @@
+---
+title: "Auslandsbelege: §13b, i. g. Erwerb und Fremdwährung"
+sidebarTitle: "Auslandsbelege"
+description: "Wie du Auslandsrechnungen in Limetax kontierst — inklusive Reverse-Charge, innergemeinschaftlichem Erwerb und Rechnungen in Fremdwährung."
+icon: "globe"
+---
+
+Auslandsbelege sind der Bereich, in dem Limetax bewusst vorsichtig ist. Statt automatisch zu buchen, landen sie standardmäßig im Status **Prüfen** oder **Manuell** — die KI schlägt eine Kontierung vor, gibt aber nicht selbst frei. Der Grund ist praktisch: bei Auslandsbelegen hängt der richtige Steuerschlüssel oft an Details, die die KI ohne dich nicht sicher bewerten kann (Kunden-USt-ID, Leistungsort, tatsächlicher Warenweg).
+
+Der Artikel geht die drei häufigsten Konstellationen durch — Reverse-Charge, innergemeinschaftlicher Erwerb, Fremdwährung — und beschreibt jeweils den Buchungsweg. Was er nicht ersetzen kann, ist ein solides Grundverständnis des UStG bei internationalen Sachverhalten. Bei Grenzfällen frag Otto oder eine:n Kolleg:in.
+
+## Reverse-Charge (§13b UStG)
+
+Bei einem Reverse-Charge-Fall schuldet der **Empfänger** die Umsatzsteuer, nicht der Rechnungssteller. Auf der Rechnung ist keine Umsatzsteuer ausgewiesen, aber ein Hinweis wie „Steuerschuldnerschaft des Leistungsempfängers" oder „reverse-charge".
+
+**Typische Fälle**: Facebook Ads (Meta Ireland), Google Ads (Google Ireland), AWS und Google Cloud (US-Anbieter), Bau- und Reinigungsleistungen im Inland zwischen Unternehmern.
+
+**Buchung in Limetax**: Steuerschlüssel **RC** oder **13b**, je nach eurer Konfiguration. Die Buchung führt zu ausgewiesener Umsatzsteuer **und** Vorsteuer in derselben Höhe — unter dem Strich ist sie neutral, dient aber der Deklaration in der UStVA. Sachkonto bleibt der reguläre Aufwand (Werbekosten, Fremdleistungen, EDV).
+
+<Tip>
+  Bei wiederkehrenden Meta- oder Google-Ads-Rechnungen kannst du nach ein paar Belegen den [blauen Haken](/rechnungen/blauer-haken) setzen — dann werden sie automatisch freigegeben. Vorher zwei, drei Belege manuell prüfen, damit du sicher bist, dass Steuerschlüssel und Konto stimmen.
+</Tip>
+
+## Innergemeinschaftlicher Erwerb (i. g. Erwerb)
+
+Bei einem i. g. Erwerb kauft dein Mandant Waren aus einem anderen EU-Land von einem Unternehmer, dem er seine deutsche USt-ID gegeben hat. Auf der Rechnung ist keine ausländische Umsatzsteuer ausgewiesen, dafür beide USt-IDs (Lieferant im EU-Ausland, Käufer in Deutschland).
+
+**Buchung in Limetax**: Steuerschlüssel **IG**. Der Vorgang wirkt wie Reverse-Charge — Umsatzsteuer und Vorsteuer werden in Deutschland ausgewiesen, netto steht dieselbe Höhe.
+
+Wichtig ist, dass die USt-ID des Mandanten auf der Rechnung tatsächlich steht. Ohne diese Angabe ist es kein i. g. Erwerb, sondern eine ausländische Rechnung mit ausgewiesener Umsatzsteuer — die dann in dem Herkunftsland zu klären wäre. Prüf das bei jedem Beleg mit i. g.-Verdacht.
+
+<Warning>
+  Wenn dein Mandant Waren aus dem EU-Ausland ohne USt-ID bezogen hat, greift **kein** i. g. Erwerb. Der Steuerausweis auf der Rechnung ist dann ausländische Umsatzsteuer, die in Deutschland nicht abziehbar ist. Kläre mit dem Mandanten, ob die USt-ID im nächsten Bestellvorgang mitgeschickt wird.
+</Warning>
+
+## Fremdwährung
+
+Rechnungen in USD, GBP, CHF, JPY und anderen Nicht-EUR-Währungen kommen genauso in die Belegansicht wie inländische. Der Rechnungsbetrag steht in Fremdwährung, und die KI zeigt auf der rechten Seite sowohl den Fremdwährungsbetrag als auch den Kurs zum Rechnungsdatum an.
+
+**Umrechnung**: Limetax merkt den Fremdwährungsbetrag und den Kurs, die eigentliche EUR-Umrechnung erfolgt beim [Export in DATEV](/export/stapel-uebertragen) über die dort hinterlegten Kurse. Du musst also nicht selbst umrechnen — das läuft im Kanzlei-Rechnungswesen.
+
+**Beim Bank-Matching**: Fremdwährungsbelege werden beim [Bank-Matching](/bank/matching) nicht automatisch mit EUR-Zahlungen zusammengeführt. Wenn du eine USD-Rechnung hast und die Zahlung ist in EUR abgeflossen (die Bank hat konvertiert), musst du das Match manuell setzen. Details in [Matching](/bank/matching).
+
+## Warum die App vorsichtig ist
+
+Bei Standardfällen wäre eine automatische Freigabe verlockend — aber ein einziger falsch gebuchter §13b-Fall führt entweder zu einer zu wenig gezahlten Umsatzsteuer (Nachzahlung) oder zu einer nicht abziehbaren Vorsteuer (die Kanzlei erklärt es dem Mandanten). Deshalb: Auslandsbelege bewusst prüfen, blauen Haken erst nach Wiederholung setzen, im Zweifel Otto oder eine zweite Meinung.
+
+<Columns cols={2}>
+  <Card title="Otto fragen" icon="wand-magic-sparkles" href="/rechnungen/ki-fragen">
+    Für steuerliche Einordnung im Zweifel.
+  </Card>
+
+  <Card title="Status verstehen" icon="traffic-light" href="/rechnungen/status-verstehen">
+    Warum Auslandsbelege in Prüfen und Manuell landen.
+  </Card>
+</Columns>

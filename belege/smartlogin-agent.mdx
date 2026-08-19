@@ -1,0 +1,46 @@
+---
+title: "Belege über den SmartLogin-Agent importieren"
+sidebarTitle: "SmartLogin-Agent"
+description: "So verbindest du den SmartLogin-Agent und lässt Belege automatisch aus DATEV Unternehmen Online abholen."
+icon: "inbox-in"
+---
+
+Der SmartLogin-Agent meldet sich für dich in DATEV Unternehmen Online an und lädt alle offenen, noch nicht gebuchten Belege in die App. Für Mandanten mit DUO ist das der Standardweg — du brauchst DUO danach für den Belegimport nicht mehr selbst zu öffnen.
+
+Dieser Artikel beschreibt den Weg für Mandanten mit **DATEV Unternehmen Online**. Arbeitet dein Mandant mit einem Vorsystem wie Pleo, Moss, Lexware Office oder SevDesk, klär zuerst über [Mandanten mit Vorsystemen](/belege/vorsysteme), wie die Daten überhaupt in DUO ankommen — solange sie dort nicht liegen, holt der Agent sie auch nicht.
+
+## Voraussetzung: ein universeller SmartLogin
+
+Der Agent braucht einen **universellen SmartLogin** — also einen Zugang, der für alle Mandanten der Kanzlei gilt. Mit einem mandantenspezifischen SmartLogin kommt er nicht zuverlässig durch. Woran du den Unterschied merkst: Der Scan geht durch, der Import endet aber ohne Belege oder bricht mittendrin ab. Wenn du nicht weißt, welchen Typ eure Kanzlei nutzt, scanne einmal und schau, ob Belege ankommen. Wenn nicht, nimm bis zur Klärung den [manuellen Weg](/belege/manuell-herunterladen) — der funktioniert unabhängig vom SmartLogin-Typ.
+
+## So läuft der Import
+
+Gehe im Hauptmenü zu **Buchhaltung → 1 Belege importieren**. Es öffnet sich eine Seite mit einem QR-Code. Scanne diesen QR-Code mit der DATEV SmartLogin-App auf deinem Handy und bestätige die Anmeldung dort.
+
+<Frame caption="QR-Code für die SmartLogin-Anmeldung">
+  ![Importseite mit QR-Code für DATEV SmartLogin](/images/belege/smartlogin-qr.png)
+</Frame>
+
+Der Agent meldet sich jetzt in DATEV Unternehmen Online an und holt die Belege. Je nach Belegmenge dauert das ein paar Minuten. Du kannst die Seite in der Zeit verlassen — der Agent läuft im Hintergrund weiter. Geladen werden ausschließlich Belege, die in DUO **noch nicht als gebucht markiert** sind. Was dort schon gebucht ist, kommt nicht mit, auch wenn es in Limetax noch nie aufgetaucht ist. Das ist der Grund, warum bei Mandanten, an denen vorher jemand direkt in DUO gearbeitet hat, weniger ankommt als erwartet.
+
+## Danach
+
+Die Belege liegen unter **Eingangsrechnung** und **Ausgangsrechnung**. Die KI-Vorkontierung startet automatisch und arbeitet die Belege der Reihe nach ab; die Liste füllt sich also nicht auf einmal, sondern nach und nach. Sobald die ersten Belege im Status **Prüfen** oder **Freigegeben** stehen, kannst du mit der Bearbeitung anfangen, während der Rest noch läuft. Erkannte Dubletten landen direkt im Status **Manuell** und müssen nur noch archiviert werden — die App bucht sie nicht doppelt.
+
+<Frame caption="Belegliste nach dem Import">
+  ![Gefüllte Belegliste nach dem Import](/images/belege/belegliste-nach-import.png)
+</Frame>
+
+<Warning>
+  Importiere immer **vor** einer Bearbeitungsrunde, nicht mittendrin. Laufen während der Prüfung neue Belege ein, mischen sich geprüfte und ungeprüfte Fälle in derselben Liste — du verlierst den Überblick, was du schon gesehen hast, und prüfst am Ende doppelt oder gar nicht.
+</Warning>
+
+<Columns cols={2}>
+  <Card title="Manuell herunterladen" icon="download" href="/belege/manuell-herunterladen">
+    Der Weg ohne universellen SmartLogin.
+  </Card>
+
+  <Card title="Import-Probleme" icon="triangle-exclamation" href="/belege/import-probleme">
+    Was tun, wenn nichts oder zu wenig ankommt.
+  </Card>
+</Columns>

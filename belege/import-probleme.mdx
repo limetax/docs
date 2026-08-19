@@ -1,0 +1,51 @@
+---
+title: "Import-Probleme: QR abgelaufen, Belege fehlen, Dubletten"
+sidebarTitle: "Import-Probleme"
+description: "Die häufigsten Fälle beim Belegimport und wie du sie schnell auflöst."
+---
+
+Beim Belegimport tauchen ein paar wiederkehrende Probleme auf: der SmartLogin-QR ist abgelaufen, es kommen weniger Belege als erwartet, ein Beleg fehlt komplett oder Dubletten laufen mit. Hier stehen die Ursachen und die konkrete Lösung pro Fall — von der schnellsten (fünf Sekunden) bis zur unangenehmsten (Mandant anrufen).
+
+## Der QR-Code ist abgelaufen
+
+Beim Öffnen des Importers zeigt Limetax einen frischen QR-Code an. Der bleibt etwa zwei Minuten gültig — genug, um das Handy zu holen und die SmartLogin-App aufzurufen, nicht genug, um zwischendurch noch drei Mails zu beantworten. Wenn du zu lange brauchst, meldet die App entweder „QR-Code ungültig" oder der Scan geht durch, aber der Agent zieht keine Belege.
+
+Der Fix ist trivial: **Seite neu laden**, ein frischer QR-Code erscheint, sofort scannen. Wenn du das Muster kennst — Import öffnen, sofort scannen — passiert es dir kaum wieder.
+
+## Der Scan klappt, aber es kommen keine Belege
+
+Zwei Ursachen. Erstens: der Agent findet in DUO keine noch nicht gebuchten Belege. Prüf einmal in DATEV Unternehmen Online, ob dort tatsächlich Belege liegen und ob sie nicht schon als gebucht markiert sind. Wenn DUO leer ist oder alle Belege gebucht sind, ist das Ergebnis erwartungsgemäß — Limetax importiert bewusst nur, was noch offen ist.
+
+Zweitens: der SmartLogin ist **mandantenspezifisch**, nicht universell. Dann bricht der Agent nach dem Scan intern ab, ohne dass es dir angezeigt wird. Prüf mit eurem SmartLogin-Verantwortlichen, welchen Typ ihr habt. Solange das nicht geklärt ist, nimm den [manuellen Weg](/belege/manuell-herunterladen).
+
+## Es fehlen einzelne Belege
+
+Wenn im Monatslauf ein oder zwei Belege fehlen, die der Mandant sicher eingereicht hat, sind meist drei Ursachen im Spiel:
+
+- **Der Beleg ist in DUO, aber schon als gebucht markiert.** Passiert, wenn vorher jemand in DUO direkt gebucht hat. Kläre kurz, ob die Buchung stimmt — meistens ist sie ein Altlast-Eintrag und du hakst den Beleg in DUO ab.
+- **Der Beleg ist gar nicht in DUO angekommen.** Bei Vorsystemen (Pleo, Moss, Lexware Office, SevDesk) hat der [Vorsystem-Export nach DUO](/belege/vorsysteme) nicht geklappt. Mandant muss den Export erneut anstoßen.
+- **Der Beleg wurde vom Mandanten nie eingereicht.** Klassiker. Nutze [Fehlende Belege anfordern](/belege/fehlende-belege-anfordern), um eine strukturierte Nachforderung rauszuschicken.
+
+## Dubletten sind reingekommen
+
+Kein Grund zur Sorge. Wenn Limetax denselben Beleg zweimal importiert (weil du zweimal denselben Zeitraum gezogen hast, oder weil der Mandant denselben Beleg zweimal hochgeladen hat), erkennt die Duplikatserkennung das anhand von Belegdatum, Rechnungsnummer und Beträgen. Der zweite Beleg landet direkt im Status **Manuell** und wird beim Export übersprungen.
+
+<Frame caption="Ein Beleg im Status Manuell wegen erkannter Dublette">
+  ![Belegansicht mit Status Manuell und Hinweis auf erkannte Dublette](/images/belege/beleg-manuell-duplikat.png)
+</Frame>
+
+Du musst die Dublette nicht extra bearbeiten. Wenn du sicher gehen willst, archiviere sie mit einer kurzen Notiz — sonst schwirrt sie in der Manuell-Liste rum, bis du am Monatsende aufräumst.
+
+## Der Import bricht ohne Fehlermeldung ab
+
+Selten, aber es kommt vor: der Agent-Lauf endet, es sind aber weniger Belege gekommen, als in DUO sichtbar wären. Meistens hilft ein zweiter Lauf ein paar Minuten später — DUO drosselt gelegentlich große Downloads, dann läuft der zweite Versuch durch. Wenn auch der zweite Lauf nichts bringt, wechsle zum [manuellen Weg](/belege/manuell-herunterladen) und meld den Fall an [kontakt@limetax.de](mailto:kontakt@limetax.de) mit Mandantennummer und Zeitraum.
+
+<Columns cols={2}>
+  <Card title="SmartLogin-Agent" icon="qrcode" href="/belege/smartlogin-agent">
+    So läuft der reguläre Import.
+  </Card>
+
+  <Card title="Fehlende Belege anfordern" icon="envelope" href="/belege/fehlende-belege-anfordern">
+    E-Mail-Entwurf für den Mandanten.
+  </Card>
+</Columns>

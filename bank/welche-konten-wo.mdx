@@ -1,0 +1,56 @@
+---
+title: "Welche Konten in Limetax und welche in DATEV gebucht werden"
+sidebarTitle: "Welche Konten wo buchen"
+description: "Die wichtigste Grundregel vor dem ersten Bankimport — sonst entstehen Doppelbuchungen, die später aufwändig storniert werden müssen."
+icon: "arrows-split-up-and-left"
+---
+
+Bevor du in einem Mandanten das erste Finanzkonto anlegst und den ersten Bankumsatz importierst, muss eine Grundregel geklärt sein: welche Bankkonten und Zahlungskonten laufen über Limetax, welche laufen weiter über DATEV. Wenn diese Trennung nicht sitzt, buchst du dieselben Umsätze zweimal — einmal in Limetax, einmal in DATEV — und die Bereinigung im Kanzlei-Rechnungswesen ist deutlich schmerzhafter als die einmalige Klärung vorne.
+
+Die Regel ist einfach zu merken, wenn du sie einmal verstanden hast. Sie folgt aus der Architektur: Limetax buchst nur, was als **Datei** in die App kommt. Alles, was direkt aus einer Bank-Anbindung nach DATEV fließt, bleibt in DATEV.
+
+## Die Regel
+
+In Limetax buchst du **nur Konten, deren Umsätze als Datei ankommen** — CSV, Excel oder PDF, entweder als Upload oder über den QR-Sync eines Vorsystems.
+
+**Konkret in Limetax:**
+
+- Kreditkarten mit Datei-Abrechnung (AMEX, Visa Business, sofern per PDF ausgeliefert).
+- Ausgabenmanagement-Systeme mit Datei-Export (Moss, Pleo, Ramp).
+- PayPal, wenn die Abrechnung per Datei kommt (Monatsauszug PDF).
+- Kassen (Bar, Registrierkasse), wenn Kassenberichte hochgeladen werden.
+- Alle anderen Datei-basierten Zahlungskonten (bar geführte Auslagenkasse, virtuelle Wallets).
+
+**Konkret in DATEV, nicht in Limetax:**
+
+- Geschäftskonto über **RZ-Bankinfo** (DATEV-Bankanbindung mit HBCI/FinTS).
+- Bankkonten, die über **DATEV Unternehmen Online** an DATEV übergeben werden.
+- Kreditkarten, die über DATEV direkt angebunden sind.
+
+## Warum
+
+Bei RZ-Bankinfo und DUO-Bankanbindungen fließen die Umsätze automatisch aus der Bank nach DATEV Kanzlei-Rechnungswesen — meist mehrmals pro Tag. Wenn du dieselben Umsätze zusätzlich als Datei nach Limetax lädst und den Buchungsstapel exportierst, stehen sie zweimal in DATEV. Das fällt oft erst bei der Kontenabstimmung am Monatsende auf — und dann ist Stornoarbeit fällig, weil du in Limetax freigegebene, in DATEV festgeschriebene Buchungen wieder zurückrollen musst.
+
+Der umgekehrte Fall — ein Datei-Konto in DATEV statt in Limetax buchen — ist weniger schlimm, aber unpraktisch: du verlierst den Vorteil der automatischen Kontierung durch Limetax und arbeitest doppelt.
+
+## In der Praxis
+
+Beim Onboarding eines neuen Mandanten geh die Konten einmal durch: Welche laufen wo? Trag das Ergebnis in die [Notiz in den Stammdaten](/stammdaten/stammdaten-und-notiz) ein. Dann muss niemand im Team es zweimal herausfinden — und wenn irgendwann jemand fragt „Warum ist das AMEX-Konto in Limetax und die Sparkasse nicht?", steht die Antwort schon da.
+
+<Note>
+  Ein häufiger Fall aus der Praxis: der Mandant hat mehrere Karten, eine läuft über die Bank-Anbindung, eine über eine Datei. Kein Grund zur Panik — beide dürfen parallel existieren, du buchst nur die Datei-Karte in Limetax und lässt die andere in DATEV. Die Trennung ist pro Konto, nicht pro Mandant.
+</Note>
+
+## Was passiert, wenn die Regel nicht sitzt
+
+Wenn im ersten Monat versehentlich ein DUO-Konto in Limetax importiert wird, siehst du das spätestens beim Übertragen des Stapels: die Zusammenfassung zeigt Beträge, die dir bekannt vorkommen, weil sie schon in DATEV stehen. Übertrag den Stapel in dem Fall **nicht**. Lösch die Datei-Zeilen aus dem Limetax-Import (oder setz die betroffenen Belege auf Manuell) und beginn den Bankteil des Monats für dieses Konto neu.
+
+<Columns cols={2}>
+  <Card title="Finanzkonten anlegen" icon="plus" href="/bank/finanzkonten-anlegen">
+    Wenn die Regel klar ist: die Finanzkonten anlegen.
+  </Card>
+
+  <Card title="Umsätze importieren" icon="file-import" href="/bank/umsaetze-importieren">
+    Wie die Datei-Umsätze in die App kommen.
+  </Card>
+</Columns>

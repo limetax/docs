@@ -1,0 +1,55 @@
+---
+title: "Eingangsrechnungen prüfen und freigeben"
+sidebarTitle: "Eingangsrechnungen prüfen"
+description: "Der Arbeits-Loop in der Belegansicht: durchgehen, prüfen, korrigieren, freigeben — mit Tastenkürzeln in wenigen Sekunden pro Beleg."
+---
+
+Die Prüfung der Eingangsrechnungen ist die zeitintensivste Aufgabe im Monatslauf. Wenn du diesen Ablauf gut im Griff hast, ist der Rest des Monats fast von selbst gemacht. Der Kern: nicht jedes Feld einzeln durchdenken, sondern in einem festen Rhythmus über die Belege gehen und nur da eingreifen, wo die KI wirklich einen Fehler gemacht hat.
+
+Der Bereich liegt unter **Buchhaltung → 2 Eingangsrechnung**. Filtre die Liste auf Status **Prüfen** — die Belege im Status **Freigegeben** sind schon fertig, die willst du beim Loop nicht anfassen.
+
+## Vor dem Start: einmal die Zahlen ansehen
+
+Bevor du einen Beleg öffnest, wirf einen Blick auf die Zähler oben: **Prüfen (n)**, **Manuell (n)**, **Freigegeben (n)**. Wenn du weißt, dass du gerade 40 Belege im Prüfen-Status hast, planst du dafür 15–20 Minuten und arbeitest sie am Stück ab. Das ist wichtiger als es klingt — Unterbrechungen mitten in einem Loop führen dazu, dass du hinterher nicht mehr weißt, welchen Beleg du zuletzt gesehen hast.
+
+## Der Loop
+
+Klick den ersten Beleg an. Es öffnet sich die [Belegansicht](/rechnungen/belegansicht) — links das Original-PDF, rechts der KI-Vorschlag.
+
+Geh die Felder in einer festen Reihenfolge durch: **Gegenpartei → Datum → Beträge → Sachkonto → Steuerschlüssel → ggf. Kostenstelle**. Bei der KI-Vorkontierung sitzen die ersten vier Felder in 90\+ % der Fälle. Sachkonto und Steuerschlüssel sind die häufigsten Korrekturfälle — Beleg auf einem Sachkonto, das für den Mandanten nicht passt, oder Sonderfälle bei der Vorsteuer.
+
+Wenn alles passt, drückst du **F** — Beleg freigegeben, der nächste öffnet sich. Wenn du korrigieren musst, klick ins Feld, überschreib den Wert, dann **F**. Die App merkt sich deine Korrektur pro Lieferant: beim nächsten Beleg desselben Lieferanten schlägt sie den korrigierten Wert vor. Wenn du zurück willst, drückst du **P** (previous), wenn du erstmal auslassen willst, **N** (next). Die vollständige Kürzelliste steht in [Tastenkürzel](/stammdaten/tastenkuerzel).
+
+<Frame caption="Belegansicht während des Prüf-Loops">
+  ![Belegansicht mit PDF links und KI-Vorschlag rechts, während der Prüfung](/images/rechnungen/belegansicht-pruefen.png)
+</Frame>
+
+## Was du bewusst prüfst
+
+Nicht alles muss auf jedem Beleg geprüft werden. Konzentriere dich auf die vier Punkte, wo Fehler wehtun:
+
+- **Vorsteuerabzug korrekt.** Bei ausländischen Rechnungen ohne deutsche USt-ID ist der Vorsteuerabzug ausgeschlossen. Wenn die KI hier trotzdem 19 % vorschlägt, korrigiere.
+- **Steuerschlüssel bei §13b und i. g. Erwerb.** Auslandsbelege landen zwar meist in **Manuell**, aber nicht immer — bei einem eingespielten Lieferanten kann die App zu unrecht in **Prüfen** setzen. Kurz kontrollieren.
+- **Sachkonto beim Erstbeleg eines neuen Lieferanten.** Der erste Beleg legt fest, worauf zukünftige Belege desselben Lieferanten laufen. Wenn du hier falsch kontierst, korrigierst du später jeden Beleg einzeln.
+- **Skonto und Rabatte.** Wenn die Rechnung Skonto ausweist, prüf, ob der Betrag korrekt gebucht wird — je nach Mandant und Kontenrahmen läuft das anders.
+
+## Wenn du unsicher bist
+
+Statt einen unsicheren Beleg freizugeben, nutze zwei Wege:
+
+- **[Otto fragen](/rechnungen/ki-fragen).** Der Chat-Assistent kennt den Beleg im Kontext und antwortet auf steuerliche Fragen mit einer Einschätzung inklusive Quelle. „Wie buche ich eine AWS-Rechnung mit Reverse-Charge?" — Otto antwortet mit dem passenden Muster und den Sachkonten.
+- **Auf Manuell setzen.** Wenn du gerade keine Zeit hast, den Fall zu klären, setz den Beleg auf **Manuell** mit einer kurzen Notiz. Beim nächsten Monatsende arbeitest du die Manuell-Liste gebündelt ab.
+
+<Warning>
+  Gib keinen Beleg frei, den du nicht wirklich verstehst. Ein einmal freigegebener Beleg im Buchungsstapel landet nach dem [Export](/export/stapel-uebertragen) und [Festschreiben in DATEV](/export/stapel-in-datev) — dann ist die Korrektur ein Storno statt einer Änderung.
+</Warning>
+
+<Columns cols={2}>
+  <Card title="Belegansicht" icon="table-columns" href="/rechnungen/belegansicht">
+    Die Aufteilung PDF links, Felder rechts im Detail.
+  </Card>
+
+  <Card title="Tastenkürzel" icon="keyboard" href="/stammdaten/tastenkuerzel">
+    Die Kürzel, die den Loop schnell machen.
+  </Card>
+</Columns>

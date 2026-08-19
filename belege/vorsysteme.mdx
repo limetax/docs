@@ -1,0 +1,49 @@
+---
+title: "Mandanten mit Vorsystemen: Pleo, Moss, Lexware Office, SevDesk"
+sidebarTitle: "Vorsysteme"
+description: "Wie du Mandanten anbindest, die ihre Belege nicht in DUO, sondern in einem Vorsystem verwalten."
+---
+
+Manche Mandanten arbeiten nicht direkt in DATEV Unternehmen Online, sondern in einem Vorsystem: Pleo für Kartenausgaben, Moss für Kreditkarten und Ausgabenmanagement, Lexware Office als Buchhaltungsvorbereitung oder SevDesk. Der Weg der Belege in Limetax ist bei allen ähnlich: **das Vorsystem exportiert die Belege nach DUO, Limetax holt sie aus DUO**. Der SmartLogin-Agent kann daher auch bei Vorsystem-Mandanten laufen, du musst nur einmal sicherstellen, dass die Kette Vorsystem → DUO steht.
+
+Dieser Artikel geht davon aus, dass die Anbindung zwischen Vorsystem und DUO bereits eingerichtet ist — das läuft üblicherweise über den Mandanten selbst oder das Vorsystem-Onboarding, nicht über die Kanzlei. Deine Aufgabe ist zu wissen, wann Belege in DUO ankommen und wann nicht.
+
+## Wann welche Belege in DUO landen
+
+Das hängt am Vorsystem. Zwei Muster tauchen praktisch überall auf:
+
+- **Push nach jedem Vorgang.** Sobald ein Beleg im Vorsystem freigegeben ist, geht er automatisch nach DUO. Pleo und Moss arbeiten so — sekundengenau, du siehst neue Belege ohne Verzögerung.
+- **Batch-Export einmal am Tag oder auf Knopfdruck.** Lexware Office und SevDesk exportieren nach DUO nicht immer sofort, sondern in Zeitintervallen oder wenn der Mandant den Export selbst anstößt. Wenn Belege in Limetax fehlen, ist oft nur der Batch-Export noch nicht durch.
+
+<Info>
+  Wenn du unsicher bist, prüf zuerst in DUO, ob der Beleg dort liegt. Ist er in DUO, holt ihn Limetax beim nächsten Agent-Lauf. Ist er nicht in DUO, ist er im Vorsystem hängengeblieben — und das musst du mit dem Mandanten klären.
+</Info>
+
+## Export im Vorsystem anstoßen
+
+{/* TODO: Konkrete Klickwege pro Vorsystem — Pleo, Moss, Lexware Office, SevDesk — von Batu ergänzen */}
+
+Bis die genauen Klickpfade dokumentiert sind, hier die Anlaufstelle pro System: im Vorsystem gibt es in der Regel einen Menüpunkt **DATEV-Export**, **Buchhaltungsvorbereitung** oder **Belegexport**. Der Export läuft entweder ins DUO-Postfach der Kanzlei oder direkt in den Belegeingang des Mandanten. Danach kommt der SmartLogin-Agent daran.
+
+## Karten- und Rechnungsbelege getrennt behandeln
+
+Bei Vorsystemen für Kartenausgaben (Pleo, Moss) laufen zwei verschiedene Datenströme:
+
+- **Belege** (Rechnungen, Quittungen) — kommen über DUO in Limetax und werden dort als Eingangsrechnung geführt.
+- **Abrechnungen der Karte** (monatliche Kartenauszüge) — landen unter [Umsätze importieren](/bank/umsaetze-importieren) als Kontoauszug für das entsprechende Finanzkonto.
+
+Beide Ströme werden erst beim Bank-[Matching](/bank/matching) zusammengeführt. Das heißt: Wenn du bei einem Moss-Mandanten nur die Belege siehst, aber keine Abrechnung, fehlt der zweite Weg. Umgekehrt genauso.
+
+## Wenn Belege dauerhaft fehlen
+
+Wenn nach mehreren Agent-Läufen Belege fehlen, die sichtbar im Vorsystem liegen, hilft nur der direkte Weg über den Mandanten oder das Vorsystem-Support-Team. Häufigste Ursachen: der Vorsystem-Nutzer hat keine Rechte, Belege nach DUO zu pushen; der Mandant hat den Batch-Export vergessen; die DUO-Anbindung braucht einen erneuten Login. Details findest du in [Import-Probleme](/belege/import-probleme).
+
+<Columns cols={2}>
+  <Card title="SmartLogin-Agent" icon="qrcode" href="/belege/smartlogin-agent">
+    So läuft der Import in Limetax.
+  </Card>
+
+  <Card title="Umsätze importieren" icon="file-import" href="/bank/umsaetze-importieren">
+    Wohin Kartenabrechnungen aus Pleo und Moss gehen.
+  </Card>
+</Columns>

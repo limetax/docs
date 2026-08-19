@@ -1,0 +1,58 @@
+---
+title: "Tastenkürzel in Limetax"
+description: "Mit diesen Kürzeln kommst du deutlich schneller durch die Belegprüfung — insbesondere beim wiederkehrenden Prüf-Loop."
+icon: "keyboard"
+sidebarTitle: "Tastenkürzel"
+---
+
+Beim Durchgehen der Eingangs- und Ausgangsrechnungen sind Tastenkürzel der Unterschied zwischen fünf Sekunden pro Beleg und fünfzehn. Über einen Monatslauf mit ein paar hundert Belegen wächst das zu einer halben oder ganzen Stunde eingesparter Zeit an — und die geht komplett in dein Ergebnis, weil der Kürzel-Loop nebenbei konzentrierter macht: du siehst den Beleg, nicht die Maus.
+
+Die Kürzel wirken in der [Belegansicht](/rechnungen/belegansicht), sobald du einen Beleg geöffnet hast. Die Voraussetzung ist, dass **kein Eingabefeld aktiv** ist — wenn du gerade im Betragsfeld tippst, tippt **N** in dieses Feld, statt zum nächsten Beleg zu springen. Klick einmal in den leeren Bereich der Belegansicht oder drück **Escape**, um alle Felder zu verlassen, dann funktionieren die Kürzel.
+
+## Der Kern: F und N
+
+Zwei Kürzel machen den Großteil des Nutzens aus.
+
+- **F** — Beleg freigeben. Wenn KI-Vorkontierung passt und du fertig bist, ein Tastendruck, und der Beleg wechselt in den Status **Freigegeben**.
+- **N** — nächster Beleg. Öffnet direkt den nächsten Beleg im Filter (Prüfen, Manuell, …).
+
+Der klassische Loop ist also: Beleg öffnen, prüfen, **F**. Der nächste öffnet sich automatisch, weil die App bei Freigabe automatisch weiterspringt. In der Praxis: **F, F, F, F, N** (weil du bei einem den Beleg auslassen willst), **F, F, F**. Ohne einmal die Maus zu berühren.
+
+## Weitere nützliche Kürzel
+
+- **P** oder **←** — vorheriger Beleg. Wenn du versehentlich freigegeben hast oder nochmal nachsehen willst.
+- **N** oder **→** — nächster Beleg, ohne den aktuellen freizugeben.
+- **S** — Sachkonto-Feld aktivieren, Kontierung ins Feld übernehmen und schnell wechseln.
+- **Esc** — Beleg schließen, zurück zur Liste.
+- **?** — Übersicht aller Tastenkürzel einblenden.
+
+{/* TODO: Vollständige Kürzel-Liste inklusive Split, Otto, Manuell-Setzen von Chris ergänzen */}
+
+## Wo die Kürzel nicht wirken
+
+Ein paar Fälle, in denen du zum Klick zurückgreifen musst:
+
+- **Auslandsbelege und Sonderfälle.** Wenn du in einem Feld tippen musst (Steuerschlüssel ändern, Notiz ergänzen), ist der Kürzel-Fluss unterbrochen — das ist okay, weil diese Belege ohnehin mehr Zeit brauchen.
+- **[Splitbuchungen](/rechnungen/splitbuchungen).** Solange du in den Splitzeilen tippst, sind die Kürzel deaktiviert. **F** funktioniert erst wieder, wenn alle Zeilen ausgefüllt sind und die Summenkontrolle grün ist.
+- **Beim Öffnen von Otto.** Der [Chat-Assistent](/rechnungen/ki-fragen) übernimmt die Tastatur, während du tippst.
+
+## Praktische Anwendung
+
+Die Kürzel entfalten ihren Wert, wenn du sie durchziehst, nicht wenn du sie ab und zu benutzt. Zwei Tipps:
+
+- **In der ersten Woche bewusst nur Kürzel.** Zwing dich, die Maus liegen zu lassen. Nach zwei Tagen sitzt das Muster.
+- **Mit einem großen Filter arbeiten.** Wenn du eine Liste mit hundert Belegen im Filter **Prüfen** hast und startest den Loop, hast du die schnellste Phase — je größer die Serie, desto stärker die Zeitersparnis.
+
+<Tip>
+  Wenn du merkst, dass du bei bestimmten Lieferanten immer wieder **F** drückst, ohne wirklich zu prüfen, ist das ein Signal für den [blauen Haken](/rechnungen/blauer-haken). Setz die Regel einmal, dann taucht dieser Lieferant im Prüf-Loop gar nicht mehr auf.
+</Tip>
+
+<Columns cols={2}>
+  <Card title="Eingangsrechnungen prüfen" icon="clipboard-check" href="/rechnungen/eingangsrechnungen-pruefen">
+    Der Loop, in dem die Kürzel wirken.
+  </Card>
+
+  <Card title="Blauer Haken" icon="square-check" href="/rechnungen/blauer-haken">
+    Wenn du ganze Lieferanten aus dem Loop nehmen willst.
+  </Card>
+</Columns>

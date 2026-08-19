@@ -1,0 +1,60 @@
+---
+title: "Durchlaufende Posten (1590 / 1370) auflösen"
+sidebarTitle: "Durchlaufende Posten auflösen"
+description: "Warum Bankumsätze ohne Beleg auf 1590 (SKR 03) oder 1370 (SKR 04) landen und wie du das Konto zuverlässig gegen 0 fährst."
+icon: "shuffle"
+---
+
+Wenn Limetax beim [Matching](/bank/matching) einem Bankumsatz keinen passenden Beleg zuordnen kann, bucht die App den Umsatz nicht einfach nicht — sie bucht ihn auf ein **durchlaufendes Posten**-Konto. Bei SKR 03 ist das **1590**, bei SKR 04 **1370**. Diese Buchungspraxis hat einen wichtigen Zweck: die Bank ist trotzdem vollständig gebucht, jeder offene Sachverhalt ist sichtbar und zählbar, und du siehst mit einem Blick, wie viel Arbeit im Monat noch offen ist.
+
+Ein dauerhaft gefülltes DP-Konto ist keine Fehlermeldung, sondern ein Arbeitsauftrag: es fehlen Belege. Der Standard-Rhythmus ist, das Konto einmal pro Monatslauf gegen 0 zu fahren — mit dem Ziel, dass am Monatsabschluss kein Umsatz mehr dort steht.
+
+## Warum das gut ist
+
+Die Alternative wäre, Bankumsätze ohne Beleg gar nicht zu buchen. Dann wäre die Bank unvollständig, der Saldo falsch, und der offene Sachverhalt nirgends sichtbar — er würde erst bei der Kontenabstimmung am Monatsende auffallen. Über die durchlaufenden Posten dagegen gilt:
+
+- **Die Bank ist vollständig gebucht.** Kontostand und Buchhaltungsstand stimmen jederzeit überein.
+- **Jeder offene Sachverhalt ist zählbar.** Ein Blick aufs DP-Konto sagt dir, wieviel Belege fehlen — konkret in Euro und Anzahl.
+- **Sobald der Beleg da ist, wird die Buchung automatisch aufgelöst.** Der neue Beleg wird gebucht, das nächste Matching zieht die Zahlung von 1590/1370 runter und bucht sie gegen den Kreditor um.
+
+<Frame caption="Umsätze auf den durchlaufenden Posten">
+  ![Liste der Umsätze, die auf durchlaufende Posten gebucht wurden](/images/bank/durchlaufende-posten-liste.png)
+</Frame>
+
+## Wie du das Konto gegen 0 fährst
+
+Der Ablauf ist immer derselbe:
+
+1. **Stand prüfen.** Nach dem Bank-[Matching](/bank/matching) öffnest du das Sachkonto 1590 (SKR 03) oder 1370 (SKR 04) und schaust, was drauf liegt. Meistens sind es zehn bis fünfzig Umsätze pro Mandant und Monat, unterschiedlich groß.
+2. **Belege anfordern.** Nutze [Fehlende Belege anfordern](/belege/fehlende-belege-anfordern) — die App bereitet dir eine strukturierte E-Mail mit Excel-Anhang vor, in der alle offenen Posten aufgelistet sind. Der Mandant sieht Datum, Betrag, Gegenpartei und Verwendungszweck und weiß genau, wonach du fragst.
+3. **Belege einholen und importieren.** Sobald der Mandant reagiert, importierst du die Belege über den normalen Weg ([SmartLogin-Agent](/belege/smartlogin-agent) oder manuell), kontierst sie und gibst sie frei.
+4. **Erneut matchen.** Beim nächsten Import-Zyklus läuft das Matching automatisch nochmal — jetzt findet es die passenden Belege und bucht die Zahlungen vom DP-Konto runter.
+
+<Note>
+  Bau dir einen festen Rhythmus. Direkt nach dem Bank-Matching den Stand prüfen und die Belegnachforderung rausschicken. Monatlich, immer am gleichen Punkt im Prozess. Wenn du das durchziehst, ist das DP-Konto am Monatsende ein bis zwei Wochen später leer — und du gehst nicht mit einer langen Liste ins nächste Monatsende.
+</Note>
+
+## Was bleibt trotzdem drauf
+
+Nicht jeder Umsatz auf 1590/1370 wird durch einen Beleg aufgelöst. Klassische Fälle, die auf dem DP-Konto bleiben, weil sie keine reguläre Rechnung sind:
+
+- **Gehaltszahlungen** — die kommen aus dem Lohnprogramm und werden dort gebucht.
+- **Steuerzahlungen** — Voranmeldungszahlungen an das Finanzamt, Steuernachzahlungen. Die bucht ihr in DATEV.
+- **Kreditrückzahlungen** — Tilgung und Zinsen kommen nicht als Rechnung.
+- **Interne Umbuchungen** — Übertragungen zwischen den Konten des Mandanten.
+
+Für diese Fälle gibt es zwei Wege: entweder bucht ihr sie direkt in DATEV Kanzlei-Rechnungswesen weg, oder ihr korrigiert die Buchung in Limetax und setzt den Umsatz auf **Manuell** mit dem passenden Sachkonto.
+
+## Wann du auf keinen Fall stumm freigibst
+
+Ein häufiger Fehler bei neuen Kolleg:innen: einen unklaren Umsatz auf 1590 einfach auf ein Aufwandskonto umbuchen, damit die DP-Liste kürzer wird. Mach das **nicht** — der Umsatz bleibt so lange auf 1590, bis der Beleg tatsächlich da ist. Nur mit Beleg wird die Buchung aufgelöst. Ohne Beleg ist eine Aufwandsbuchung auf gut Glück steuerlich nicht abzugsfähig und wird bei einer Betriebsprüfung zurückgedreht.
+
+<Columns cols={2}>
+  <Card title="Fehlende Belege anfordern" icon="envelope" href="/belege/fehlende-belege-anfordern">
+    E-Mail-Entwurf mit Excel-Liste an den Mandanten.
+  </Card>
+
+  <Card title="Matching" icon="link" href="/bank/matching">
+    Der Schritt davor.
+  </Card>
+</Columns>

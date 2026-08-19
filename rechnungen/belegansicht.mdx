@@ -1,0 +1,59 @@
+---
+title: "Die Belegansicht: PDF links, Kontierung rechts"
+sidebarTitle: "Belegansicht"
+description: "Wie die Belegansicht aufgebaut ist und welche Felder du im Alltag brauchst."
+---
+
+Die Belegansicht ist das Fenster, in dem du 90 % deiner Zeit mit Limetax verbringst. Sie ist bewusst zweigeteilt: **links das Original-PDF**, damit du die Rechnung visuell prüfen kannst, **rechts die strukturierten Felder**, in denen die Kontierung entsteht. Diese Aufteilung hat einen Zweck — du willst nie „im Kopf" prüfen, ob ein Betrag stimmt. Du willst ihn auf der Rechnung sehen und rechts vergleichen.
+
+Der Artikel ist eine Referenz: was steht wo, was tut welches Feld. Der eigentliche Arbeits-Loop steht in [Eingangsrechnungen prüfen](/rechnungen/eingangsrechnungen-pruefen).
+
+## Linke Seite: das PDF
+
+Auf der linken Hälfte des Fensters siehst du den Beleg im Original. Du kannst mit dem Scrollrad zoomen, mit gedrückter Maustaste verschieben und die Miniaturansicht am unteren Rand für Multi-Seiten-Belege nutzen.
+
+<Frame caption="Belegansicht mit vergrößertem PDF">
+  ![Vergrößerte PDF-Anzeige mit erkennbaren Beträgen](/images/rechnungen/belegansicht-pdf-zoom.png)
+</Frame>
+
+Bei ZUGFeRD-, XRechnung- und Factur-X-Belegen zeigt die Ansicht sowohl die visuelle PDF als auch die eingebetteten strukturierten Daten. Die KI nutzt die strukturierten Daten primär — die PDF-Anzeige ist für deine visuelle Kontrolle da.
+
+## Rechte Seite: die Kontierungsfelder
+
+Auf der rechten Hälfte stehen die Felder in einer festen Reihenfolge von oben nach unten. Die Reihenfolge ist bewusst gewählt: jedes Feld greift auf die vorherigen zurück.
+
+### Belegkopf
+
+- **Gegenpartei** — Lieferant bei Eingangsrechnungen, Kunde bei Ausgangsrechnungen. Die KI zieht den Namen aus dem Beleg und legt den Debitor oder Kreditor automatisch an, falls er noch nicht existiert.
+- **Rechnungsdatum** und **Rechnungsnummer** — aus dem Beleg. Bei fehlenden oder unklaren Datumsangaben nimmt die KI das Rechnungsdatum, nicht das Leistungsdatum. Bei abweichendem Leistungsdatum gibt es ein Zusatzfeld.
+- **Fälligkeitsdatum** — errechnet aus Rechnungsdatum \+ Zahlungsziel, wenn auf der Rechnung ausgewiesen. Sonst leer.
+
+### Beträge und Steuer
+
+- **Bruttobetrag**, **Nettobetrag**, **USt-Betrag** — aus dem Beleg gelesen und rechnerisch geprüft. Wenn die Beträge nicht aufgehen (Rundungsdifferenzen), warnt die App.
+- **Steuersatz** und **Steuerschlüssel** — abgeleitet aus dem Ausweis auf der Rechnung. Standardfälle: 19 %, 7 %, 0 % oder steuerfrei. Sonderfälle: **RC** für Reverse-Charge, **IG** für innergemeinschaftlichen Erwerb. Für Details siehe [Auslandsbelege](/rechnungen/auslandsbelege).
+
+### Kontierung
+
+- **Sachkonto** — das Aufwands- oder Ertragskonto. Die KI wählt anhand der Gegenpartei, des Verwendungszwecks und der Historie mit demselben Mandanten.
+- **Gegenkonto** — das Kreditoren- oder Debitorenkonto der Gegenpartei. Meist automatisch anhand des Namens erkannt oder neu angelegt.
+- **Kostenstelle** — optional, wenn der Mandant Kostenstellen führt. Details in [Kostenstellen](/stammdaten/kostenstellen).
+
+### Split und Sonstiges
+
+- **Splitbuchungen** — wenn ein Beleg auf mehrere Sachkonten aufgeteilt werden muss (z. B. eine Rechnung mit Software und Hardware auf zwei Sachkonten), klickst du auf **Split** und legst weitere Zeilen an. Details in [Splitbuchungen](/rechnungen/splitbuchungen).
+- **Notiz** — freies Textfeld pro Beleg, für Kanzlei-interne Hinweise. Sichtbar nur für Kanzleinutzer.
+
+## Aktionen unten
+
+Unter den Feldern liegen die Aktionen: **Freigeben**, **Auf Manuell setzen**, **Nächster/Vorheriger Beleg**, **Splitten**, **Otto fragen**. Die häufigsten Aktionen (Freigeben, Nächster, Vorheriger) haben eigene [Tastenkürzel](/stammdaten/tastenkuerzel).
+
+<Columns cols={2}>
+  <Card title="Eingangsrechnungen prüfen" icon="clipboard-check" href="/rechnungen/eingangsrechnungen-pruefen">
+    Wie du die Belegansicht im Loop nutzt.
+  </Card>
+
+  <Card title="Splitbuchungen" icon="arrows-split-up-and-left" href="/rechnungen/splitbuchungen">
+    Wenn ein Beleg auf mehrere Sachkonten aufgeteilt werden muss.
+  </Card>
+</Columns>

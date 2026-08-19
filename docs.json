@@ -1,0 +1,460 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "Limetax Helpcenter",
+  "colors": {
+    "primary": "#436fff",
+    "light": "#5a85ff",
+    "dark": "#2d55e8"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "pages": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Dokumentation",
+          "href": "https://mintlify.com/docs",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://mintlify.com/blog",
+          "icon": "newspaper"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "language": "de",
+        "default": true,
+        "groups": [
+          {
+            "group": "Erste Schritte",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "group": "Belege importieren",
+            "icon": "inbox-in",
+            "pages": [
+              "belege/smartlogin-agent",
+              "belege/manuell-herunterladen",
+              "belege/vorsysteme",
+              "belege/import-probleme",
+              "belege/fehlende-belege-anfordern"
+            ]
+          },
+          {
+            "group": "Rechnungen",
+            "icon": "file-invoice",
+            "pages": [
+              "rechnungen/status-verstehen",
+              "rechnungen/eingangsrechnungen-pruefen",
+              "rechnungen/belegansicht",
+              "rechnungen/splitbuchungen",
+              "rechnungen/manuell-buchen",
+              "rechnungen/ausgangsrechnungen",
+              "rechnungen/blauer-haken",
+              "rechnungen/ki-fragen",
+              "rechnungen/auslandsbelege"
+            ]
+          },
+          {
+            "group": "Bank",
+            "icon": "building-columns",
+            "pages": [
+              "bank/welche-konten-wo",
+              "bank/finanzkonten-anlegen",
+              "bank/umsaetze-importieren",
+              "bank/matching",
+              "bank/durchlaufende-posten"
+            ]
+          },
+          {
+            "group": "Stammdaten",
+            "icon": "sliders",
+            "pages": [
+              "stammdaten/kostenstellen",
+              "stammdaten/stammdaten-und-notiz",
+              "stammdaten/tastenkuerzel"
+            ]
+          },
+          {
+            "group": "Export nach DATEV",
+            "icon": "arrow-right-from-bracket",
+            "pages": [
+              "export/stapel-uebertragen",
+              "export/stapel-in-datev",
+              "export/anlagenzugaenge"
+            ]
+          },
+          {
+            "group": "Funktionsstand",
+            "icon": "list-check",
+            "pages": [
+              "funktionsstand/funktionsstand"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://www.limetax.de"
+  },
+  "navbar": {
+    "links": [
+      {
+        "href": "mailto:kontakt@limetax.de",
+        "label": "Support"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Zur Limetax App",
+      "href": "https://app.limetax.de"
+    }
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "website": "https://www.limetax.de"
+    }
+  },
+  "search": {
+    "prompt": "Helpcenter durchsuchen…"
+  },
+  "description": "Hilfe und Anleitungen zur Limetax App für Steuerkanzleien.",
+  "fonts": {
+    "family": "Geist"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "redirects": [
+    {
+      "source": "/belege/fehlende-belege",
+      "destination": "/belege/fehlende-belege-anfordern",
+      "permanent": true
+    },
+    {
+      "source": "/belege/fehlende-anfordern",
+      "destination": "/belege/fehlende-belege-anfordern",
+      "permanent": true
+    },
+    {
+      "source": "/belege/bereitstellen",
+      "destination": "/belege/smartlogin-agent",
+      "permanent": true
+    },
+    {
+      "source": "/belege/belegerkennung",
+      "destination": "/belege/smartlogin-agent",
+      "permanent": true
+    },
+    {
+      "source": "/belege/erkennung",
+      "destination": "/belege/smartlogin-agent",
+      "permanent": true
+    },
+    {
+      "source": "/belege/duplikate",
+      "destination": "/belege/import-probleme",
+      "permanent": true
+    },
+    {
+      "source": "/belege/heften",
+      "destination": "/belege/smartlogin-agent",
+      "permanent": true
+    },
+    {
+      "source": "/erste-schritte/was-limetax-uebernimmt",
+      "destination": "/erste-schritte/was-macht-limetax",
+      "permanent": true
+    },
+    {
+      "source": "/erste-schritte/geeignete-mandanten",
+      "destination": "/erste-schritte/passende-mandanten",
+      "permanent": true
+    },
+    {
+      "source": "/erste-schritte/anmeldung",
+      "destination": "/erste-schritte/anmelden-und-mandant-oeffnen",
+      "permanent": true
+    },
+    {
+      "source": "/erste-schritte/oberflaeche",
+      "destination": "/erste-schritte/anmelden-und-mandant-oeffnen",
+      "permanent": true
+    },
+    {
+      "source": "/erste-schritte/datev-verbinden",
+      "destination": "/erste-schritte/was-macht-limetax",
+      "permanent": true
+    },
+    {
+      "source": "/kontierung/durchlaufende-posten",
+      "destination": "/bank/durchlaufende-posten",
+      "permanent": true
+    },
+    {
+      "source": "/kontierung/kostenstellen",
+      "destination": "/stammdaten/kostenstellen",
+      "permanent": true
+    },
+    {
+      "source": "/kontierung/vorschlaege-pruefen",
+      "destination": "/rechnungen/eingangsrechnungen-pruefen",
+      "permanent": true
+    },
+    {
+      "source": "/kontierung/automatikkonten",
+      "destination": "/rechnungen/eingangsrechnungen-pruefen",
+      "permanent": true
+    },
+    {
+      "source": "/kontierung/privatauslagen",
+      "destination": "/rechnungen/manuell-buchen",
+      "permanent": true
+    },
+    {
+      "source": "/kontierung/aufzuteilende-vorsteuer",
+      "destination": "/rechnungen/auslandsbelege",
+      "permanent": true
+    },
+    {
+      "source": "/kontierung/steuerfreie-umsaetze",
+      "destination": "/rechnungen/auslandsbelege",
+      "permanent": true
+    },
+    {
+      "source": "/bank/bewegungen-buchen",
+      "destination": "/bank/matching",
+      "permanent": true
+    },
+    {
+      "source": "/bank/buchen",
+      "destination": "/bank/matching",
+      "permanent": true
+    },
+    {
+      "source": "/bank/bankregeln",
+      "destination": "/bank/matching",
+      "permanent": true
+    },
+    {
+      "source": "/bank/regeln",
+      "destination": "/bank/matching",
+      "permanent": true
+    },
+    {
+      "source": "/bank/kontoauszuege-pdf",
+      "destination": "/bank/umsaetze-importieren",
+      "permanent": true
+    },
+    {
+      "source": "/bank/pdf-auszuege",
+      "destination": "/bank/umsaetze-importieren",
+      "permanent": true
+    },
+    {
+      "source": "/bank/sammelzahlungen",
+      "destination": "/bank/matching",
+      "permanent": true
+    },
+    {
+      "source": "/datev/buchungsdatenservice",
+      "destination": "/export/stapel-uebertragen",
+      "permanent": true
+    },
+    {
+      "source": "/datev/exportieren",
+      "destination": "/export/stapel-uebertragen",
+      "permanent": true
+    },
+    {
+      "source": "/datev/export",
+      "destination": "/export/stapel-uebertragen",
+      "permanent": true
+    },
+    {
+      "source": "/datev/export-probleme",
+      "destination": "/export/stapel-uebertragen",
+      "permanent": true
+    },
+    {
+      "source": "/datev/abweichendes-wirtschaftsjahr",
+      "destination": "/export/stapel-in-datev",
+      "permanent": true
+    },
+    {
+      "source": "/bescheidpruefung/bescheid-pruefen",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/bescheidpruefung/abweichungen",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/bescheidpruefung/ampel-status",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/bescheide/hochladen-und-pruefen",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/bescheide/abweichungen",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/bescheide/ampel",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/chat/fragen-stellen",
+      "destination": "/rechnungen/ki-fragen",
+      "permanent": true
+    },
+    {
+      "source": "/chat/quellen-pruefen",
+      "destination": "/rechnungen/ki-fragen",
+      "permanent": true
+    },
+    {
+      "source": "/chat/grenzen",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/agenten/ueberblick",
+      "destination": "/belege/smartlogin-agent",
+      "permanent": true
+    },
+    {
+      "source": "/agenten/uebersicht",
+      "destination": "/belege/smartlogin-agent",
+      "permanent": true
+    },
+    {
+      "source": "/agenten/einrichten",
+      "destination": "/belege/smartlogin-agent",
+      "permanent": true
+    },
+    {
+      "source": "/agenten/ueberwachen",
+      "destination": "/belege/smartlogin-agent",
+      "permanent": true
+    },
+    {
+      "source": "/verwaltung/mandanten-anlegen",
+      "destination": "/stammdaten/stammdaten-und-notiz",
+      "permanent": true
+    },
+    {
+      "source": "/verwaltung/nutzer-anlegen",
+      "destination": "/stammdaten/stammdaten-und-notiz",
+      "permanent": true
+    },
+    {
+      "source": "/verwaltung/berechtigungen",
+      "destination": "/stammdaten/stammdaten-und-notiz",
+      "permanent": true
+    },
+    {
+      "source": "/verwaltung/stammdaten",
+      "destination": "/stammdaten/stammdaten-und-notiz",
+      "permanent": true
+    },
+    {
+      "source": "/kanzlei/mandanten-anlegen",
+      "destination": "/stammdaten/stammdaten-und-notiz",
+      "permanent": true
+    },
+    {
+      "source": "/kanzlei/nutzer-anlegen",
+      "destination": "/stammdaten/stammdaten-und-notiz",
+      "permanent": true
+    },
+    {
+      "source": "/kanzlei/berechtigungen",
+      "destination": "/stammdaten/stammdaten-und-notiz",
+      "permanent": true
+    },
+    {
+      "source": "/kanzlei/stammdaten",
+      "destination": "/stammdaten/stammdaten-und-notiz",
+      "permanent": true
+    },
+    {
+      "source": "/sicherheit/datenhaltung",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/sicherheit/mandantendaten",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/sicherheit/grenzen-ki",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/sicherheit/wo-die-daten-liegen",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/sicherheit/was-mit-mandantendaten-passiert",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/sicherheit/grenzen-der-ki",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/fehler/index",
+      "destination": "/belege/import-probleme",
+      "permanent": true
+    },
+    {
+      "source": "/fehler/index-nach-fehlermeldung",
+      "destination": "/belege/import-probleme",
+      "permanent": true
+    },
+    {
+      "source": "/changelog",
+      "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    }
+  ]
+}

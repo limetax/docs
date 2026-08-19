@@ -1,0 +1,60 @@
+---
+title: "Matching: Bankumsatz und Beleg zusammenbringen"
+sidebarTitle: "Matching"
+description: "Wie Limetax importierte Zahlungen den bereits gebuchten Belegen zuordnet — und was du im Anschluss kontrollierst."
+icon: "link"
+---
+
+Wenn die Belege gebucht sind und die Bankumsätze importiert wurden, ordnet Limetax die Zahlungen den Belegen zu. Das ist das **Matching** — der Punkt, an dem eine Rechnung, die vor drei Wochen gebucht wurde, mit der Zahlung von vor zwei Tagen zusammenfindet und der Kreditor endlich richtig ausgeglichen ist. Das Matching läuft automatisch nach jedem Umsatzimport, du musst nichts anstoßen. Deine Aufgabe ist zu kontrollieren, was zusammengeführt wurde, und die offenen Fälle zu klären.
+
+Ganz wichtig: das Matching setzt voraus, dass die Belege **vor** den Umsätzen gebucht sind — sonst findet der Abgleich nichts, und alle Zahlungen laufen auf die durchlaufenden Posten. Deshalb ist die Reihenfolge im Monatslauf: Belege importieren → Rechnungen prüfen und freigeben → Bank importieren → Matching.
+
+<Warning>
+  Erst Belege, dann Bank. Wenn du in der Reihenfolge Bank vor Belegen arbeitest, findet das Matching nichts, alles landet auf 1590 (SKR 03) oder 1370 (SKR 04), und du hast anschließend die doppelte Arbeit: Belege buchen und die durchlaufenden Posten wieder auflösen.
+</Warning>
+
+## Wie das Matching arbeitet
+
+Der Abgleich läuft primär über den **Betrag**. Die App sucht pro Bankumsatz nach einer offenen Rechnung mit exakt demselben Betrag.
+
+- **Ein eindeutiger Treffer**: automatische Zuordnung. Die Zahlung wird gegen den Kreditor oder Debitor gebucht, der Offene-Posten-Stand des Belegs geht auf 0.
+- **Mehrere Treffer** (zwei Rechnungen mit demselben Betrag im offenen Bestand): die KI entscheidet anhand von Gegenpartei, Datum und Verwendungszweck. Bei Unsicherheit wird die Zuordnung nicht automatisch gemacht, sondern der Umsatz landet in einer Prüfliste.
+- **Kein Treffer**: der Umsatz läuft auf die [durchlaufenden Posten](/bank/durchlaufende-posten). Das ist die zweite Chance — sobald der fehlende Beleg reinkommt, matcht die App beim nächsten Lauf.
+
+<Frame caption="Transaktionsliste nach dem Matching">
+  ![Liste der Transaktionen mit gematchten und nicht gematchten Umsätzen](/images/bank/matching-transaktionsliste.png)
+</Frame>
+
+## Was du kontrollierst
+
+Nicht jeder automatisch gematchte Umsatz ist ein Volltreffer. Vor allem in zwei Konstellationen lohnt sich ein kurzer Blick:
+
+- **Wiederkehrende gleich hohe Beträge vom selben Kreditor.** Wenn ein Lieferant jeden Monat 500 € berechnet und der Mandant jeden Monat 500 € überweist, kann eine Zahlung von August fälschlich der September-Rechnung zugeordnet werden. Meistens fällt das nur bei der OP-Liste am Ende auf. Wenn du im Matching einen solchen Fall siehst, prüf die Zuordnung anhand des Buchungsdatums.
+- **Zahlungen kurz vor oder nach dem Monatswechsel.** Beleg vom 31. Juli, Zahlung vom 3. August — noch dieselbe Rechnung, aber die App tut sich schwerer, weil Datum und Buchungsdatum auseinanderlaufen. Kurzer Check.
+
+Die Sammelansicht der gematchten und offenen Umsätze findest du unter **Transaktionen → Übersicht**. Filtre nach **nicht gematcht**, um die Nachbearbeitung zu bündeln.
+
+## Zwei Einschränkungen
+
+Nicht alle Konstellationen kann das Matching automatisch:
+
+- **Sammelüberweisungen.** Eine Zahlung von 3.500 €, die auf drei Rechnungen à 1.000 €, 1.500 € und 1.000 € läuft, matcht die App nicht selbstständig. Klick den Sammelumsatz an, wähle **Aufteilen** und ordne die Teilbeträge den Rechnungen zu.
+- **Fremdwährung.** Beim Bank-Matching wird nicht automatisch umgerechnet. Eine USD-Rechnung über 1.200 USD und eine EUR-Zahlung über 1.098,54 € (nach Kurs) matcht die App nicht — die Beträge stimmen numerisch nicht überein. Diese Zuordnungen setzt du manuell. Details in [Auslandsbelege](/rechnungen/auslandsbelege).
+
+## Was am Ende übrig bleibt
+
+Nach dem Matching hast du drei Kategorien:
+
+- **Gematchte Umsätze** — fertig. Gehen im nächsten [Export](/export/stapel-uebertragen) mit.
+- **Umsätze auf durchlaufenden Posten** — kein Beleg da. Hier setzt die [Anforderung fehlender Belege](/belege/fehlende-belege-anfordern) an.
+- **Nicht auflösbare Fälle** — Zahlungen für Sachverhalte, die keine reguläre Rechnung sind (Gehalt, Steuerzahlung, Kredittilgung). Die bucht ihr weiterhin in DATEV Kanzlei-Rechnungswesen.
+
+<Columns cols={2}>
+  <Card title="Durchlaufende Posten auflösen" icon="shuffle" href="/bank/durchlaufende-posten">
+    Was mit ungematchten Umsätzen passiert.
+  </Card>
+
+  <Card title="Auslandsbelege" icon="globe" href="/rechnungen/auslandsbelege">
+    Warum Fremdwährung manuell zugeordnet wird.
+  </Card>
+</Columns>

@@ -1,0 +1,58 @@
+---
+title: "Ausgangsrechnungen prüfen und freigeben"
+sidebarTitle: "Ausgangsrechnungen"
+description: "Der Ablauf für Rechnungen, die dein Mandant an seine Kunden geschrieben hat — mit den Unterschieden zur Eingangsseite."
+---
+
+Ausgangsrechnungen sind die Rechnungen, die dein Mandant an seine Kunden geschrieben hat. In der Systematik von Limetax funktionieren sie fast wie Eingangsrechnungen — dieselbe Belegansicht, dieselben Status, dieselbe KI-Vorkontierung. Die Unterschiede sind vor allem in den Feldern (Erlös statt Aufwand, Debitor statt Kreditor) und in ein paar wiederkehrenden Sonderfällen.
+
+Der Bereich liegt unter **Buchhaltung → 3 Ausgangsrechnung**. Wenn dein Mandant seine Ausgangsrechnungen im Vorsystem schreibt (Lexware Office, SevDesk, sevdesk-ähnliche Fakturasoftware) und über DUO nach Limetax pusht, hast du hier meist wenig zu tun — die Rechnungen kommen strukturiert an und die KI liegt fast immer richtig. Bei Mandanten, die ihre Ausgangsrechnungen als PDF hochladen, sieht es anders aus.
+
+## Die Ausgangsseite in der Belegansicht
+
+Beim Öffnen einer Ausgangsrechnung siehst du die gewohnte Belegansicht: PDF links, Felder rechts. Zwei Unterschiede zur Eingangsseite:
+
+- **Gegenkonto ist ein Debitor**, nicht ein Kreditor. Die KI legt neue Debitoren auf Basis von Name und USt-ID an, so wie bei Kreditoren.
+- **Sachkonto ist ein Erlöskonto.** Standard ist 8400 (SKR 03) beziehungsweise 4400 (SKR 04) für Erlöse 19 %, entsprechend die Varianten für 7 % und steuerfreie Umsätze.
+
+<Frame caption="Belegansicht mit einer Ausgangsrechnung">
+  ![Belegansicht einer Ausgangsrechnung mit PDF links und Debitor/Erlöskonto rechts](/images/rechnungen/ausgangsrechnung-belegansicht.png)
+</Frame>
+
+Der Prüf-Loop und die Statuslogik sind identisch mit der Eingangsseite. Details in [Eingangsrechnungen prüfen](/rechnungen/eingangsrechnungen-pruefen) — der Ablauf gilt genauso.
+
+## Häufige Sonderfälle
+
+### Rechnungen an Kunden im EU-Ausland
+
+Wenn dein Mandant an einen EU-Kunden mit gültiger USt-ID fakturiert, ist die Lieferung innergemeinschaftlich steuerfrei nach §4 Nr. 1b UStG. Auf der Ausgangsrechnung steht kein Umsatzsteuerausweis, aber der Hinweis „Steuerfreie innergemeinschaftliche Lieferung". Die KI erkennt das meist am fehlenden Steuerausweis und der Kombination aus Rechnungsempfänger im Ausland und USt-ID.
+
+Setz **Steuerschlüssel IG** oder das äquivalente steuerfreie EU-Konto. Achte darauf, dass die USt-ID im Debitorenstamm hinterlegt ist — die brauchst du für die zusammenfassende Meldung.
+
+### Rechnungen mit Reverse-Charge im Inland
+
+Baugewerbe, Gebäudereinigung, Lieferung von Handys, Tablets und Notebooks über 5.000 € — in diesen Konstellationen schuldet der Empfänger die Umsatzsteuer, nicht der Rechnungssteller. Der Mandant weist auf der Rechnung keine Umsatzsteuer aus und ergänzt „Steuerschuldnerschaft des Leistungsempfängers §13b UStG".
+
+Die KI liegt hier gelegentlich daneben, weil sie die 0 % als „steuerfrei" liest. Prüf jedes Mal, ob der Reverse-Charge-Fall tatsächlich vorliegt (die häufigsten Branchen kennst du) und korrigier ggf. den Steuerschlüssel.
+
+### Gutschriften und Storno
+
+Eine Gutschrift ist eine Ausgangsrechnung mit negativem Betrag. Limetax bucht sie automatisch als negative Erlöse, kein separater Vorgang. Wenn dein Mandant eine bestehende Rechnung storniert, kommt die Storno-Rechnung als eigener Beleg — die Verknüpfung mit dem Original-Beleg trägst du in der Notiz ein, damit später nachvollziehbar bleibt, welche Rechnung wofür ist.
+
+### Anzahlungen
+
+Anzahlungsrechnungen laufen nicht über die Erlöskonten, sondern über die Anzahlungskonten (**1718** oder **1719** SKR 03 / **3270** oder **3272** SKR 04, je nach Steuersatz). Bei der Schlussrechnung wird die Anzahlung wieder gegen die Erlöse aufgelöst. Das ist ein Fall, wo die KI oft falsch liegt — kontroll bei jedem Mandanten mit Projektgeschäft die Anzahlungsbuchungen manuell.
+
+<Warning>
+  Ausgangsrechnungen sind nach dem Festschreiben in DATEV umsatzsteuerrelevant und tauchen in der UStVA auf. Ein Fehler auf einer Ausgangsrechnung ist teurer als auf einer Eingangsrechnung — nimm dir für die Erst-Prüfung eines neuen Mandanten mit vielen Ausgangsrechnungen bewusst mehr Zeit.
+</Warning>
+
+<Columns cols={2}>
+  <Card title="Auslandsbelege" icon="globe" href="/rechnungen/auslandsbelege">
+    Details zu §13b, i. g. Erwerb und EU-Umsätzen.
+  </Card>
+
+  <Card title="Status verstehen" icon="traffic-light" href="/rechnungen/status-verstehen">
+    Was Offen, Prüfen, Manuell, Freigegeben bedeuten.
+  </Card>
+</Columns>

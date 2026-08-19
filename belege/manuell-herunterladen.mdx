@@ -1,0 +1,47 @@
+---
+title: "Belege manuell aus DATEV Unternehmen Online herunterladen"
+sidebarTitle: "Manuell herunterladen"
+description: "Der Fallback, wenn der SmartLogin-Agent nicht funktioniert: Belege in DUO exportieren und per Upload in Limetax bringen."
+---
+
+Wenn der SmartLogin-Agent nicht funktioniert — weil euer Mandant keinen universellen SmartLogin nutzt, weil die App-Anmeldung ständig abbricht oder weil du gerade schnell nur ein paar Belege nachziehen willst — führst du den Belegimport manuell durch. Du lädst die Belege in DUO als ZIP herunter und ziehst sie danach in den Limetax-Importer.
+
+Für den regulären Monatslauf ist der [SmartLogin-Agent](/belege/smartlogin-agent) der Standardweg. Der manuelle Weg ist bewusst als Fallback gedacht und braucht ein paar Minuten mehr pro Mandant — dafür ist er unabhängig vom SmartLogin-Typ und läuft auch, wenn ihr in DUO Sonderrechte gesetzt habt.
+
+## In DATEV Unternehmen Online exportieren
+
+Melde dich in **DATEV Unternehmen Online** am Mandanten an und wechsle in **Belege online**. Wähle den Zeitraum, den du in Limetax importieren willst — im Zweifel den ganzen Monat, es schadet nichts, wenn ein Beleg dabei ist, der schon in Limetax liegt, weil das Duplikats-Erkennung übernimmt.
+
+Filter die Liste auf **noch nicht gebuchte Belege**. Alles, was in DUO bereits als gebucht markiert ist, gehört nicht in den Import — sonst tauchen Belege doppelt auf, die vielleicht schon aus der Vor-Limetax-Zeit in DATEV gebucht sind. Wähle die Belege aus und klicke oben auf **Herunterladen**. DUO packt die Belege als ZIP-Datei. Der Download läuft in deinem Browser, die Datei landet standardmäßig im Downloads-Ordner.
+
+<Frame caption="Belege online in DUO mit gefilterter Liste">
+  ![Belege-online-Ansicht in DATEV Unternehmen Online mit gefilterter Liste noch nicht gebuchter Belege](/images/belege/duo-belege-online.png)
+</Frame>
+
+## In Limetax importieren
+
+Wechsle in Limetax zurück und öffne **Buchhaltung → 1 Belege importieren**. Neben dem QR-Code für den Agent gibt es einen **Upload-Bereich für Dateien**. Ziehe die ZIP dorthin oder klick den Bereich an und wähle die Datei aus.
+
+<Frame caption="Upload-Bereich im Belege-Importer">
+  ![Importer mit Upload-Bereich neben dem QR-Code](/images/belege/importer-upload.png)
+</Frame>
+
+Limetax entpackt die ZIP und legt jeden Beleg einzeln an. Die KI-Vorkontierung startet automatisch — dieselbe wie beim Agent-Import, es gibt keinen Qualitätsunterschied. Die Belege landen unter **Eingangsrechnung** und **Ausgangsrechnung**, die Bearbeitung ist dieselbe wie bei jedem anderen Import.
+
+<Tip>
+  Wenn du regelmäßig manuell importierst, leg dir in DUO einen Filter „noch nicht gebucht, aktueller Monat" ab. Dann brauchst du beim monatlichen Lauf nur noch **Alle auswählen → Herunterladen**.
+</Tip>
+
+## Wenn dieselben Belege doppelt reinkommen
+
+Ein häufiger Fall beim manuellen Weg: du importierst zweimal denselben Zeitraum, weil du unterbrochen wurdest und nicht mehr sicher warst, ob der erste Import durch war. Das ist kein Problem. Limetax erkennt Dubletten anhand von Belegdatum, Beträgen und Rechnungsnummer, setzt sie auf **Manuell** und lässt sie beim Export weg. Du musst nichts zurückrollen.
+
+<Columns cols={2}>
+  <Card title="SmartLogin-Agent" icon="qrcode" href="/belege/smartlogin-agent">
+    Der schnellere Weg über den Agent.
+  </Card>
+
+  <Card title="Import-Probleme" icon="triangle-exclamation" href="/belege/import-probleme">
+    Wenn im Import etwas schiefgeht.
+  </Card>
+</Columns>

@@ -1,0 +1,70 @@
+---
+title: "Anlagenzugänge in DATEV Anlagenbuchhaltung ergänzen"
+description: "Nach dem Stapel-Import: Anlagenzugänge einzeln als Wirtschaftsgüter in DATEV anlegen und mit der Buchung verknüpfen."
+icon: "building"
+sidebarTitle: "Anlagenzugänge"
+---
+
+Limetax bucht Anlagenzugänge auf die entsprechenden Anlagenkonten — 0400 oder 0410 (SKR 03), 0650 oder 0690 (SKR 04). Damit steht der Zugang in der Finanzbuchhaltung, aber er ist noch nicht im **Anlageverzeichnis**. Das Inventar mit AfA-Lauf bleibt in DATEV Anlagenbuchhaltung, und dorthin überträgst du jeden Zugang einmal manuell. Ohne diesen Schritt läuft im nächsten Jahresabschluss keine AfA — der Zugang steht dann in voller Höhe im Anlagevermögen, statt jährlich abgeschrieben zu werden.
+
+Das ist Handarbeit, weil die Anlagenbuchhaltung mehr Informationen braucht, als in der Buchhaltungsbuchung stecken: AfA-Art (linear, degressiv, GWG), Nutzungsdauer, ggf. Aktivierungspflicht bei Sammelposten. Diese Details entscheidet ihr Kanzlei-intern und pflegt sie in DATEV, nicht in Limetax.
+
+## Zugänge in der Primanota erkennen
+
+Nach dem Einspielen des [Stapels in DATEV](/export/stapel-in-datev) siehst du in der Primanota alle Buchungen. Anlagenzugänge erkennst du am **Sachkonto**:
+
+- **SKR 03**: 0400 (Bauten), 0410 (BGA — Betriebs- und Geschäftsausstattung), 0420 (Werkzeuge), 0430 (Fuhrpark), 0440 (Anlagen im Bau), 0450 (Sammelposten), 0460 (GWG).
+- **SKR 04**: 0650 (BGA), 0670 (Fuhrpark), 0690 (Werkzeuge), 0510 (Bauten), 0810 (Sammelposten), 0820 (GWG).
+
+Merk dir beim Kontrollieren der Primanota jede Buchung auf ein Anlagenkonto — die brauchst du gleich in der Anlagenbuchhaltung.
+
+<Frame caption="Primanota mit einer Anlagenzugangs-Buchung">
+  ![Primanota mit einer Buchung auf einem Anlagenkonto, markiert](/images/export/primanota-anlagenzugang.png)
+</Frame>
+
+## In der Anlagenbuchhaltung ergänzen
+
+Wechsle in **DATEV Anlagenbuchhaltung** desselben Mandanten. Der Weg hängt von eurer DATEV-Version ab (Rewe pro, Rewe compact, Anlagenbuchführung als separates Modul).
+
+Pro Zugang legst du ein **Wirtschaftsgut** an:
+
+- **Bezeichnung** — der Name, unter dem das Wirtschaftsgut geführt wird. „Laptop MacBook Pro 14 Zoll — Müller" ist präzise, „Laptop" ist nutzlos.
+- **Anschaffungsdatum** — meist das Rechnungsdatum oder das Datum der tatsächlichen Übergabe.
+- **Anschaffungskosten** — der Nettobetrag, wenn Vorsteuer voll abziehbar. Bei ausgeschlossener Vorsteuer der Bruttobetrag.
+- **AfA-Art** — linear (Standardfall bei BGA), degressiv (nur wenn steuerlich zulässig und sinnvoll), GWG (bei Wirtschaftsgütern bis 800 € netto — sofortabschreibung).
+- **Nutzungsdauer** — nach amtlicher AfA-Tabelle. Laptop drei Jahre, Büromöbel dreizehn Jahre, PKW sechs Jahre.
+- **Verknüpfung mit der Buchung** — DATEV bietet die Möglichkeit, das Wirtschaftsgut mit der Zugangsbuchung aus der Primanota zu verknüpfen. Nutz das, dann bleibt später nachvollziehbar, welcher Beleg zu welchem Wirtschaftsgut gehört.
+
+<Frame caption="Wirtschaftsgut in DATEV Anlagenbuchhaltung anlegen">
+  ![Dialog zum Anlegen eines Wirtschaftsguts in der Anlagenbuchhaltung](/images/export/anlagenbuchhaltung-neu.png)
+</Frame>
+
+## Sonderfälle
+
+### Geringwertige Wirtschaftsgüter (GWG)
+
+Für Wirtschaftsgüter bis 800 € netto (Grenze seit 2018) gibt es die GWG-Sofortabschreibung: der Zugang wird im Jahr der Anschaffung voll als Aufwand behandelt. In der Anlagenbuchhaltung legst du das Wirtschaftsgut trotzdem an, damit es im Bestand geführt wird — die AfA setzt du auf GWG.
+
+Alternativ ist der **Sammelposten** (Bewegliche Wirtschaftsgüter zwischen 250 € und 1.000 €, gleichmäßig über 5 Jahre abgeschrieben) — aber diesen Weg müsst ihr für den Mandanten einheitlich wählen und dokumentieren.
+
+### Aktivierung erst später
+
+Wenn du dir bei einer Buchung nicht sicher bist, ob sie aktiviert werden muss, buch sie zunächst als Aufwand in Limetax und diskutier die Aktivierung mit dem Berater. Falls nachträglich aktiviert wird, ist eine Umbuchung in DATEV nötig — das ist unangenehm, aber machbar.
+
+### Anlage im Bau
+
+Bei einer Anlage im Bau (z. B. Umbau eines Ladens, das über mehrere Monate läuft) sammelst du die Anschaffungskosten auf einem entsprechenden Sachkonto (0440 SKR 03 / 0700 SKR 04). Erst mit Fertigstellung wechselst du auf das eigentliche Anlagenkonto und legst das Wirtschaftsgut in der Anlagenbuchhaltung an.
+
+<Check>
+  Der Zugang ist in der Anlagenbuchhaltung als Wirtschaftsgut geführt und mit der Buchung aus dem Limetax-Stapel verknüpft. Die AfA läuft ab dem Anschaffungsmonat im nächsten AfA-Lauf.
+</Check>
+
+<Columns cols={2}>
+  <Card title="Stapel in DATEV" icon="lock" href="/export/stapel-in-datev">
+    Der Schritt davor.
+  </Card>
+
+  <Card title="Funktionsstand" icon="list-check" href="/funktionsstand/funktionsstand">
+    Was DATEV übernimmt, was Limetax macht.
+  </Card>
+</Columns>

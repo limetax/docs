@@ -1,0 +1,78 @@
+---
+title: "Funktionsstand: was Limetax heute übernimmt und was in DATEV bleibt"
+sidebarTitle: "Funktionsstand"
+description: "Der ehrliche Blick auf den aktuellen Umfang — welche Aufgaben Limetax heute automatisiert, welche in DATEV bleiben und was auf der Roadmap steht."
+icon: "list-check"
+---
+
+Limetax ist eine Ergänzung zu DATEV Kanzlei-Rechnungswesen, kein Ersatz. Der App-Umfang ist bewusst auf die Bereiche fokussiert, in denen KI-gestütztes Buchen einen echten Zeitvorteil bringt: Beleg-Import, Kontierung und Freigabe, Bank-Matching. Alles, was steuerlich oder rechtlich bindend ist (UStVA, Lohn, Jahresabschluss, Festschreibung), läuft weiter über DATEV — und das ist Absicht.
+
+Der Artikel gibt dir einen ehrlichen Überblick, damit du weißt, was du im Alltag erwarten kannst und wo du weiter in gewohnten Tools arbeitest.
+
+## Was Limetax heute übernimmt
+
+**Belegbeschaffung.**
+
+- Automatischer Import über den [SmartLogin-Agent](/belege/smartlogin-agent) aus DATEV Unternehmen Online.
+- Manueller Upload von PDF und Bilddateien.
+- Anbindung von Vorsystemen (Pleo, Moss, Lexware Office, SevDesk) — siehe [Vorsysteme](/belege/vorsysteme).
+- Dublettenerkennung und Import-Diagnose ([Import-Probleme](/belege/import-probleme)).
+
+**Kontierung mit KI.**
+
+- Vorkontierung mit Sachkonto, Steuerschlüssel, Gegenpartei aus dem Beleg heraus.
+- Automatische Freigabe bei sicheren Vorschlägen ([Status verstehen](/rechnungen/status-verstehen)).
+- Lerneffekt pro Mandant über den [blauen Haken](/rechnungen/blauer-haken).
+- [Splitbuchungen](/rechnungen/splitbuchungen), Auslands-Sonderfälle, Kostenstellen.
+- Otto, der [KI-Assistent](/rechnungen/ki-fragen) im Chat für steuerliche Fragen.
+
+**Bank und Zahlungen.**
+
+- Import von Kartenabrechnungen, PayPal, Kassen, Datei-Konten ([Umsätze importieren](/bank/umsaetze-importieren)).
+- Automatisches [Matching](/bank/matching) von Zahlungen mit Belegen.
+- Verwaltung der [durchlaufenden Posten](/bank/durchlaufende-posten).
+- Belegnachforderung per E-Mail mit Excel-Liste.
+
+**Übergabe an DATEV.**
+
+- [Buchungsstapel-Export](/export/stapel-uebertragen) an DATEV Kanzlei-Rechnungswesen.
+- Zusammenfassung vor der Übertragung, klare Trennung zwischen Limetax und DATEV.
+
+## Was heute noch in DATEV bleibt
+
+Das ist der wichtige Teil — hier weißt du, wo du dich nicht auf Limetax verlassen kannst.
+
+- **UStVA und ZM.** Werden aus dem Kanzlei-Rechnungswesen abgegeben, nicht aus Limetax.
+- **Anlagenbuchhaltung.** Inventarpflege, AfA-Lauf, Abgänge — siehe [Anlagenzugänge](/export/anlagenzugaenge). Limetax bucht Zugänge bilanziell, die Anlagen-Stammdaten pflegst du in DATEV.
+- **Lohn.** Vollständig außerhalb von Limetax.
+- **Festschreibung.** Nur in DATEV Kanzlei-Rechnungswesen — Limetax bereitet den Stapel vor, das Festschreiben ist immer manuell in DATEV.
+- **Jahresabschluss.** Bilanz, GuV, E-Bilanz, Rückstellungen, Umbuchungen zum Jahresende. Alles in DATEV.
+- **Steuererklärungen.** Einkommensteuer, Körperschaft, Gewerbe. Getrennte DATEV-Anwendung.
+- **Mandantenstammdatenpflege.** Rahmendaten (Anschrift, Steuernummer, Kontenrahmen) werden aus DATEV synchronisiert, nicht in Limetax bearbeitet.
+
+## Was gerade nicht (oder eingeschränkt) unterstützt wird
+
+Ehrlich benannt, damit ihr wisst, wo Handarbeit oder Warten dazugehört:
+
+- **RZ-Bankinfo-Konten.** Bewusst nicht in Limetax gebucht — siehe [Welche Konten wo](/bank/welche-konten-wo). Kein Fehlen, sondern Entwurfsentscheidung.
+- **Sammelüberweisungen im Bank-Matching.** Werden nicht automatisch aufgeteilt — Zuordnung manuell.
+- **Fremdwährungs-Matching.** Ist nicht automatisch, weil sich Rechnungsbetrag und Zahlbetrag nach Kurs unterscheiden. Manuelle Zuordnung.
+- **Änderungen an bereits übertragenen Buchungen.** Nachträgliche Korrektur in Limetax an einem bereits exportierten Stapel wirkt nicht mehr in DATEV. Korrekturen laufen dann direkt im Kanzlei-Rechnungswesen.
+
+## Aktueller Reifegrad
+
+Limetax ist stabil im monatlichen Buchungslauf für die typischen Kanzlei-Mandanten (Freiberufler, kleine bis mittlere GmbHs mit überschaubarer Bank-, Karten- und Belegstruktur). Bei komplexen Mandanten mit Konzernverflechtung, ausländischen Betriebsstätten oder Sonderrechnungslegung (IFRS, HGB mit Wahlrechten) ist die Belegkontierung weiterhin verlässlich; die steuerlichen Feinheiten bleiben Aufgabe der Kanzlei.
+
+<Info>
+  Der Funktionsumfang wächst laufend. Für Feature-Wünsche und Feedback ist der schnellste Kanal die E-Mail an [kontakt@limetax.de](mailto:kontakt@limetax.de). Der Kontakt geht direkt ins Produktteam.
+</Info>
+
+<Columns cols={2}>
+  <Card title="Startseite" icon="house" href="/">
+    Zurück zur Übersicht des Helpcenters.
+  </Card>
+
+  <Card title="Welche Konten wo" icon="arrows-split-up-and-left" href="/bank/welche-konten-wo">
+    Die wichtigste Grundregel bei der Abgrenzung Limetax/DATEV.
+  </Card>
+</Columns>
