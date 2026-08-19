@@ -7,7 +7,10 @@
     "light": "#5a85ff",
     "dark": "#2d55e8"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/logo_mark_black.png",
+    "dark": "/images/logo_mark_white.png"
+  },
   "navigation": {
     "pages": [
       {
@@ -55,16 +58,14 @@
             ]
           },
           {
-            "group": "Rechnungen",
+            "group": "Kreditoren- und Debitorenbuchaltung",
             "icon": "file-invoice",
             "pages": [
               "rechnungen/status-verstehen",
               "rechnungen/eingangsrechnungen-pruefen",
               "rechnungen/belegansicht",
               "rechnungen/splitbuchungen",
-              "rechnungen/manuell-buchen",
               "rechnungen/ausgangsrechnungen",
-              "rechnungen/blauer-haken",
               "rechnungen/ki-fragen",
               "rechnungen/auslandsbelege"
             ]
@@ -81,21 +82,21 @@
             ]
           },
           {
-            "group": "Stammdaten",
-            "icon": "sliders",
-            "pages": [
-              "stammdaten/kostenstellen",
-              "stammdaten/stammdaten-und-notiz",
-              "stammdaten/tastenkuerzel"
-            ]
-          },
-          {
             "group": "Export nach DATEV",
             "icon": "arrow-right-from-bracket",
             "pages": [
               "export/stapel-uebertragen",
               "export/stapel-in-datev",
               "export/anlagenzugaenge"
+            ]
+          },
+          {
+            "group": "Sonstiges",
+            "icon": "sliders",
+            "pages": [
+              "stammdaten/kostenstellen",
+              "stammdaten/stammdaten-und-notiz",
+              "stammdaten/tastenkuerzel"
             ]
           },
           {

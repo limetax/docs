@@ -10,15 +10,27 @@ Der Artikel geht davon aus, dass die Kostenstellen-Systematik im Mandanten berei
 
 ## Kostenstellen im Mandanten aktivieren
 
-Wenn ein Mandant mit Kostenstellen arbeiten soll, aktivierst du das Feld einmalig in den [Stammdaten](/stammdaten/stammdaten-und-notiz). Wenn Kostenstellen aktiv sind, taucht in der [Belegansicht](/rechnungen/belegansicht) und beim [Bank-Matching](/bank/matching) das Feld **Kostenstelle** rechts unter den Kontierungsfeldern auf. Ist es nicht aktiv, existiert das Feld gar nicht — dann kannst du dir das Auseinandersetzen mit der Systematik sparen.
+Die Kostenstellen eines Mandanten findest du in der Mandantenübersicht ganz unten in der Seitenleiste. Dort siehst du das Kostensystem des Mandanten und legst neue Kostenstellen an.
 
-<Frame caption="Stammdaten mit aktivierter Kostenstellen-Option">
-  ![Stammdaten-Ansicht mit Schalter für Kostenstellen](/images/stammdaten/kostenstellen-aktiv.png)
+<Frame>
+  ![Kostenstellen Synchronisieren](/images/kostenstellen-synchronisieren.png "Kostenstellen Synchronisieren")
 </Frame>
 
-## Kostenstellen anlegen
+Wie es danach weitergeht, hängt davon ab, ob der Mandant in DATEV bereits ein Kostensystem hat. 
 
-Die Kostenstellen selbst pflegst du in der Regel im Kanzlei-Rechnungswesen in DATEV — Limetax synchronisiert sie über die Mandantenverbindung. Nach der Synchronisation stehen sie im Auswahlfeld beim Beleg zur Verfügung.
+Sind Kostensystem und Kostenstellen in DATEV bereits angelegt, baust du in der Limetax-App nichts neu auf. Es reicht eine einmalige Synchronisation für das betroffene Jahr — in der Regel das laufende Wirtschaftsjahr. Danach stehen dir alle Kostenstellen des Mandanten in der Auswahl zur Verfügung.
+
+Kommt später eine neue Kostenstelle dazu, legst du sie direkt in der App an. Sie wird automatisch nach DATEV übertragen. Du musst dort nichts nachpflegen und keinen weiteren Abgleich anstoßen.
+
+<Frame>
+  ![Kostenstellen Anlegen](/images/kostenstellen-anlegen.png "Kostenstellen Anlegen")
+</Frame>
+
+### Der Mandant nutzt Kostenstellen zum ersten Mal
+
+Das Kostensystem selbst legst du wie gewohnt in DATEV an — dieser Schritt bleibt in DATEV, Limetax kann kein neues Kostensystem erzeugen. Sobald es dort steht, synchronisierst du in Limetax einmal, und das Kostensystem ist hinterlegt.
+
+Ab diesem Punkt gilt dasselbe wie im Fall oben: Neue Kostenstellen legst du in Limetax an, die Übertragung nach DATEV läuft automatisch.
 
 {/* TODO: Klickpfad für die Synchronisation aus DATEV bestätigen */}
 
@@ -30,16 +42,6 @@ In der Belegansicht wählst du die Kostenstelle im Feld **Kostenstelle** unter d
 - Der Beleg klare Hinweise enthält (Projektname im Verwendungszweck, Bestellnummer, die auf einer Kostenstelle liegt).
 
 Ohne solche Hinweise lässt die App das Feld leer und wartet auf deinen Eintrag.
-
-## Kostenstellen bei Splitbuchungen
-
-Bei einer [Splitbuchung](/rechnungen/splitbuchungen) kannst du pro Zeile eine eigene Kostenstelle setzen. Klassischer Fall: eine Hotelrechnung mit Zimmer für einen Geschäftsreisenden und einem Bewirtungsabendessen für einen anderen Bereich — die zwei Positionen laufen auf zwei Sachkonten **und** zwei Kostenstellen.
-
-## Was du im Alltag beachtest
-
-- **Kostenstelle immer setzen, wenn der Mandant sie fordert.** Wenn Kostenstellen im Mandanten aktiv sind, ist das Feld erwartet. Ein fehlender Eintrag führt in DATEV zu einer unstellenmäßigen Buchung — die zieht bei der BWA einen komischen „Sonstiges"-Block nach sich.
-- **Nicht raten.** Wenn du unsicher bist, welche Kostenstelle korrekt ist, frag beim Mandanten oder trag „nicht zugeordnet" ein. Falsch zugeordnete Kostenstellen sind schlimmer als leere, weil sie in der Auswertung ein falsches Bild geben.
-- **Aus dem Beleg lesen.** Bei größeren Mandanten mit ausdrücklicher Kostenstellen-Kultur schreiben Leute die Kostenstelle oft auf den Beleg (Post-it, Vermerk). Wenn du das siehst, übernimm es — bei diesen Mandanten ist das die verlässlichste Quelle.
 
 <Note>
   Wenn ein Mandant Kostenstellen nur an einzelnen Bereichen führt (z. B. nur Fahrzeuge, aber nicht Standorte), leg das in der [Notiz](/stammdaten/stammdaten-und-notiz) fest. Sonst rätselt jedes Kollegenmitglied bei jeder Buchung, ob es diesmal eine Kostenstelle braucht.

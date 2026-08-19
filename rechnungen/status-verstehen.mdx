@@ -4,34 +4,23 @@ sidebarTitle: "Status verstehen"
 description: "Der Ampelsatz in Limetax — was der jeweilige Status heißt, wer ihn setzt und was er für den Export bedeutet."
 ---
 
-Jeder Beleg in Limetax hat einen Status. Der Status ist keine Kosmetik, sondern die zentrale Steuerungsgröße: er entscheidet, ob ein Beleg zum Buchen ansteht, ob er nachgeprüft werden muss und ob er beim nächsten Export mitgeht. Wenn du den Status verstehst, weißt du an einem Vormittag, was in einem Mandanten noch zu tun ist — ohne dass du dich durch die einzelne Belegansicht klicken musst.
+Jeder Beleg in Limetax hat einen Status. Der Status ist die zentrale Steuerungsgröße: er entscheidet, ob ein Beleg zum Buchen ansteht, ob er nachgeprüft werden muss und ob er beim nächsten Export mitgeht.
 
 Es gibt vier Status, die sich in einer festen Reihenfolge ablösen: **Offen → Prüfen oder Manuell → Freigegeben**. Was welchen Status auslöst und was du darin machst, steht unten.
 
 ## Offen
 
-**Der Beleg ist gerade importiert worden, die KI hat noch nicht kontiert.** Das ist der Zustand direkt nach dem Import — der Beleg wird gerade automatisch vorkontiert oder wartet darauf. Bei Massenimporten kann das ein paar Minuten dauern, weil die KI der Reihe nach durchläuft.
-
-Was du machst: nichts. Warte, bis der Beleg in **Prüfen** oder **Freigegeben** wechselt. Wenn ein Beleg dauerhaft in **Offen** hängt (mehr als eine Stunde bei sonst leeren Warteschlangen), meld das an [kontakt@limetax.de](mailto:kontakt@limetax.de) mit Belegnummer.
+Unter **Offen** liegen alle Belege, die noch nicht freigegeben sind unabhängig davon, wo sie im Ablauf stehen. Der Status ist also die Summe der Belege die noch bearbeitet werden müssen **(Manuell \+ Prüfen).**
 
 ## Freigegeben
 
-**Die KI hat kontiert und ist sich sicher.** Der Beleg ist fertig und geht beim nächsten Export mit. Du musst nichts tun — außer stichprobenartig prüfen, ob die KI-Freigabe tatsächlich sitzt. Das lohnt vor allem in den ersten Wochen mit Limetax, um Vertrauen aufzubauen, und immer dann, wenn ein neuer Belegtyp auftaucht (neuer Lieferant, neue Kartenabrechnung).
-
-Wenn die KI zu unrecht freigegeben hat, öffne den Beleg und korrigiere. Er springt beim Speichern wieder in **Prüfen** — das ist gewollt, damit du siehst, welche Belege du selbst korrigiert hast.
+**Die KI hat kontiert und ist sich sicher.** Der Beleg ist fertig und geht beim nächsten Export mit. Du musst nichts tun außer stichprobenartig prüfen, ob die KI-Freigabe tatsächlich sitzt. 
 
 ## Prüfen
 
 **Die KI hat kontiert, ist sich aber nicht sicher.** Das ist der Arbeits-Status für dich: alle Belege in **Prüfen** brauchen deinen Blick. Die App zeigt dir pro Beleg den KI-Vorschlag und einen Grund, warum sie sich nicht traut freizugeben — häufig „ungewöhnlicher Betrag", „neuer Lieferant", „steuerlich unklar", „mehrere Sachverhalte auf einem Beleg".
 
-Was du machst: durchgehen, korrigieren wo nötig, freigeben. Der Standard-Loop steht in [Eingangsrechnungen prüfen und freigeben](/rechnungen/eingangsrechnungen-pruefen). Der Trick ist, den Loop mit [Tastenkürzeln](/stammdaten/tastenkuerzel) zu fahren, dann kommst du auf zehn bis zwanzig Belege pro Minute.
-
-## Manuell
-
-**Die App hat den Beleg absichtlich zurückgestellt.** Zwei Auslöser:
-
-- **Dublette erkannt.** Der Beleg ist schon in Limetax oder wurde beim Import doppelt hochgeladen. Der Beleg bleibt liegen, wird nicht doppelt exportiert. Falls die Dublettenerkennung falsch liegt, kannst du sie überschreiben — meistens will man das aber nicht.
-- **Auslandsbeleg oder steuerlicher Sonderfall.** §13b, i. g. Erwerb, Fremdwährung: die KI legt den Beleg bewusst in **Manuell** ab, damit du entscheidest. Der Ablauf steht in [Auslandsbelege](/rechnungen/auslandsbelege).
+Was du machst: durchgehen, korrigieren wo nötig → freigeben. Der Standard-Loop steht in [Eingangsrechnungen prüfen und freigeben](/rechnungen/eingangsrechnungen-pruefen). Der Trick ist, den Loop mit [Tastenkürzeln](/stammdaten/tastenkuerzel) zu fahren.
 
 Was du machst: die Manuell-Liste am Ende des Monatslaufs einmal durchgehen. Dublette bestätigen (archivieren, nichts weiter tun), Sonderfall bearbeiten (Steuerschlüssel setzen, freigeben).
 
