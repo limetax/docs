@@ -93,6 +93,18 @@
             ]
           },
           {
+            "group": "Chat & Recherche",
+            "icon": "comments",
+            "pages": [
+              "chat/ueberblick",
+              "chat/recherchequellen",
+              "chat/mandant-und-rueckfragen",
+              "chat/verlauf-und-teilen",
+              "chat/gute-prompts",
+              "chat/probleme"
+            ]
+          },
+          {
             "group": "Sonstiges",
             "icon": "sliders",
             "pages": [
