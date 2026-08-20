@@ -1,0 +1,62 @@
+---
+title: "Chat-Probleme: keine Fundstelle, kein Dokument, zu allgemein"
+sidebarTitle: "Probleme lösen"
+description: "Die häufigsten Symptome im Chat, ihre Ursache und der jeweilige Fix — meist ist es eine Einstellung, die nicht gesetzt ist."
+icon: "circle-question"
+---
+
+Fast alle Probleme im Chat gehen auf dieselben drei Ursachen zurück: Eine Quelle ist nicht aktiv, der Mandant ist nicht gesetzt, oder alter Kontext hängt noch im Chat. Such dein Symptom heraus.
+
+<AccordionGroup>
+  <Accordion title="Otto findet das Dokument nicht">
+    **Ursache:** Kein Mandant gesetzt, oder DATEV DMS ist nicht aktiv.
+
+    **Fix:** Mandant auswählen, unter **Recherche** das DATEV DMS anschalten, Frage erneut stellen. Findet er es danach immer noch nicht, prüf das Datum des Dokuments — abrufbar sind die letzten drei Jahre.
+  </Accordion>
+
+  <Accordion title="Die Antwort kommt ohne Fundstelle">
+    **Ursache:** Die Rechtsverlage sind nicht aktiv — oder sie sind aktiv, du hast die Fundstelle aber nicht angefordert.
+
+    **Fix:** Toggle anschalten und die Fundstelle im Prompt explizit mit anfordern: „Mit Fundstelle — Norm, Urteil oder BMF-Schreiben."
+  </Accordion>
+
+  <Accordion title="Die Antwort bleibt zu allgemein">
+    **Ursache:** Zu wenig Kontext im Prompt.
+
+    **Fix:** **Rückfragen** anschalten oder den Sachverhalt selbst konkreter beschreiben — Rechtsform, Wirtschaftsjahr, Versteuerungsart, Betrag.
+  </Accordion>
+
+  <Accordion title="Es dauert lange und die Antwort enthält viel Rauschen">
+    **Ursache:** Zu viele Quellen gleichzeitig aktiv.
+
+    **Fix:** Nur die eine Quelle anlassen, die du für diese Frage brauchst. Das Badge neben **Recherche** zeigt dir, wie viele gerade laufen.
+  </Accordion>
+
+  <Accordion title="Otto vermischt zwei Themen">
+    **Ursache:** Alter Kontext im Chat. Otto zieht den bisherigen Verlauf in jede neue Antwort mit ein.
+
+    **Fix:** **Neuer Chat**. Der alte bleibt im Chat Verlauf erhalten.
+  </Accordion>
+
+  <Accordion title="Das Dokument ist älter als drei Jahre">
+    **Ursache:** Es liegt außerhalb des DMS-Abrufzeitraums.
+
+    **Fix:** Direkt in DATEV DMS suchen. Über den Chat ist es nicht erreichbar.
+  </Accordion>
+</AccordionGroup>
+
+## Wenn die Antwort fachlich falsch ist
+
+Das kommt vor, und es ist kein Bedienfehler. Behandle jede Aussage als Recherchehilfe, die du vor der Verwendung gegenprüfst — bei steuerlichen Fragen über die angeforderte Fundstelle, bei Registerdaten über den Handelsregisterauszug selbst.
+
+{/* TODO: Eskalationspfad ergänzen — verbindlicher Support-Kanal ist noch offen (Max) */}
+
+<Columns cols={2}>
+  <Card title="Recherchequellen" icon="database" href="/chat/recherchequellen">
+    Welche Quelle für welche Frage.
+  </Card>
+
+  <Card title="Funktionsstand" icon="list-check" href="/funktionsstand/funktionsstand">
+    Was die KI heute noch nicht kann.
+  </Card>
+</Columns>

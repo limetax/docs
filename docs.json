@@ -100,7 +100,8 @@
               "chat/recherchequellen",
               "chat/mandant-und-rueckfragen",
               "chat/verlauf-und-teilen",
-              "chat/gute-prompts"
+              "chat/gute-prompts",
+              "chat/probleme"
             ]
           },
           {
