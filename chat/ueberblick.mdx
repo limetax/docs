@@ -1,0 +1,58 @@
+---
+title: "Chat in Limetax: so arbeitest du mit Otto"
+sidebarTitle: "Überblick"
+description: "Wofür du den Chat nutzt, wie die Eingabezeile aufgebaut ist und in welcher Reihenfolge du Mandant, Quellen und Frage setzt."
+icon: "comments"
+---
+
+Über den **Chat** fragst du Otto alles, was nicht an einem einzelnen Beleg hängt: eine steuerliche Fachfrage, ein Dokument aus der Mandantenakte, eine Registerabfrage oder den Entwurf einer Mandanten-E-Mail. Otto recherchiert dafür in den Quellen, die du vorher freischaltest, und antwortet im Chatfenster.
+
+## Immer in dieser Reihenfolge
+
+**1 · Mandant.** Nur bei mandantenbezogenen Fragen nötig. Die Auswahl grenzt vor allem die Suche im DATEV DMS ein.
+
+**2 · Quelle.** Unter **Recherche** die passenden Toggles setzen. Ohne aktive Quelle antwortet Otto aus seinem allgemeinen Wissen, ohne irgendwo nachzuschlagen.
+
+**3 · Frage.** Sachverhalt beschreiben und dazusagen, in welchem Format und in welcher Länge du die Antwort brauchst.
+
+Die Reihenfolge ist kein Ritual: Mandant und Quellen gelten für die Frage, die du danach abschickst. Setzt du sie erst hinterher, ist die erste Antwort ohne sie entstanden.
+
+## Die Eingabezeile
+
+{/* TODO: Screenshot aus dem Playbook Chat übernehmen */}
+
+<Frame caption="Die Eingabezeile mit Recherche, Rückfragen, Mandant und Anhang">
+  ![Eingabezeile des Chats mit den Schaltflächen Recherche, Rückfragen, Mandant und Anhang](/images/chat/eingabezeile.png)
+</Frame>
+
+| Element | Was es tut | Wann du es brauchst |
+| --- | --- | --- |
+| **Eingabefeld** | Frage oder Auftrag eintippen | Immer |
+| **Recherche ▾** | Öffnet die vier Quellen-Toggles; das Badge zeigt, wie viele Quellen aktiv sind | Sobald Otto extern nachschauen soll |
+| **Rückfragen** | Otto fragt erst nach, wenn Kontext fehlt, und antwortet erst danach | Bei Aufträgen, die eng werden sollen |
+| **Mandant ▾** | Setzt den Mandantenkontext für den Chat | Bei jedem konkreten Mandanten |
+| **Anhang** | Datei oder Beleg an die Frage hängen | Beleg prüfen lassen, statt ihn abzutippen |
+
+<Note>
+  Der Platzhalter im Eingabefeld wechselt — _Begriff erklären… · Steuerfrage stellen… · Email formulieren…_ — und zeigt dir die drei typischen Anwendungsfälle.
+</Note>
+
+## Chat oder KI fragen am Beleg?
+
+Beides ist Otto, aber mit unterschiedlichem Kontext. Der Chat kennt den Beleg nicht, den du gerade offen hast; er kennt dafür die Recherchequellen und die Mandantenakte. **KI fragen** in der Belegansicht kennt umgekehrt Belegbild, Buchungsvorschlag und Stammdaten und kann Buchungen direkt ändern.
+
+Faustregel: Fragen der Form „warum wurde dieser Beleg so gebucht" gehören an den Beleg. Alles, wofür jemand sonst LEXinform, das Handelsregister oder das DMS geöffnet hätte, gehört in den Chat.
+
+<Warning>
+  **Beachte!** Otto ist eine Recherchehilfe, keine verbindliche Auskunft. Die fachliche Entscheidung und die Verantwortung für das, was beim Mandanten landet, bleiben bei dir.
+</Warning>
+
+<Columns cols={2}>
+  <Card title="Recherchequellen" icon="database" href="/chat/recherchequellen">
+    Welche Quelle für welche Frage.
+  </Card>
+
+  <Card title="KI fragen (Otto)" icon="sparkles" href="/rechnungen/ki-fragen">
+    Der Assistent am geöffneten Beleg.
+  </Card>
+</Columns>

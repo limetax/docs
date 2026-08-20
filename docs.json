@@ -93,6 +93,13 @@
             ]
           },
           {
+            "group": "Chat & Recherche",
+            "icon": "comments",
+            "pages": [
+              "chat/ueberblick"
+            ]
+          },
+          {
             "group": "Sonstiges",
             "icon": "sliders",
             "pages": [
