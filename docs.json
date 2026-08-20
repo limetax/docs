@@ -96,7 +96,9 @@
             "group": "Chat & Recherche",
             "icon": "comments",
             "pages": [
-              "chat/ueberblick"
+              "chat/ueberblick",
+              "chat/recherchequellen",
+              "chat/mandant-und-rueckfragen"
             ]
           },
           {

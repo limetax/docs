@@ -1,0 +1,83 @@
+---
+title: "Die vier Recherchequellen — und wann du welche brauchst"
+sidebarTitle: "Recherchequellen"
+description: "Handelsregister, Rechtsverlage, DATEV DMS und Internet: was jede Quelle liefert und welche Kombination zu welcher Frage passt."
+icon: "database"
+---
+
+Unter **Recherche** schaltest du frei, wo Otto nachschlägt. Ohne aktive Quelle antwortet er aus seinem allgemeinen Wissen — ohne Fundstelle und ohne Zugriff auf die Akte.
+
+{/* TODO: Screenshot aus dem Playbook Chat übernehmen */}
+
+<Frame caption="Die vier Quellen-Toggles unter Recherche">
+  ![Aufgeklapptes Recherche-Menü mit den Toggles Handelsregister, Rechtsverlage, DATEV DMS und Internet](/images/chat/recherche-toggles.png)
+</Frame>
+
+| Quelle | Was passiert | Beispiel |
+| --- | --- | --- |
+| **Handelsregister** | Otto sucht das Unternehmen im Handelsregister und zieht die dort eingetragenen Informationen | „Wer ist Geschäftsführer der Cell Labs GmbH und wie ist die Vertretungsregelung?" |
+| **Rechtsverlage** | Recherche in den Fachdatenbanken, aktuell im Wesentlichen LEXinform (DATEV) | „Wann liegt beim Gesellschafter-Geschäftsführer eine vGA vor? Mit Fundstellen." |
+| **DATEV DMS** | Zugriff auf das angebundene DATEV DMS des gewählten Mandanten | „Zeig mir den letzten Körperschaftsteuerbescheid." |
+| **Internet** | Schaltet die freie Internetsuche an | „Was macht die Firma X — Geschäftsmodell und Website?" |
+
+## Was jede Quelle liefert
+
+<AccordionGroup>
+  <Accordion title="Handelsregister">
+    Firmierung, Sitz und Anschrift, HR-Nummer, Geschäftsführer und Vertretungsregelung, Gesellschafter, Stammkapital und Eintragungshistorie.
+
+    Typisch für: Neumandat prüfen, Vertretungsbefugnis klären, Firmierung für den Schriftverkehr verifizieren.
+  </Accordion>
+
+  <Accordion title="Rechtsverlage">
+    Gesetze, Richtlinien, Urteile und BMF-Schreiben aus **LEXinform (DATEV)**. Damit klärst du steuerliche Fragen direkt in der Fachquelle, statt in Google oder einzelnen Datenbanken zu suchen.
+
+    Fordere die Fundstelle im Prompt aktiv mit an — sonst bekommst du sie nicht zwingend.
+  </Accordion>
+
+  <Accordion title="DATEV DMS">
+    Verträge, Bescheide, Jahresabschlüsse und Schriftverkehr, rückwirkend drei Jahre.
+
+    Wähl vorher den Mandanten aus. Dann sucht Otto ausschließlich in dessen Bestand — deutlich schneller und präziser. Ohne Mandantenauswahl durchsucht er alles.
+  </Accordion>
+
+  <Accordion title="Internet">
+    Alles, was nicht in den Fachquellen steht: Unternehmensinfos, Marktdaten, aktuelle Meldungen, Webseiten. Nicht für steuerrechtliche Aussagen — dafür sind die Rechtsverlage da.
+  </Accordion>
+</AccordionGroup>
+
+{/* TODO fachliche Freigabe: DMS-Abrufzeitraum "drei Jahre" vor Veröffentlichung bestätigen lassen — Stand Playbook v0.2 */}
+
+## Welche Quelle wann
+
+Du kannst mehrere Quellen gleichzeitig anschalten. Sinnvoll ist trotzdem, nur die zu setzen, die du für diese eine Frage wirklich brauchst: Jede zusätzliche Quelle kostet Zeit und bringt Treffer mit, die zur Frage nichts beitragen.
+
+{/* TODO: Screenshot aus dem Playbook Chat übernehmen */}
+
+<Frame caption="Die aktiven Quellen siehst du am Badge neben Recherche">
+  ![Chat mit aktiven Quellen-Badges über dem Eingabefeld](/images/chat/quellen-aktiv.png)
+</Frame>
+
+| Anwendungsfall | Handelsregister | Rechtsverlage | DATEV DMS | Internet | Mandant |
+| --- | --- | --- | --- | --- | --- |
+| Begriff erklären lassen | – | – | – | – | – |
+| Steuerliche Fachfrage (allgemein) | – | ✓ | – | – | – |
+| Steuerfrage zu einem konkreten Mandanten | – | ✓ | ✓ | – | ✓ |
+| Dokument suchen, Sachverhalt aus der Akte | – | – | ✓ | – | ✓ |
+| Registerabfrage, Neumandat prüfen | ✓ | – | – | ✓ | – |
+| E-Mail an den Mandanten formulieren | – | – | bei Dokumentbezug | – | ✓ |
+| Unternehmensrecherche | ✓ | – | – | ✓ | – |
+
+<Tip>
+  Für reine Begriffs- und Verständnisfragen brauchst du gar keine Quelle. Alles auszulassen ist hier die schnellste Einstellung.
+</Tip>
+
+<Columns cols={2}>
+  <Card title="Mandant & Rückfragen" icon="user-check" href="/chat/mandant-und-rueckfragen">
+    Warum der Mandant vor dem DMS kommt.
+  </Card>
+
+  <Card title="Probleme lösen" icon="circle-question" href="/chat/probleme">
+    Keine Fundstelle, kein Dokument, zu allgemein.
+  </Card>
+</Columns>
