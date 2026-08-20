@@ -98,7 +98,8 @@
             "pages": [
               "chat/ueberblick",
               "chat/recherchequellen",
-              "chat/mandant-und-rueckfragen"
+              "chat/mandant-und-rueckfragen",
+              "chat/verlauf-und-teilen"
             ]
           },
           {
