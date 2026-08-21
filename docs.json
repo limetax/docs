@@ -52,7 +52,6 @@
             "pages": [
               "belege/smartlogin-agent",
               "belege/manuell-herunterladen",
-              "belege/import-probleme",
               "belege/fehlende-belege-anfordern"
             ]
           },
@@ -97,9 +96,6 @@
             "pages": [
               "chat/ueberblick",
               "chat/recherchequellen",
-              "chat/mandant-und-rueckfragen",
-              "chat/verlauf-und-teilen",
-              "chat/gute-prompts",
               "chat/probleme"
             ]
           },
