@@ -13,26 +13,16 @@ Nach dem Import liegen die Belege vorkontiert in der App. Du prüfst jeden einze
 Gehe in der Seitenleiste zu **Buchhaltung → 2 Eingangsrechnung**. Der Reiter **Prüfen** zeigt die Belege, die die KI kontiert hat, bei denen sie sich aber nicht sicher war. Klicke einen Beleg an. Es öffnet sich die Detailansicht: links das Belegbild, rechts die Kontierung.
 
 <Frame caption="Belegliste im Reiter Prüfen">
-  ![Liste der Belege im Status Prüfen](/images/rechnungen/pruefen-liste.png)
+  ![Screenshot 2026 08 18 155330](/images/Screenshot-2026-08-18-155330.png "Screenshot 2026 08 18 155330")
 </Frame>
 
-## Zuerst die KI-Analyse lesen
-
-Der Abschnitt **KI-Analyse** nennt den Grund, warum dieser Beleg überhaupt auf **Prüfen** liegt — und dieser Grund ist dein Prüfauftrag. Die häufigsten drei:
-
-- **§13b-Verdacht** — die KI hält den Fall für Reverse Charge. Prüf, ob der Sachverhalt das wirklich ist und ob der BU-Schlüssel dazu passt.
-- **Abweichender Leistungsempfänger** — auf der Rechnung steht ein anderer Name als der Mandant. Kann eine Betriebsstätte sein, kann eine private Rechnung sein.
-- **Monatsübergreifender Leistungszeitraum** — die Leistung läuft über den Monatswechsel. Entscheide, in welche Periode sie gehört.
-
-Bei Auslandsbelegen gibt die KI grundsätzlich nie automatisch frei.
-
-<Frame caption="Detailansicht mit der KI-Analyse">
-  ![Belegansicht mit dem Bereich KI-Analyse und der Begründung für den Status Prüfen](/images/rechnungen/belegansicht-pruefen.png)
-</Frame>
-
-## Dann Buchungssätze und Belegdaten
+## Buchungssätze und Belegdaten
 
 Im Bereich **Buchungssätze** prüfst du Sachkonto, BU-Schlüssel, Betrag und gegebenenfalls die Kostenstelle. Der **Restbetrag** unter den Zeilen muss auf 0,00 € stehen. Steht dort noch etwas, geht die Buchung nicht auf — bei mehreren Kostenarten teilst du sie über [Splitbuchungen](/rechnungen/splitbuchungen) auf.
+
+<Frame>
+  ![Screenshot 2026 08 21 142732](/images/Screenshot-2026-08-21-142732.png "Screenshot 2026 08 21 142732")
+</Frame>
 
 Darunter gleichst du die **Belegdaten** gegen das Belegbild ab. Zwei Felder sind dabei wichtiger als die anderen: Das **Belegdatum** bestimmt die Periode — ein falsches Datum verschiebt die Buchung in den falschen Monat und damit in die falsche UStVA. **Belegfeld 1** trägt die Rechnungsnummer des Lieferanten; fehlt sie, wird die Offene-Posten-Verwaltung in DATEV unbrauchbar und die App erkennt Dubletten schlechter.
 
@@ -55,6 +45,10 @@ Der Beleg ist eine **Dublette**: **Archivieren**. Nicht wegbuchen — sonst hast
 Der Beleg ist **unleserlich oder der Sachverhalt unklar**: Reiter **Manuell**, von Hand buchen.
 
 Die **Belegart ist falsch erkannt** — in der Eingangsrechnungsliste liegt eine Ausgangsrechnung oder ein Kontoauszug: In der Kopfzeile über **Belegart ändern** auf die richtige Art umstellen. Nicht archivieren; der Beleg ist nicht falsch, nur falsch einsortiert, und beim Archivieren fällt er aus dem Prozess.
+
+<Frame>
+  ![Belegart Aendern Callout](/images/belegart-aendern-callout.png "Belegart Aendern Callout")
+</Frame>
 
 Der **Kreditor ist nicht eindeutig zugeordnet** — im Gegenkonto steht **70000 · Sammelkonto**: Über **\+ Kreditor anlegen** im Hinweis der KI-Analyse ein eigenes Kreditorenkonto erzeugen. Der Ablauf steht in [Kreditor in DATEV anlegen](/rechnungen/kreditor-anlegen). Nicht auf dem Sammelkonto freigeben — sonst ist die Offene-Posten-Verwaltung für diesen Lieferanten hin.
 
