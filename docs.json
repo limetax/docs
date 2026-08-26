@@ -70,35 +70,6 @@
             ]
           },
           {
-            "group": "Bank",
-            "icon": "building-columns",
-            "pages": [
-              "bank/welche-konten-wo",
-              "bank/finanzkonten-anlegen",
-              "bank/umsaetze-importieren",
-              "bank/matching",
-              "bank/durchlaufende-posten"
-            ]
-          },
-          {
-            "group": "Export nach DATEV",
-            "icon": "arrow-right-from-bracket",
-            "pages": [
-              "export/stapel-uebertragen",
-              "export/stapel-in-datev",
-              "export/anlagenzugaenge"
-            ]
-          },
-          {
-            "group": "Chat & Recherche",
-            "icon": "comments",
-            "pages": [
-              "chat/ueberblick",
-              "chat/recherchequellen",
-              "chat/probleme"
-            ]
-          },
-          {
             "group": "Sonstiges",
             "icon": "sliders",
             "pages": [
