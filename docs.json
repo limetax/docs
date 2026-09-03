@@ -35,70 +35,7 @@
         }
       ]
     },
-    "languages": [
-      {
-        "language": "de",
-        "default": true,
-        "groups": [
-          {
-            "group": "Erste Schritte",
-            "pages": [
-              "index"
-            ]
-          },
-          {
-            "group": "Belege importieren",
-            "icon": "inbox-in",
-            "pages": [
-              "belege/smartlogin-agent",
-              "belege/manuell-herunterladen",
-              "belege/fehlende-belege-anfordern"
-            ]
-          },
-          {
-            "group": "Kreditoren- und Debitorenbuchaltung",
-            "icon": "file-invoice",
-            "pages": [
-              "rechnungen/status-verstehen",
-              "rechnungen/eingangsrechnungen-pruefen",
-              "rechnungen/belegansicht",
-              "rechnungen/splitbuchungen",
-              "rechnungen/kreditor-anlegen",
-              "rechnungen/ausgangsrechnungen",
-              "rechnungen/wiederkehrende-buchungen",
-              "rechnungen/ki-fragen"
-            ]
-          },
-          {
-            "group": "Sonstiges",
-            "icon": "sliders",
-            "pages": [
-              "stammdaten/kostenstellen",
-              "stammdaten/stammdaten-und-notiz",
-              "stammdaten/tastenkuerzel"
-            ]
-          },
-          {
-            "group": "Funktionsstand",
-            "icon": "list-check",
-            "pages": [
-              "funktionsstand/funktionsstand"
-            ]
-          }
-        ]
-      },
-      {
-        "language": "de",
-        "products": [
-          {
-            "product": "HR",
-            "pages": [
-              "untitled-page-2"
-            ]
-          }
-        ]
-      }
-    ]
+    "groups": []
   },
   "logo": {
     "light": "/images/logo_mark_black.png",
