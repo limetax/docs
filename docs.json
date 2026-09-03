@@ -35,55 +35,67 @@
         }
       ]
     },
-    "groups": [
+    "languages": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index"
-        ]
-      },
-      {
-        "group": "belege",
-        "pages": [
-          "belege/smartlogin-agent",
-          "belege/manuell-herunterladen",
-          "belege/vorsysteme",
-          "belege/fehlende-belege-anfordern"
-        ]
-      },
-      {
-        "group": "chat",
-        "pages": [
-          "chat/probleme",
-          "chat/recherchequellen",
-          "chat/ueberblick"
-        ]
-      },
-      {
-        "group": "rechnungen",
-        "pages": [
-          "rechnungen/belegansicht",
-          "rechnungen/status-verstehen",
-          "rechnungen/eingangsrechnungen-pruefen",
-          "rechnungen/ausgangsrechnungen",
-          "rechnungen/splitbuchungen",
-          "rechnungen/kreditor-anlegen",
-          "rechnungen/wiederkehrende-buchungen",
-          "rechnungen/ki-fragen"
-        ]
-      },
-      {
-        "group": "stammdaten",
-        "pages": [
-          "stammdaten/kostenstellen",
-          "stammdaten/stammdaten-und-notiz",
-          "stammdaten/tastenkuerzel"
-        ]
-      },
-      {
-        "group": "funktionsstand",
-        "pages": [
-          "funktionsstand/funktionsstand"
+        "language": "de",
+        "default": true,
+        "groups": [
+          {
+            "group": "Erste Schritte",
+            "pages": [
+              "index"
+            ]
+          },
+          {
+            "group": "Belege importieren",
+            "icon": "inbox-in",
+            "pages": [
+              "belege/smartlogin-agent",
+              "belege/manuell-herunterladen",
+              "belege/fehlende-belege-anfordern",
+              "belege/vorsysteme"
+            ]
+          },
+          {
+            "group": "Kreditoren- und Debitorenbuchaltung",
+            "icon": "file-invoice",
+            "pages": [
+              "rechnungen/status-verstehen",
+              "rechnungen/eingangsrechnungen-pruefen",
+              "rechnungen/belegansicht",
+              "rechnungen/splitbuchungen",
+              "rechnungen/kreditor-anlegen",
+              "rechnungen/ausgangsrechnungen",
+              "rechnungen/wiederkehrende-buchungen",
+              "rechnungen/ki-fragen"
+            ]
+          },
+          {
+            "group": "Sonstiges",
+            "icon": "sliders",
+            "pages": [
+              "stammdaten/kostenstellen",
+              "stammdaten/stammdaten-und-notiz",
+              "stammdaten/tastenkuerzel"
+            ]
+          },
+          {
+            "group": "Funktionsstand",
+            "icon": "list-check",
+            "pages": [
+              "funktionsstand/funktionsstand"
+            ]
+          },
+          {
+            "group": "Chat",
+            "icon": "comments",
+            "hidden": true,
+            "pages": [
+              "chat/probleme",
+              "chat/recherchequellen",
+              "chat/ueberblick"
+            ]
+          }
         ]
       }
     ]
