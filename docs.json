@@ -35,7 +35,58 @@
         }
       ]
     },
-    "groups": []
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "group": "belege",
+        "pages": [
+          "belege/smartlogin-agent",
+          "belege/manuell-herunterladen",
+          "belege/vorsysteme",
+          "belege/fehlende-belege-anfordern"
+        ]
+      },
+      {
+        "group": "chat",
+        "pages": [
+          "chat/probleme",
+          "chat/recherchequellen",
+          "chat/ueberblick"
+        ]
+      },
+      {
+        "group": "rechnungen",
+        "pages": [
+          "rechnungen/belegansicht",
+          "rechnungen/status-verstehen",
+          "rechnungen/eingangsrechnungen-pruefen",
+          "rechnungen/ausgangsrechnungen",
+          "rechnungen/splitbuchungen",
+          "rechnungen/kreditor-anlegen",
+          "rechnungen/wiederkehrende-buchungen",
+          "rechnungen/ki-fragen"
+        ]
+      },
+      {
+        "group": "stammdaten",
+        "pages": [
+          "stammdaten/kostenstellen",
+          "stammdaten/stammdaten-und-notiz",
+          "stammdaten/tastenkuerzel"
+        ]
+      },
+      {
+        "group": "funktionsstand",
+        "pages": [
+          "funktionsstand/funktionsstand"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/images/logo_mark_black.png",
