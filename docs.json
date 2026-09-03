@@ -86,6 +86,14 @@
             ]
           }
         ]
+      },
+      {
+        "language": "de",
+        "products": [
+          {
+            "product": "HR"
+          }
+        ]
       }
     ]
   },
@@ -436,5 +444,9 @@
       "destination": "/funktionsstand/funktionsstand",
       "permanent": true
     }
-  ]
+  ],
+  "appearance": {
+    "default": "light",
+    "strict": true
+  }
 }
