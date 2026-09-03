@@ -91,7 +91,10 @@
         "language": "de",
         "products": [
           {
-            "product": "HR"
+            "product": "HR",
+            "pages": [
+              "untitled-page-2"
+            ]
           }
         ]
       }
