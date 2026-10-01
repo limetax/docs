@@ -1,0 +1,57 @@
+---
+title: "Die Belegansicht: PDF links, Kontierung rechts"
+sidebarTitle: "Belegansicht"
+description: "Wie die Belegansicht aufgebaut ist, welche fünf Bereiche das Bearbeitungsfeld hat und in welcher Reihenfolge du sie abarbeitest."
+---
+
+Klickst du einen Beleg an, öffnet sich die Detailansicht: links das Belegbild im PDF-Viewer, rechts das Bearbeitungsfeld. Das Bearbeitungsfeld hat fünf Bereiche, und ihre Anordnung von oben nach unten ist gleichzeitig die sinnvolle Arbeitsreihenfolge.
+
+<Frame caption="Detailansicht mit den fünf Bereichen des Bearbeitungsfelds">
+  ![Screenshot 2026 08 18 155330](/images/Screenshot-2026-08-18-155330.png "Screenshot 2026 08 18 155330")
+</Frame>
+
+## 1 · Kopfzeile
+
+Status, Gegenpartei, Betrag und Belegdatum. Dazu der Button **KI fragen** und das X zum Schließen.
+
+Zwischen beiden steht die erkannte **Belegart** als Aufklappmenü. Über **Belegart ändern** stellst du sie auf **Eingangsrechnung**, **Ausgangsrechnung** oder **Kontoauszug** um; die aktuell gesetzte Art ist mit einem Häkchen markiert. Das ist der richtige Griff, wenn ein Beleg im falschen Bereich gelandet ist — ein Kontoauszug, der unter Eingangsrechnung auftaucht, wird nicht archiviert, sondern umgestellt.
+
+Die Kopfzeile ist für die schnelle Einordnung da: wer, wie viel, wann. Bei einem Beleg, den du in zwei Sekunden erkennst, reicht sie schon, um zu entscheiden, ob es ein Routinefall ist oder einer, bei dem du genauer hinschauen musst.
+
+## 2 · KI-Analyse
+
+Hier steht, was die KI geprüft hat und **warum** der Beleg auf **Prüfen** liegt — zum Beispiel ein §13b-Verdacht, ein abweichender Leistungsempfänger oder ein monatsübergreifender Leistungszeitraum.
+
+Unter den Analysepunkten kann ein eigener Hinweisblock mit **Aktions-Button** stehen. Der häufigste ist **Kreditor nicht eindeutig zugeordnet** mit dem Button **\+ Kreditor anlegen** — der Ablauf steht in [Kreditor in DATEV anlegen](/rechnungen/kreditor-anlegen). Ein solcher Block ist kein Text zum Wegklicken, sondern eine Aufgabe.
+
+Lies das zuerst. Die KI-Analyse ist keine Zusammenfassung des Belegs, sondern eine Begründung für ihren Zweifel. Damit ist sie deine Prüf-Checkliste für genau diesen einen Beleg — und sie erspart dir, alle Felder gleich intensiv zu kontrollieren.
+
+## 3 · Buchungssätze
+
+BU-Schlüssel, Konto, Betrag und darunter der **Restbetrag**. Über **\+ Buchung hinzufügen** und **\+ Letzte kopieren** legst du weitere Zeilen an, wenn ein Beleg aufgeteilt werden muss.
+
+Der Restbetrag ist die Kontrollzahl dieses Bereichs: Rechnungsbetrag minus Summe aller Buchungszeilen. Er muss vor der Freigabe auf 0,00 € stehen, sonst geht die Buchung nicht auf.
+
+An einer einzelnen Buchungsposition kannst du zusätzlich eine **Rechnungsabgrenzung** einrichten. Der Betrag wird dann nicht sofort als Aufwand gebucht, sondern in monatlichen Raten aufgelöst. Der Ablauf steht in [Wiederkehrende Buchungen](/rechnungen/wiederkehrende-buchungen).
+
+## 4 · Belegdaten
+
+Gegenkonto, Belegdatum, Belegfeld 1 und 2, Währung, Rechnungsbetrag und Notiz. Diesen Bereich gleichst du gegen das Belegbild links ab.
+
+Zwei Details, die im Alltag stören, wenn man sie nicht kennt: Das Feld heißt **Gegenkonto (Kreditor)** und zeigt bei einem unbekannten Lieferanten **70000 · Sammelkonto**. Und **Belegfeld 2** ist ein **Datumsfeld** (tt.mm.jjjj), kein Freitextfeld — die Rechnungsnummer gehört ausschließlich in Belegfeld 1.
+
+Zwei Felder wirken dabei stärker als die anderen. Das **Belegdatum** bestimmt die Periode — ein falsches Datum verschiebt die Buchung in den falschen Monat und damit in die falsche UStVA. **Belegfeld 1** trägt die Rechnungsnummer; fehlt sie, wird die Offene-Posten-Verwaltung in DATEV unbrauchbar und die Dublettenerkennung arbeitet schlechter.
+
+<Tip>
+  Arbeite von oben nach unten: einordnen, KI-Analyse lesen, Buchungssätze prüfen, Belegdaten abgleichen, entscheiden. Wer mit den Belegdaten anfängt, prüft oft Felder, auf die die KI gar nicht hingewiesen hat — und übersieht den einen Punkt, der wirklich unklar war.
+</Tip>
+
+<Columns cols={2}>
+  <Card title="Eingangsrechnungen prüfen" icon="clipboard-check" href="/rechnungen/eingangsrechnungen-pruefen">
+    Der Arbeits-Loop, der auf dieser Ansicht aufsetzt.
+  </Card>
+
+  <Card title="Tastenkürzel" icon="keyboard" href="/stammdaten/tastenkuerzel">
+    Die vollständige Liste der Kürzel.
+  </Card>
+</Columns>

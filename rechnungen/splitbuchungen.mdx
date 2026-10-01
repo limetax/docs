@@ -1,0 +1,43 @@
+---
+title: "Splitbuchungen: einen Beleg auf mehrere Sachkonten aufteilen"
+sidebarTitle: "Splitbuchungen"
+description: "Wie du eine Rechnung mit mehreren Kostenarten oder Steuersätzen in einzelne Buchungszeilen aufteilst und was der Restbetrag dir dabei sagt."
+---
+
+Manche Belege gehören nicht auf ein einzelnes Konto: eine Restaurantrechnung mit Bewirtung und Trinkgeld, eine Sammelrechnung über mehrere Kostenarten, Positionen mit 19 % und 7 % auf demselben Beleg. In diesen Fällen legst du mehrere Buchungszeilen an.
+
+## So teilst du auf
+
+Klicke im Bereich **Buchungssätze** auf **\+ Buchung hinzufügen**. Ändert sich zwischen den Zeilen nur der Betrag, geht es schneller über **\+ Letzte kopieren** — Konto und BU-Schlüssel werden dabei übernommen.
+
+Setz pro Zeile Konto, BU-Schlüssel und Betrag. Bei unterschiedlichen Steuersätzen gehört jeder Satz in eine eigene Zeile mit dem passenden BU-Schlüssel; eine Mischzeile mit einem Durchschnittssatz führt zu einer falschen Vorsteuer.
+
+<Frame caption="Buchungszeilen vor und nach dem Aufteilen">
+  ![Buchungssatz Hinzufuegen Kopieren](/images/buchungssatz-hinzufuegen-kopieren.png "Buchungssatz Hinzufuegen Kopieren")
+</Frame>
+
+## Was der Restbetrag dir sagt
+
+Der **Restbetrag** unter den Buchungszeilen ist der Rechnungsbetrag minus die Summe aller Zeilen. Er ist deine laufende Kontrolle beim Aufteilen: Solange er nicht 0,00 € beträgt, ist der Beleg nicht vollständig verbucht.
+
+Ist er positiv, fehlt noch eine Zeile. Ist er negativ, hast du zu viel verteilt — meist, weil eine Zeile den Bruttobetrag statt des Teilbetrags trägt.
+
+<Warning>
+  **Beachte!** Eine Freigabe bei einem Restbetrag ungleich 0,00 € ist der häufigste Fehler in diesem Schritt. Auffallen wird es erst in DATEV, wenn der Stapel nicht sauber durchläuft — und dann musst du zurück in die App, den Beleg suchen, korrigieren und neu übertragen.
+</Warning>
+
+## Wenn nur Centbeträge übrig bleiben
+
+Beträgt der Restbetrag ein paar Cent, liegt es fast immer an einer Rundung im **erkannten Rechnungsbetrag**, nicht an deiner Aufteilung. Prüf den Betrag oben in den Belegdaten gegen das Belegbild und korrigier ihn dort.
+
+Buche die Differenz nicht irgendwo hin. Ein Cent auf einem Aufwandskonto ist harmlos, aber ein falscher Rechnungsbetrag im Belegfeld führt dazu, dass die Zahlung später nicht gematcht wird — der Abgleich läuft über genau diesen Betrag.
+
+<Columns cols={2}>
+  <Card title="Kostenstellen" icon="chart-pie" href="/stammdaten/kostenstellen">
+    Pro Buchungszeile eine eigene Kostenstelle setzen.
+  </Card>
+
+  <Card title="Matching" icon="link" href="/bank/matching">
+    Warum der Rechnungsbetrag für den Zahlungsabgleich zählt.
+  </Card>
+</Columns>

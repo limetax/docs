@@ -1,0 +1,58 @@
+---
+title: "Kostenstellen in Limetax verwenden"
+sidebarTitle: "Kostenstellen"
+description: "Wie du Kostenstellen einem Mandanten zuordnest und wie sie im Belegprozess und bei der Auswertung wirken."
+---
+
+Kostenstellen sind das Werkzeug, mit dem dein Mandant Aufwand und Ertrag nach interner Struktur aufteilt: Standorte, Abteilungen, Projekte, Fahrzeuge. In Limetax funktionieren Kostenstellen als **zusätzliches Feld an der Buchungszeile** — jede Buchung kann (muss aber nicht) einer Kostenstelle zugeordnet werden. Die Kostenstelle wird beim Export nach DATEV übernommen und läuft dort in die BWA und weitere Auswertungen ein.
+
+Der Artikel geht davon aus, dass die Kostenstellen-Systematik im Mandanten bereits definiert ist (welche Nummer für welchen Bereich). Das ist eine Entscheidung zwischen Kanzlei und Mandant und läuft üblicherweise beim Onboarding. Dieser Artikel beschreibt, wie du die Kostenstellen dann in Limetax nutzt.
+
+## Kostenstellen im Mandanten aktivieren
+
+Die Kostenstellen eines Mandanten findest du in der Mandantenübersicht ganz unten in der Seitenleiste. Dort siehst du das Kostensystem des Mandanten und legst neue Kostenstellen an.
+
+<Frame>
+  ![Kostenstellen Synchronisieren](/images/kostenstellen-synchronisieren.png "Kostenstellen Synchronisieren")
+</Frame>
+
+Wie es danach weitergeht, hängt davon ab, ob der Mandant in DATEV bereits ein Kostensystem hat.
+
+Sind Kostensystem und Kostenstellen in DATEV bereits angelegt, baust du in der Limetax-App nichts neu auf. Es reicht eine einmalige Synchronisation für das betroffene Jahr — in der Regel das laufende Wirtschaftsjahr. Danach stehen dir alle Kostenstellen des Mandanten in der Auswahl zur Verfügung.
+
+Kommt später eine neue Kostenstelle dazu, legst du sie direkt in der App an. Sie wird automatisch nach DATEV übertragen. Du musst dort nichts nachpflegen und keinen weiteren Abgleich anstoßen.
+
+<Frame>
+  ![Kostenstellen Anlegen](/images/kostenstellen-anlegen.png "Kostenstellen Anlegen")
+</Frame>
+
+### Der Mandant nutzt Kostenstellen zum ersten Mal
+
+Das Kostensystem selbst legst du wie gewohnt in DATEV an — dieser Schritt bleibt in DATEV, Limetax kann kein neues Kostensystem erzeugen. Sobald es dort steht, synchronisierst du in Limetax einmal, und das Kostensystem ist hinterlegt.
+
+Ab diesem Punkt gilt dasselbe wie im Fall oben: Neue Kostenstellen legst du in Limetax an, die Übertragung nach DATEV läuft automatisch.
+
+{/* TODO: Klickpfad für die Synchronisation aus DATEV bestätigen */}
+
+## Kostenstelle beim Beleg setzen
+
+In der Belegansicht wählst du die Kostenstelle im Feld **Kostenstelle** unter dem Sachkonto. Die App schlägt eine Kostenstelle vor, wenn:
+
+- Der Lieferant historisch immer auf dieselbe Kostenstelle gebucht wurde. Beispiel: die Tankrechnungen für ein bestimmtes Fahrzeug laufen immer auf die Fahrzeug-Kostenstelle.
+- Der Beleg klare Hinweise enthält (Projektname im Verwendungszweck, Bestellnummer, die auf einer Kostenstelle liegt).
+
+Ohne solche Hinweise lässt die App das Feld leer und wartet auf deinen Eintrag.
+
+<Note>
+  Wenn ein Mandant Kostenstellen nur an einzelnen Bereichen führt (z. B. nur Fahrzeuge, aber nicht Standorte), leg das in der [Notiz](/stammdaten/stammdaten-und-notiz) fest. Sonst rätselt jedes Kollegenmitglied bei jeder Buchung, ob es diesmal eine Kostenstelle braucht.
+</Note>
+
+<Columns cols={2}>
+  <Card title="Belegansicht" icon="table-columns" href="/rechnungen/belegansicht">
+    Wo das Kostenstellen-Feld sitzt.
+  </Card>
+
+  <Card title="Stammdaten und Notiz" icon="note-sticky" href="/stammdaten/stammdaten-und-notiz">
+    Wo du die Kostenstellen-Logik für den Mandanten dokumentierst.
+  </Card>
+</Columns>
