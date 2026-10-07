@@ -16,6 +16,25 @@
       {
         "group": "Getting Started",
         "pages": [
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Belege importieren",
+        "pages": [
+          "belege/smartlogin-agent"
+        ]
+      },
+      {
+        "group": "Getting Started",
+        "pages": [
           "index",
           "quickstart"
         ]
