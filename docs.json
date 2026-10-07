@@ -34,7 +34,7 @@
             ]
           },
           {
-            "group": "Kreditoren- und Debitorenbuchaltung",
+            "group": "Kreditoren- und Debitorenbuchhaltung",
             "icon": "file-invoice",
             "pages": [
               "rechnungen/status-verstehen",
@@ -146,7 +146,7 @@
     },
     {
       "source": "/belege/duplikate",
-      "destination": "/belege/import-probleme",
+      "destination": "/belege/manuell-herunterladen",
       "permanent": true
     },
     {
@@ -156,27 +156,27 @@
     },
     {
       "source": "/erste-schritte/was-limetax-uebernimmt",
-      "destination": "/erste-schritte/was-macht-limetax",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/erste-schritte/geeignete-mandanten",
-      "destination": "/erste-schritte/passende-mandanten",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/erste-schritte/anmeldung",
-      "destination": "/erste-schritte/anmelden-und-mandant-oeffnen",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/erste-schritte/oberflaeche",
-      "destination": "/erste-schritte/anmelden-und-mandant-oeffnen",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/erste-schritte/datev-verbinden",
-      "destination": "/erste-schritte/was-macht-limetax",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -201,17 +201,17 @@
     },
     {
       "source": "/kontierung/privatauslagen",
-      "destination": "/rechnungen/manuell-buchen",
+      "destination": "/rechnungen/eingangsrechnungen-pruefen",
       "permanent": true
     },
     {
       "source": "/kontierung/aufzuteilende-vorsteuer",
-      "destination": "/rechnungen/auslandsbelege",
+      "destination": "/rechnungen/eingangsrechnungen-pruefen",
       "permanent": true
     },
     {
       "source": "/kontierung/steuerfreie-umsaetze",
-      "destination": "/rechnungen/auslandsbelege",
+      "destination": "/rechnungen/eingangsrechnungen-pruefen",
       "permanent": true
     },
     {
@@ -411,12 +411,12 @@
     },
     {
       "source": "/fehler/index",
-      "destination": "/belege/import-probleme",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/fehler/index-nach-fehlermeldung",
-      "destination": "/belege/import-probleme",
+      "destination": "/",
       "permanent": true
     },
     {
