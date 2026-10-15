@@ -1,0 +1,53 @@
+---
+title: "DATEVconnect: Konten, OPOS und Anlagenverzeichnis im Chat abfragen"
+sidebarTitle: "DATEVconnect"
+description: "Wie du gebuchte Konten, offene Posten und das Anlagenverzeichnis direkt aus dem Chat ziehst — als Excel, ohne jedes Blatt einzeln in DATEV zu suchen."
+---
+
+**DATEVconnect** ist die zweite DATEV-Quelle im Chat. Während die **DATEV DMS Suche** Dokumente findet — Verträge, Bescheide, Schriftverkehr —, greift DATEVconnect auf das **Rechnungswesen** zu: auf das, was tatsächlich gebucht ist.
+
+| Quelle | Was dahinter liegt |
+| --- | --- |
+| **DATEV DMS** | Dokumente des Mandanten: Verträge, Bescheide, Jahresabschlüsse, Schriftverkehr |
+| **DATEVconnect** | Buchhaltungsdaten: Konten, Buchungssätze, OPOS, Anlagenverzeichnis |
+
+Beide sind getrennte Integrationen. Du setzt sie über **\+ → Integrationen auswählen** oder per **/** im Eingabefeld; danach stehen sie rechts im **Kontext**. Den Mandanten brauchst du in beiden Fällen.
+
+## Was du abfragen kannst
+
+Grundsätzlich funktioniert es mit **jedem Konto, das in DATEV gebucht ist**. Typische Fragen aus dem Alltag:
+
+- „Gliedere mir das Kautionskonto der … GmbH auf und schick es als Excel."
+- „Zeig mir Konto 1590 mit allen Buchungen."
+- „Welche Verbindlichkeiten sind noch offen?" (OPOS)
+- „Gib mir das Anlagenverzeichnis zum aktuellen Stand."
+
+Das Anlagenverzeichnis kommt mit **Inventarnummer, Bezeichnung, Anschaffungsdatum und Nutzungsdauer** — direkt aus DATEV, nicht nachgebaut.
+
+Das Ergebnis öffnet sich als **Excel rechts in der Seitenansicht**. Von dort kannst du es direkt an eine E-Mail hängen oder im [Arbeitsordner](/chat/arbeitsordner) ablegen.
+
+<Note>
+  Für die Excel-Ausgabe ist noch kein Kanzlei-Muster hinterlegt — du bekommst eine Standard-Excel ohne eigenes Layout.
+</Note>
+
+## Fehlende Belege an Buchungen finden
+
+DATEVconnect zeigt auch, ob an einer Buchung ein **digitaler Beleg** hängt. Damit lässt sich ein Konto gezielt danach durchsehen, wo noch etwas fehlt:
+
+> Zeig mir alle Buchungen auf Konto …, an denen kein digitaler Beleg hängt.
+
+Nützlich zum Beispiel bei Darlehen: Die Buchung ist da, der Darlehensvertrag hängt aber noch nicht dran.
+
+## Zeitraum: ab 2024
+
+<Warning>
+  **Beachte!** Abrufbar sind die Jahre **ab 2024**. Das Jahr **2023** steht über DATEVconnect nicht mehr zur Verfügung.
+
+  Wenn du keinen Zeitraum angibst, sucht der Chat über alle Jahre und meldet unter Umständen, dass das Tool nicht ausgeführt werden konnte. Alles ab 2024 liefert er trotzdem. Gib das Jahr oder den Zeitraum lieber direkt mit an.
+</Warning>
+
+## Mehrere Anfragen auf einmal
+
+Der eigentliche Gewinn liegt in der Kombination: eingegangene E-Mails auswerten, die dazugehörigen Konten abfragen und die Antwort an den Mandanten gleich formulieren lassen — alles in einem Chat, ohne in DATEV jedes Blatt einzeln herauszusuchen.
+
+Hast du mehrere Mandanten abzuarbeiten, lass die Abfragen in [mehreren Chats parallel](/chat/ueberblick) laufen.
