@@ -51,13 +51,11 @@
             "group": "Chat",
             "icon": "comments",
             "pages": [
-              "chat/ueberblick",
               "chat/mandant-und-kontext",
               "chat/arbeitsordner",
               "chat/outlook-und-teams",
               "chat/datev-connect",
-              "chat/integrationen",
-              "chat/probleme"
+              "chat/integrationen"
             ]
           },
           {
@@ -74,16 +72,6 @@
             "icon": "list-check",
             "pages": [
               "funktionsstand/funktionsstand"
-            ]
-          },
-          {
-            "group": "Chat",
-            "icon": "comments",
-            "hidden": true,
-            "pages": [
-              "chat/probleme",
-              "chat/recherchequellen",
-              "chat/ueberblick"
             ]
           }
         ]
