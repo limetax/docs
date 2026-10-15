@@ -12,68 +12,78 @@
     "dark": "/images/logo_mark_white.png"
   },
   "navigation": {
-    "languages": [
+    "groups": [
       {
-        "language": "de",
-        "default": true,
-        "groups": [
-          {
-            "group": "Erste Schritte",
-            "pages": [
-              "index"
-            ]
-          },
-          {
-            "group": "Belege importieren",
-            "icon": "inbox-in",
-            "pages": [
-              "belege/smartlogin-agent",
-              "belege/manuell-herunterladen",
-              "belege/fehlende-belege-anfordern",
-              "belege/vorsysteme"
-            ]
-          },
-          {
-            "group": "Kreditoren- und Debitorenbuchhaltung",
-            "icon": "file-invoice",
-            "pages": [
-              "rechnungen/status-verstehen",
-              "rechnungen/eingangsrechnungen-pruefen",
-              "rechnungen/belegansicht",
-              "rechnungen/splitbuchungen",
-              "rechnungen/kreditor-anlegen",
-              "rechnungen/ausgangsrechnungen",
-              "rechnungen/wiederkehrende-buchungen",
-              "rechnungen/ki-fragen"
-            ]
-          },
-          {
-            "group": "Chat",
-            "icon": "comments",
-            "pages": [
-              "chat/mandant-und-kontext",
-              "chat/arbeitsordner",
-              "chat/outlook-und-teams",
-              "chat/datev-connect",
-              "chat/integrationen"
-            ]
-          },
-          {
-            "group": "Sonstiges",
-            "icon": "sliders",
-            "pages": [
-              "stammdaten/kostenstellen",
-              "stammdaten/stammdaten-und-notiz",
-              "stammdaten/tastenkuerzel"
-            ]
-          },
-          {
-            "group": "Funktionsstand",
-            "icon": "list-check",
-            "pages": [
-              "funktionsstand/funktionsstand"
-            ]
-          }
+        "group": "Erste Schritte",
+        "icon": "hand-wave",
+        "pages": [
+          "index",
+          "funktionsstand/funktionsstand"
+        ]
+      },
+      {
+        "group": "Belege",
+        "icon": "file-arrow-up",
+        "pages": [
+          "belege/smartlogin-agent",
+          "belege/manuell-herunterladen",
+          "belege/fehlende-belege-anfordern"
+        ]
+      },
+      {
+        "group": "Rechnungen buchen",
+        "icon": "receipt",
+        "pages": [
+          "rechnungen/belegansicht",
+          "rechnungen/status-verstehen",
+          "rechnungen/eingangsrechnungen-pruefen",
+          "rechnungen/ausgangsrechnungen",
+          "rechnungen/splitbuchungen",
+          "rechnungen/kreditor-anlegen",
+          "rechnungen/wiederkehrende-buchungen",
+          "rechnungen/ki-fragen"
+        ]
+      },
+      {
+        "group": "Bank",
+        "icon": "building-columns",
+        "pages": [
+          "bank/welche-konten-wo",
+          "bank/finanzkonten-anlegen",
+          "bank/umsaetze-importieren",
+          "bank/matching",
+          "bank/durchlaufende-posten"
+        ]
+      },
+      {
+        "group": "Chat",
+        "icon": "comments",
+        "pages": [
+          "chat/ueberblick",
+          "chat/mandant-und-kontext",
+          "chat/arbeitsordner",
+          "chat/outlook-und-teams",
+          "chat/datev-connect",
+          "chat/integrationen",
+          "chat/probleme"
+        ]
+      },
+      {
+        "group": "DATEV-Übergabe",
+        "icon": "arrow-right-arrow-left",
+        "pages": [
+          "export/stapel-uebertragen",
+          "export/stapel-in-datev",
+          "export/anlagenzugaenge"
+        ]
+      },
+      {
+        "group": "Stammdaten & Kanzlei",
+        "icon": "gear",
+        "pages": [
+          "stammdaten/stammdaten-und-notiz",
+          "stammdaten/kostenstellen",
+          "stammdaten/tastenkuerzel"
         ]
       }
     ]
@@ -86,7 +96,7 @@
   "navbar": {
     "links": [
       {
-        "href": "mailto:support@limetax.de",
+        "href": "mailto:kontakt@limetax.de",
         "label": "Support"
       }
     ],
@@ -318,6 +328,16 @@
     {
       "source": "/chat/grenzen",
       "destination": "/funktionsstand/funktionsstand",
+      "permanent": true
+    },
+    {
+      "source": "/chat/recherchequellen",
+      "destination": "/chat/integrationen",
+      "permanent": true
+    },
+    {
+      "source": "/chat/mandant-und-rueckfragen",
+      "destination": "/chat/mandant-und-kontext",
       "permanent": true
     },
     {
