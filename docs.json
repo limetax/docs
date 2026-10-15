@@ -53,7 +53,8 @@
           "bank/umsaetze-importieren",
           "bank/matching",
           "bank/durchlaufende-posten"
-        ]
+        ],
+        "hidden": true
       },
       {
         "group": "Chat",
