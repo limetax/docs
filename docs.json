@@ -60,7 +60,6 @@
         "group": "Chat",
         "icon": "comments",
         "pages": [
-          "chat/ueberblick",
           "chat/mandant-und-kontext",
           "chat/arbeitsordner",
           "chat/outlook-und-teams",
