@@ -48,6 +48,12 @@
             ]
           },
           {
+            "group": "Untitled Tab",
+            "pages": [
+              "untitled-page-2"
+            ]
+          },
+          {
             "group": "Sonstiges",
             "icon": "sliders",
             "pages": [
