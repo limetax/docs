@@ -1,63 +1,79 @@
 ---
-title: "DATEVconnect: Konten, OPOS und Anlagenverzeichnis im Chat abfragen"
+title: "Welche Daten über DATEVconnect laufen"
 sidebarTitle: "DATEVconnect"
-description: "Wie du gebuchte Konten, offene Posten und das Anlagenverzeichnis direkt aus dem Chat ziehst — als Excel, ohne jedes Blatt einzeln in DATEV zu suchen."
+description: "DATEVconnect verbindet eure DATEV-Installation direkt mit anderer Software. Hier steht, welche Daten dabei erreichbar sind und was sich verändern lässt."
 ---
 
-**DATEVconnect** ist die zweite DATEV-Quelle im Chat. Während die **DATEV DMS Suche** Dokumente findet — Verträge, Bescheide, Schriftverkehr —, greift DATEVconnect auf das **Rechnungswesen** zu: auf das, was tatsächlich gebucht ist.
+DATEVconnect verbindet eure DATEV-Installation direkt mit der Limetax App. Statt einen Buchungsstapel als Datei zu exportieren, weiterzuschicken und wieder einzulesen, greift die Software direkt auf euer DATEV zu.
 
-| Quelle | Was dahinter liegt |
-| --- | --- |
-| **DATEV DMS** | Dokumente des Mandanten: Verträge, Bescheide, Jahresabschlüsse, Schriftverkehr |
-| **DATEVconnect** | Buchhaltungsdaten: Konten, Buchungssätze, OPOS, Anlagenverzeichnis |
+Erreichbar ist dabei deutlich mehr als nur Buchungen.
 
-Beide sind getrennte Integrationen. Du setzt sie über **\+ → Integrationen auswählen** oder per **/** im Eingabefeld; danach stehen sie rechts im **Kontext**. Den Mandanten brauchst du in beiden Fällen.
+## Was aus der Buchhaltung sichtbar wird
 
-## Was du abfragen kannst
+Praktisch der gesamte Bestand, den ihr im Kanzlei-Rechnungswesen vor euch habt:
 
-Grundsätzlich funktioniert es mit **jedem Konto, das in DATEV gebucht ist**. Typische Fragen aus dem Alltag:
+- **Mandanten und Wirtschaftsjahre** mit Kontenrahmen (SKR03 oder SKR04), Sachkontennummernlänge, Basiswährung und Besteuerungsart
+- **Offene Posten** — Forderungen und Verbindlichkeiten, offene wie bereits ausgeglichene, mit Rechnungsnummer, Betrag, Zahlungsweise, Mahnstufe, Kostenstelle, Steuersatz und Belegverweis
+- **Der Kontenplan**: alle beschrifteten Sachkonten und zusätzlich alle, die zwar unbeschriftet, aber bebucht sind
+- **Debitoren und Kreditoren** mit Adressdaten, Kommunikationsdaten, Bankverbindungen, Rechtsform und Steuernummer
+- **Kostenstellen, Kostenträger und KOST-Systeme** samt Kostenstelleneigenschaften
+- **Auswertungen**: Summen- und Saldenliste, Primanota mit den erfassten Stapeln und deren Buchungen, dazu die monatliche Buchungsstatistik
+- **Inventurdaten** aus der Anlagenbuchführung
+- **Zahlungsbedingungen** und diverse Adressen
 
-- „Gliedere mir das Kautionskonto der … GmbH auf und schick es als Excel."
-- „Zeig mir Konto 1590 mit allen Buchungen."
-- „Welche Verbindlichkeiten sind noch offen?" (OPOS)
-- „Gib mir das Anlagenverzeichnis zum aktuellen Stand."
+## Was aus den Stammdaten sichtbar wird
 
-Das Anlagenverzeichnis kommt mit **Inventarnummer, Bezeichnung, Anschaffungsdatum und Nutzungsdauer** — direkt aus DATEV, nicht nachgebaut.
+Aus den Zentralen Stammdaten im DATEV Arbeitsplatz kommen Mandanten und Adressaten — jeweils mit Anschriften, Kommunikationsverbindungen, Bankverbindungen und Finanzamtsverbindungen. Dazu Rechtsformen, eure Kanzleimitarbeiter, die hinterlegten Zuständigkeiten und die Unternehmensstrukturen.
 
-Das Ergebnis öffnet sich als **Excel rechts in der Seitenansicht**. Von dort kannst du es direkt an eine E-Mail hängen oder im [Arbeitsordner](/chat/arbeitsordner) ablegen.
+## Was aus dem Lohn sichtbar wird
 
-<Note>
-  Für die Excel-Ausgabe ist noch kein Kanzlei-Muster hinterlegt — du bekommst eine Standard-Excel ohne eigenes Layout.
-</Note>
+Das setzt Lohn und Gehalt classic oder comfort voraus. Erreichbar sind Lohnarten, Kostenstellen und Ausfallschlüssel des Mandanten sowie die Arbeitnehmerdaten: Adresse, Bankverbindung, Tätigkeit, Beschäftigungsverhältnisse, Brutto-Bezüge, Stundenlöhne, Urlaubsanspruch, Sozialversicherung, freiwillige und private Versicherung, steuerliche Angaben und die Steuerkarte. Dazu die Monats- und Kalendererfassung.
 
-## Fehlende Belege an Buchungen finden
+**Beachte:** Das ist der sensibelste Bereich überhaupt. Wer hier anbindet, kommt an vollständige Personaldaten eurer Mandanten.
 
-DATEVconnect zeigt auch, ob an einer Buchung ein **digitaler Beleg** hängt. Damit lässt sich ein Konto gezielt danach durchsehen, wo noch etwas fehlt:
+## Was aus dem DMS sichtbar wird
 
-> Zeig mir alle Buchungen auf Konto …, an denen kein digitaler Beleg hängt.
+Mit DATEV DMS oder der Dokumentenablage werden die Ablagestruktur — Bereich, Ordner, Register — und die Dokumente selbst erreichbar, inklusive ihrer Eigenschaften und der einzelnen Dateien. Gesucht wird über Filter, große Trefferlisten lassen sich seitenweise durchblättern.
 
-Nützlich zum Beispiel bei Darlehen: Die Buchung ist da, der Darlehensvertrag hängt aber noch nicht dran.
+## Was aus der Auftragsverwaltung sichtbar wird
 
-## Zeitraum: ab 2024
+Mit Eigenorganisation comfort kommen eure eigenen Auftragsdaten dazu: Auftragsarten, Aufträge mit Status und Planwerten, Teilaufträge mit Zeiten, Kosten und Umsatzwerten, Monatswerte, geplante Kostenpositionen und die Aufwandsbuchungen eurer Mitarbeiter.
 
-<Warning>
-  **Beachte!** Abrufbar sind die Jahre **ab 2024**. Das Jahr **2023** steht über DATEVconnect nicht mehr zur Verfügung.
+## Häufige Rückfragen
 
-  Wenn du keinen Zeitraum angibst, sucht der Chat über alle Jahre und meldet unter Umständen, dass das Tool nicht ausgeführt werden konnte. Alles ab 2024 liefert er trotzdem. Gib das Jahr oder den Zeitraum lieber direkt mit an.
-</Warning>
+<AccordionGroup>
+  <Accordion title="Ist das der Buchungsdatenservice?">
+    Nein. Der Buchungsdatenservice bringt Buchungen und Belegbilder vom Mandanten über das DATEV-Rechenzentrum zu euch — mehr nicht. DATEVconnect läuft lokal und kommt zusätzlich an offene Posten, Kontenplan, Kostenstellen, Stammdaten, Lohn und DMS. Beides kann nebeneinander laufen.
+  </Accordion>
 
-## Mehrere Anfragen auf einmal
+  <Accordion title="Warum sieht eine Kollegin andere Daten als ich?">
+    Weil die Berechtigungen des DATEV-Benutzers durchschlagen, unter dem die Verbindung läuft. Gesteuert wird das in der DATEV Rechteverwaltung, nicht in der Schnittstelle. Wenn etwas fehlt, liegt es fast immer an den Rechten.
+  </Accordion>
 
-Der eigentliche Gewinn liegt in der Kombination: eingegangene E-Mails auswerten, die dazugehörigen Konten abfragen und die Antwort an den Mandanten gleich formulieren lassen — alles in einem Chat, ohne in DATEV jedes Blatt einzeln herauszusuchen.
+  <Accordion title="Wir arbeiten mit Lodas statt Lohn und Gehalt">
+    Die Leistungsbeschreibung nennt ausschließlich Lohn und Gehalt classic und comfort. Lodas ist dort nicht aufgeführt. Klärt den Weg vorab mit eurem DATEV-Ansprechpartner.
+  </Accordion>
 
-Hast du mehrere Mandanten abzuarbeiten, lass die Abfragen in [mehreren Chats parallel](/chat/ueberblick) laufen.
+  <Accordion title="Läuft das über das Internet?">
+    Nein, und das ist Absicht. DATEVconnect ist für das eigene Netzwerk gedacht. DATEV empfiehlt einen Zugriff über öffentliche Netzwerke ausdrücklich nicht und trifft für dieses Szenario keine Aussage zur Datensicherheit.
+  </Accordion>
 
-<Columns cols={2}>
-  <Card title="Outlook und Teams" icon="envelope" href="/chat/outlook-und-teams">
-    Die Antwort an den Mandanten direkt aus dem Chat.
-  </Card>
+  <Accordion title="Was ist mit Steuererklärungen und Jahresabschluss?">
+    Nicht dabei. Einkommensteuer, Körperschaftsteuer, E-Bilanz und vergleichbare Programme sind nicht angebunden. DATEVconnect deckt Rechnungswesen, Zentrale Stammdaten, Lohn, DMS und Eigenorganisation ab.
+  </Accordion>
 
-  <Card title="Fehlende Belege anfordern" icon="file-circle-question" href="/belege/fehlende-belege-anfordern">
-    Die Belegliste für den Mandanten.
-  </Card>
-</Columns>
+  <Accordion title="Ändert sich der Umfang mit der Zeit?">
+    Ja. Was möglich ist, hängt an den beteiligten DATEV-Programmen und deren Versionen. DATEV entwickelt die Schnittstelle weiter und kündigt Änderungen an. Der hier beschriebene Stand bezieht sich auf die Leistungsbeschreibung DATEVconnect Version 14.01 (Dok.-Nr. 0904166).
+  </Accordion>
+</AccordionGroup>
+
+{/* TODO Chris — Abschnitt „Was Limetax davon nutzt" vor Veröffentlichung ergänzen.
+    Stand laut Lora (15.10.2026): Limetax liest ausschließlich, schreibt vorerst nicht.
+    Entwurfstext zur Freigabe:
+
+    ## Was Limetax davon nutzt
+    Limetax liest ausschließlich. Es werden Daten abgerufen, aber nichts
+    zurückgeschrieben — weder Buchungsstapel noch Stammdaten, Dokumente,
+    Lohndaten oder Benutzer.
+
+    Offen: welche Bereiche konkret, in welchem Takt, und ab wann schreibend. */}
