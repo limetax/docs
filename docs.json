@@ -65,8 +65,7 @@
           "chat/outlook-und-teams",
           "chat/datev-connect",
           "chat/integrationen"
-        ],
-        "hidden": true
+        ]
       },
       {
         "group": "DATEV-Übergabe",
