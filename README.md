@@ -38,4 +38,4 @@ Die CSS-Datei wird von Mintlify automatisch auf allen Seiten geladen, sobald sie
 
 ## Support
 
-Fragen und Feedback: [kontakt@limetax.de](mailto:kontakt@limetax.de)
+Fragen und Feedback: [support@limetax.de](mailto:support@limetax.de)
