@@ -57,7 +57,7 @@
         "hidden": true
       },
       {
-        "group": "Chat",
+        "group": "Cowork",
         "icon": "comments",
         "pages": [
           "chat/mandant-und-kontext",
@@ -66,6 +66,15 @@
           "chat/datev-connect",
           "chat/integrationen",
           "chat/Anwendungsbeispiele"
+        ]
+      },
+      {
+        "group": "Skills",
+        "icon": "wand-magic-sparkles",
+        "pages": [
+          "skills/ueberblick",
+          "skills/limetax-skills",
+          "skills/eigenen-skill-anlegen"
         ]
       },
       {
