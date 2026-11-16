@@ -72,7 +72,8 @@
         "group": "Skills",
         "icon": "wand-magic-sparkles",
         "pages": [
-          "skills/ueberblick"
+          "skills/ueberblick",
+          "skills/limetax-skills"
         ]
       },
       {
