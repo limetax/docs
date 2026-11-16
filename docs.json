@@ -73,7 +73,8 @@
         "icon": "wand-magic-sparkles",
         "pages": [
           "skills/ueberblick",
-          "skills/limetax-skills"
+          "skills/limetax-skills",
+          "skills/eigenen-skill-anlegen"
         ]
       },
       {
