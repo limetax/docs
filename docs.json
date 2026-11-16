@@ -71,7 +71,9 @@
       {
         "group": "Skills",
         "icon": "wand-magic-sparkles",
-        "pages": []
+        "pages": [
+          "skills/ueberblick"
+        ]
       },
       {
         "group": "DATEV-Übergabe",
