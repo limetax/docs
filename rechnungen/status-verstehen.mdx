@@ -36,6 +36,18 @@ Nutze diese Ansicht als Gegenkontrolle nach dem Export: Was hier steht, ist gena
 
 **Dubletten** sind doppelte oder bereits gebuchte Rechnungen. Die archivierst du. Nicht wegbuchen — eine weggebuchte Dublette verfälscht den Aufwand und die zugehörige Zahlung findet später keinen eindeutigen Beleg.
 
+## Wenn Limetax einen Beleg für gebucht hält
+
+Vor dem Import gleicht Limetax jeden Beleg gegen die Buchungen ab, die aus DATEV synchronisiert werden. Trägt eine Buchung den Beleglink, wird der Beleg direkt als **Bereits in DATEV gebucht** geschlossen. Stimmen nur Rechnungsnummer und Betrag überein, bekommst du **Möglicherweise bereits gebucht** — der Beleg wird als Duplikat gehalten und lässt sich bis zu deiner Entscheidung nicht freigeben. Wie der Abgleich arbeitet, steht unter [Import aus DUO](/belege/duo-import).
+
+Ist der Treffer falsch, öffne den Beleg unter **Belege importieren** und wähle **Trotz allem verarbeiten**. Danach läuft er normal weiter.
+
+Den umgekehrten Fall gibt es auch: Was du nach dem Import direkt in DATEV buchst, erfährt Limetax nicht. Der Beleg bleibt auf **Offen** stehen, obwohl er erledigt ist. Archivier ihn dann über **Archivieren** (Strg/Cmd + A). Ein Sammel-Archiv oder einen Status _erledigt_ gibt es nicht.
+
+## Ein Beleg taucht im falschen Zeitraum auf
+
+Belege, bei denen die Erkennung kein Rechnungsdatum lesen konnte, erscheinen bewusst **in jedem Zeitraum**, damit sie nicht untergehen. Steht ein Beleg plötzlich bei April 2023, ist er also in aller Regel keinem Zeitraum zugeordnet — es fehlt schlicht das Belegdatum. Trag es nach, dann sortiert er sich richtig ein.
+
 ## Blauer und grüner Haken
 
 Bei **Freigegeben** gibt es zwei Farben, und der Unterschied ist nicht kosmetisch.
