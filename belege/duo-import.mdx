@@ -1,0 +1,56 @@
+---
+title: "Belegimport aus DATEV Unternehmen online"
+sidebarTitle: "Import aus DUO"
+description: "Wie der nächtliche Import arbeitet, warum längst gebuchte Belege wieder auftauchen und was du dagegen tust."
+---
+
+Limetax holt die Belege jede Nacht automatisch aus DATEV Unternehmen online. Du musst dafür nichts anstoßen — und du siehst am Morgen alles, was in DUO noch offen ist.
+
+## Was der Import holt
+
+Maßgeblich ist allein der Status in DUO: Limetax holt **nur Belege, die dort als nicht gebucht geführt werden**. Alles, was DUO als gebucht kennt, bleibt liegen.
+
+Beim ersten Lauf für einen Mandanten kommt deshalb der gesamte Rückstand auf einmal. Wenn in DUO noch Belege aus mehreren Monaten offen stehen, landen sie in einer Nacht in deiner Liste — in einem Fall waren das über 160 Stück. Das sind keine Duplikate und kein Fehler, sondern der Bestand, den DUO bis dahin als offen geführt hat. Ab dem zweiten Lauf kommen nur noch die neuen Belege dazu.
+
+## Warum längst gebuchte Belege wieder auftauchen
+
+DUO leitet den Status **nicht** aus den Buchungen ab. Er wechselt erst auf gebucht, wenn Kanzlei-Rechnungswesen die Buchungsinformationen an DUO zurückgibt. Ein Beleglink allein genügt dafür nicht.
+
+Passiert diese Rückgabe nicht, steht ein Beleg in DUO dauerhaft auf nicht gebucht — auch wenn er längst festgeschrieben ist — und der Import holt ihn mit.
+
+Damit dir das nicht als Arbeit auf den Tisch kommt, gleicht Limetax jeden Beleg vor dem Import gegen die Buchungen ab, die aus DATEV synchronisiert werden:
+
+- Trägt eine Buchung den **Beleglink** des Belegs, wird er direkt als *Bereits in DATEV gebucht* geschlossen.
+- Stimmen nur **Rechnungsnummer und Betrag** überein, bekommst du *Möglicherweise bereits gebucht* und entscheidest selbst. Ist der Treffer falsch, öffne den Beleg unter **Belege importieren** und wähle **Trotz allem verarbeiten**.
+
+## Die Rückgabe an DUO dauerhaft einschalten
+
+{/* TODO vor dem Merge: Menüpfade mit Chris/Johan gegen die DATEV-Dokumentation prüfen — Quelle bisher DATEV-Community. */}
+
+Die saubere Lösung liegt in DATEV, nicht in Limetax. In Kanzlei-Rechnungswesen aktivierst du je Mandant **Buchungsinformationen beim Schließen der Belegerfassung übergeben**. Das setzt Belege online als Archivsystem voraus.
+
+Für das laufende Jahr gibst du die Informationen einmalig nach: **Abschließende Tätigkeiten → Buchungsinformationen übergeben**. Danach stimmt der Status in DUO, und gebuchte Belege kommen gar nicht erst bei dir an.
+
+## Wenn Rechnung und Zahlungsbeleg doppelt ankommen
+
+Manche Mandanten laden Rechnung und Zahlungsbeleg getrennt in DUO hoch, etwa `Invoice-8LQX9ROP.pdf` und `Receipt-2981.pdf`. Für DUO sind das zwei Belege, und daraus können zwei Eingangsrechnungen entstehen.
+
+Die Dublettenprüfung läuft deshalb nach der Belegerkennung noch einmal. Stimmen Rechnungsnummer, Datum, Betrag und Währung mit einer anderen Rechnung überein, wird die zweite als Duplikat gehalten und lässt sich nicht freigeben. Entscheide dann, welche du behältst, und archiviere die Kopie.
+
+<Warning>
+  Prüf bei doppelten Paaren auch den Stapel in DATEV. Ist die Rechnung dort bereits zweimal gebucht, musst du eine der beiden Buchungen stornieren — das Archivieren in Limetax räumt nur die Liste auf, nicht die Primanota.
+</Warning>
+
+## Belege, die du nach dem Import in DATEV buchst
+
+Diese Buchung bekommt Limetax nicht zurückgemeldet. Der Beleg bleibt bei dir auf **Offen** stehen, obwohl er erledigt ist. Öffne ihn und klicke auf **Archivieren** (Strg/Cmd + A). Er verschwindet damit aus allen Reitern und lässt sich jederzeit wiederherstellen.
+
+<Columns cols={2}>
+  <Card title="Die Status verstehen" icon="list-check" href="/rechnungen/status-verstehen">
+    Offen, Freigegeben, Eingereicht — und was dahintersteckt.
+  </Card>
+
+  <Card title="Fehlende Belege anfordern" icon="envelope" href="/belege/fehlende-belege-anfordern">
+    Was tun, wenn ein Beleg gar nicht erst in DUO liegt.
+  </Card>
+</Columns>

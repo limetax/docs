@@ -25,6 +25,7 @@
         "group": "Belege",
         "icon": "file-arrow-up",
         "pages": [
+          "belege/duo-import",
           "belege/smartlogin-agent",
           "belege/manuell-herunterladen",
           "belege/fehlende-belege-anfordern"
