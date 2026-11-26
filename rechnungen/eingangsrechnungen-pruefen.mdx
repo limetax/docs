@@ -1,22 +1,28 @@
 ---
 title: "Eingangsrechnungen prüfen und freigeben"
 sidebarTitle: "Eingangsrechnungen prüfen"
-description: "Der Arbeits-Loop in der Belegansicht: KI-Analyse lesen, Buchungssätze und Belegdaten prüfen, freigeben — plus die Fälle, in denen du anders vorgehst."
+description: "Der Arbeits-Loop in der Eingangsrechnungsliste: nach Kreditor gruppiert prüfen, einzeln oder gebündelt freigeben — plus die Fälle, in denen du anders vorgehst."
 ---
 
-Nach dem Import liegen die Belege vorkontiert in der App. Du prüfst jeden einzeln und gibst ihn frei. Mit der Freigabe wird aus dem KI-Vorschlag deine Buchung — sie geht beim nächsten Export in den Buchungsstapel und ist ab dann in DATEV.
+Nach dem Import liegen die Belege vorkontiert in der App. Du prüfst sie und gibst sie frei. Mit der Freigabe wird aus dem KI-Vorschlag deine Buchung — sie geht beim nächsten Export in den Buchungsstapel und ist ab dann in DATEV.
 
 <Note>
   Alle Kosten laufen über **Kreditoren** im 70000er-Bereich. Gehört ein Beleg dort nicht hin, buchst du ihn manuell.
 </Note>
 
-Gehe in der Seitenleiste zu **Buchhaltung → 2 Eingangsrechnung**. Der Reiter **Prüfen** zeigt die Belege, die die KI kontiert hat, bei denen sie sich aber nicht sicher war. Klicke einen Beleg an. Es öffnet sich die Detailansicht: links das Belegbild, rechts die Kontierung.
+Gehe in der Seitenleiste zu **Buchhaltung → 2 Eingangsrechnung**. Oben stehen die Status: **Offen**, **Manuell**, **Zur Prüfung**, **Freigegeben**, **Übersprungen**, **Übermittelt**. **Zur Prüfung** sind die Belege, die die KI kontiert hat, bei denen sie sich aber nicht sicher war — das ist dein Arbeitsvorrat.
 
-<Frame caption="Belegliste im Reiter Prüfen">
-  ![Screenshot 2026 08 18 155330](/images/Screenshot-2026-08-18-155330.png "Screenshot 2026 08 18 155330")
-</Frame>
+## Wie die Liste aufgebaut ist
 
-## Buchungssätze und Belegdaten
+Die Rechnungen sind nach **Kreditor** gruppiert. Im Gruppenkopf stehen Kreditorenname, Kreditorenkonto, Anzahl der Belege und die Summe, etwa `Framer B.V. · 70012 · 3 Belege · 101,15 €`. Bereits übertragene Gruppen starten zugeklappt; über **Alle einklappen** oben rechts räumst du die ganze Liste zusammen.
+
+Pro Zeile siehst du Betrag, Buchungszeilen, Belegfeld 1, Belegdatum, Leistungsdatum und Notiz. Die Buchungszeilen stehen als Badge `4964 · BU 401`, ein `+1` daneben heißt: es gibt weitere Zeilen. Fahr mit der Maus über das Badge, dann siehst du alle Zeilen mit Konto, BU-Schlüssel, Betrag und Leistungsdatum, ohne den Beleg zu öffnen.
+
+{/* TODO Screenshot: gruppierte Liste im Status Zur Prüfung, eine Gruppe aufgeklappt (Mustermandant 45000) */}
+
+## Einen Beleg prüfen
+
+Klick auf eine Zeile, dann öffnet sich die Detailansicht: links das Belegbild, rechts die Kontierung.
 
 Im Bereich **Buchungssätze** prüfst du Sachkonto, BU-Schlüssel, Betrag und gegebenenfalls die Kostenstelle. Der **Restbetrag** unter den Zeilen muss auf 0,00 € stehen. Steht dort noch etwas, geht die Buchung nicht auf — bei mehreren Kostenarten teilst du sie über [Splitbuchungen](/rechnungen/splitbuchungen) auf.
 
@@ -24,9 +30,9 @@ Im Bereich **Buchungssätze** prüfst du Sachkonto, BU-Schlüssel, Betrag und ge
   ![Screenshot 2026 08 21 142732](/images/Screenshot-2026-08-21-142732.png "Screenshot 2026 08 21 142732")
 </Frame>
 
-Darunter gleichst du die **Belegdaten** gegen das Belegbild ab. Zwei Felder sind dabei wichtiger als die anderen: Das **Belegdatum** bestimmt die Periode — ein falsches Datum verschiebt die Buchung in den falschen Monat und damit in die falsche UStVA. **Belegfeld 1** trägt die Rechnungsnummer des Lieferanten; fehlt sie, wird die Offene-Posten-Verwaltung in DATEV unbrauchbar und die App erkennt Dubletten schlechter.
+Darunter gleichst du die **Belegdaten** gegen das Belegbild ab. Das **Belegdatum** bestimmt die Periode — ein falsches Datum verschiebt die Buchung in den falschen Monat und damit in die falsche UStVA. **Belegfeld 1** trägt die Rechnungsnummer des Lieferanten; fehlt sie, wird die Offene-Posten-Verwaltung in DATEV unbrauchbar und die App erkennt Dubletten schlechter. In **Belegfeld 2** steht das Zahlungsziel, sofern der Mandant dieses Feld nutzt — siehe [Belegfeld 2 und Leistungsdatum](/export/belegfelder-pro-mandant).
 
-## Deine Checkliste pro Beleg
+### Deine Checkliste pro Beleg
 
 - Passt das Sachkonto zum Lieferanten und zur Leistung?
 - Stimmt der BU-Schlüssel, besonders bei Auslandsbelegen?
@@ -34,7 +40,23 @@ Darunter gleichst du die **Belegdaten** gegen das Belegbild ab. Zwei Felder sind
 - Stimmen Belegdatum und Rechnungsnummer mit dem Belegbild?
 - Steht der Restbetrag auf 0,00 €?
 
-Passt alles, drücke `Enter` oder klicke auf **Freigeben**. Der Beleg bekommt einen grünen Haken und verschwindet aus der Prüfliste. Weiter geht es mit `Pfeil runter` zum nächsten — bei einer sauberen Liste arbeitest du so mehrere Belege pro Minute ab.
+Passt alles, drücke `Enter` oder klicke auf **Freigeben**. Weitere Tastenkürzel stehen unten in der Detailansicht: `#` überspringt, `Strg+A` archiviert, `Esc` schließt.
+
+## Mehrere Rechnungen auf einmal freigeben
+
+Bei wiederkehrenden Lieferanten musst du nicht jeden Beleg einzeln öffnen. Hak die Checkbox im Gruppenkopf an, dann ist die ganze Kreditorengruppe ausgewählt; einzelne Zeilen kannst du auch direkt anhaken. Unten erscheint eine Leiste mit Anzahl und Summe, etwa `4 Belege ausgewählt · 561,36 €`. Mit **Freigeben** gibst du alle auf einmal frei, mit dem **✕** verwirfst du die Auswahl.
+
+{/* TODO Screenshot: Kreditorengruppe ausgewählt, Auswahlleiste mit Freigeben (Mustermandant 45000) */}
+
+Nutz das für Gruppen, bei denen Gegenkonto und BU-Schlüssel über alle Belege gleich sind — der Hover über die Badges reicht dafür meist aus. Sobald eine Zeile ein anderes Konto oder einen Zähler `+1` zeigt, öffne sie einzeln.
+
+<Warning>
+  **Beachte!** Die Sammelfreigabe prüft nichts. Sie macht aus allen ausgewählten Vorschlägen Buchungen, auch aus den falschen.
+</Warning>
+
+Belege, die so nicht freigegeben werden können, haben eine **gestrichelte, nicht klickbare Checkbox** und ein Verbotssymbol. In der Spalte Buchungszeilen steht dann **Keine Buchungszeilen**, der Betrag ist 0,00 €. Diese Belege musst du einzeln öffnen und von Hand kontieren.
+
+Schlägt eine Sammelfreigabe teilweise fehl, bleiben die nicht freigegebenen Belege ausgewählt. Du siehst also direkt, welche übrig sind.
 
 ## Wenn du nicht weiterkommst
 
@@ -42,7 +64,7 @@ Du brauchst eine **Rückfrage beim Mandanten**: **Überspringen**. Der Beleg ble
 
 Der Beleg ist eine **Dublette**: **Archivieren**. Nicht wegbuchen — sonst hast du den Aufwand doppelt und die Zahlung findet später keinen eindeutigen Beleg.
 
-Der Beleg ist **unleserlich oder der Sachverhalt unklar**: Reiter **Manuell**, von Hand buchen.
+Der Beleg ist **unleserlich oder der Sachverhalt unklar**: Status **Manuell**, von Hand buchen.
 
 Die **Belegart ist falsch erkannt** — in der Eingangsrechnungsliste liegt eine Ausgangsrechnung oder ein Kontoauszug: In der Kopfzeile über **Belegart ändern** auf die richtige Art umstellen. Nicht archivieren; der Beleg ist nicht falsch, nur falsch einsortiert, und beim Archivieren fällt er aus dem Prozess.
 
