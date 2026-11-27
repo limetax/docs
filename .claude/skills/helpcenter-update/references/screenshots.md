@@ -2,9 +2,11 @@
 
 ## Umgebung
 
-- App: `https://app.limetax.de` (Production).
+- App: `https://ava.limetax.de` (Production).
 - **Nur Testmandant 45000 (Limetax GmbH).** Dort darf alles ausgelöst werden: Belege freigeben, aufteilen, archivieren, Stapel übertragen.
-- Lora meldet sich selbst an, im eingebauten Browser der Claude-App oder in ihrem Chrome. Du gibst keine Zugangsdaten ein. Siehst du eine Anmeldeseite, sag Lora Bescheid und warte.
+- Lora meldet sich selbst an. Nimm **Claude in Chrome**: Dort ist sie meist schon angemeldet. Im eingebauten Browser der Claude-App kommt die Microsoft-Anmeldung nicht an. Du gibst keine Zugangsdaten ein. Siehst du eine Anmeldeseite, sag Lora Bescheid und warte.
+- Mandant 45000 findest du unter **Mandanten**, Suche „45000“. Die Eingangsrechnungen liegen unter **Buchhaltung → 2 Eingangsrechnung** (Menü „Buchhaltung“ erst aufklappen).
+- Neue Funktionen sind nur an Belegen sichtbar, die nach dem Release verarbeitet wurden. Gibt es noch keinen passenden Beleg, frag Lora, statt selbst einen hochzuladen: Hochgeladene Belege gehen an DATEV.
 
 ## Konventionen
 

@@ -111,7 +111,7 @@ Wie Modus Release ab Schritt 2, nur für die genannten Tickets oder Seiten. Bei 
 Ablauf und Konventionen in `references/screenshots.md`. Kurz:
 
 1. Offene Platzhalter finden: `git grep -n "TODO Screenshot"` auf dem PR-Branch, den Lora nennt, oder auf allen offenen `helpcenter/*`-Branches. Ältere Platzhalter haben keinen Zielpfad (`-> images/…`). Dann legst du den Pfad selbst fest: `images/<ordner der seite>/<sprechender-name>.png`.
-2. Lora meldet sich im Browser auf `https://app.limetax.de` an. Du gibst keine Zugangsdaten ein.
+2. Lora meldet sich im Browser auf `https://ava.limetax.de` an. Du gibst keine Zugangsdaten ein.
 3. Nur im Testmandanten 45000 (Limetax GmbH) arbeiten. Dort darf alles ausgelöst werden.
 4. Pro Platzhalter: Ansicht herstellen, Screenshot, Bild ansehen und gegen den Platzhaltertext prüfen, unter dem genannten Pfad speichern.
 5. Platzhalter ersetzen:
