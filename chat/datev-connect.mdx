@@ -24,6 +24,31 @@ Aus den Zentralen Stammdaten im DATEV Arbeitsplatz kommen Mandanten und Adressat
 
 Mit DATEV DMS oder der Dokumentenablage werden die Ablagestruktur Bereich, Ordner, Register und die Dokumente selbst erreichbar, inklusive ihrer Eigenschaften und der einzelnen Dateien. Gesucht wird über Filter, große Trefferlisten lassen sich seitenweise durchblättern.
 
+## Buchungsabfrage als Excel exportieren
+
+Bitte Ava im Chat, das Ergebnis einer Buchungsabfrage als Excel-Datei auszugeben, und du bekommst die Datei direkt im Chat. Ava schreibt die Zeilen nicht neu ab, die Datei enthält das exakte Abfrageergebnis.
+
+<Steps>
+  <Step title="Mandanten setzen">
+    Wähle den Mandanten per **@**. Die Abfrage läuft immer für diesen einen Mandanten.
+  </Step>
+  <Step title="Auswertung beschreiben und Export anfordern">
+    Beschreibe, welche Buchungen du brauchst, zum Beispiel alle Buchungen eines Sachkontos im Wirtschaftsjahr, und bitte um eine Excel-Datei.
+    {/* TODO Screenshot: Chat mit Anfrage nach einer Buchungsauswertung als Excel und der von Ava bereitgestellten Excel-Datei (Testmandant 45000) -> images/chat/buchungsabfrage-excel-export.png */}
+  </Step>
+  <Step title="Datei prüfen">
+    Öffne die Datei. Das Blatt **Ergebnis** enthält die Buchungen. Das Blatt **Quelle** nennt Mandantennummer und -name, Wirtschaftsjahr und Datenstand.
+  </Step>
+</Steps>
+
+<Check>
+  Die Datei liegt im Chat und enthält die Blätter **Ergebnis** und **Quelle**.
+</Check>
+
+Eine Datei kann bis zu 200.000 Zeilen oder 2,5 Millionen Zellen enthalten. Ist das Ergebnis größer, legt Ava keine Datei an und sagt dir das. Grenze dann den Zeitraum oder die Konten ein. Außerhalb eines Chats ist der Export nicht möglich.
+
+{/* TODO Lora: Stimmt die Beschreibung "Wirtschaftsjahr und Datenstand" im Blatt Quelle so, wie es in der App erscheint? Im Code heißt das Blatt "Quelle" mit Mandantennummer, Name, Wirtschaftsjahr, Datenstand. Außerdem: Zeigt die App Ava-Nutzern die Grenze auch als Meldung im Chat an? */}
+
 ## Häufige Rückfragen
 
 <AccordionGroup>
