@@ -12,7 +12,9 @@ Der Import funktioniert nur für Mandanten, die ihre Belege in DATEV Unternehmen
 
 Du schaltest ihn je Mandant unter **Stammdaten → Automatischer Belegimport** mit dem Schalter **Automatischer Import** ein oder aus. Ohne deine Wahl wird er aktiv, sobald der erste Beleg hochgeladen wurde. Hast du selbst geschaltet, steht rechts **Manuell festgelegt**; über **Auf Standard zurücksetzen** gibst du die Entscheidung wieder ab.
 
-{/* TODO Screenshot A: Karte Automatischer Belegimport mit dem Schalter */}
+<Frame caption="Schalter für den automatischen Belegimport in den Stammdaten">
+  ![Karte Automatischer Belegimport mit eingeschaltetem Schalter und dem Hinweis Manuell festgelegt](/images/duo-import-schalter.png "Karte Automatischer Belegimport mit eingeschaltetem Schalter und dem Hinweis Manuell festgelegt")
+</Frame>
 
 Ist für ein Bankkonto zusätzlich **Bank online** aktiviert, holt derselbe nächtliche Lauf auch dessen Umsätze ab — der Schalter betrifft also nicht nur Belege.
 
@@ -24,7 +26,9 @@ Warte nicht auf die Nacht, wenn der Mandant gerade etwas nachgereicht hat. Gehe 
 
 Oben rechts siehst du zwei Dinge: den Status **Automatischer DUO-Import** mit der Marke _Aktiv_ oder _Inaktiv_, und daneben den Button **Belege importieren**.
 
-{/* TODO Screenshot B: Kopf der Seite Belegimport mit Status und Button */}
+<Frame caption="Status des automatischen DUO-Imports und Button Belege importieren">
+  ![Kopf der Seite Belegimport mit Status Automatischer DUO-Import Aktiv und Button Belege importieren](/images/duo-import-kopf.png "Kopf der Seite Belegimport mit Status Automatischer DUO-Import Aktiv und Button Belege importieren")
+</Frame>
 
 Der Button startet noch keinen Abruf, sondern öffnet die Auswahl **Weitere Belege importieren** mit vier Wegen:
 
@@ -33,13 +37,17 @@ Der Button startet noch keinen Abruf, sondern öffnet die Auswahl **Weitere Bele
 - **Dateien hochladen** — einzelne PDF- oder Bilddateien, die an DATEV übergeben und automatisch klassifiziert werden.
 - **RDS / Vorsystem-Export** — ZIP aus Moss, sevDesk oder Lexware Office, Belege plus Buchungsdaten.
 
-{/* TODO Screenshot C: Auswahl Weitere Belege importieren */}
+<Frame caption="Die vier Wege, Belege zu importieren">
+  ![Auswahl Weitere Belege importieren mit DATEV Unternehmen online, DUO-Export, Dateien hochladen und RDS / Vorsystem-Export](/images/duo-import-auswahl.png "Auswahl Weitere Belege importieren mit DATEV Unternehmen online, DUO-Export, Dateien hochladen und RDS / Vorsystem-Export")
+</Frame>
 
 Nach **Jetzt aus DUO importieren** startet Limetax die DATEV-Sitzung selbst — du brauchst dafür weder QR-Code noch SmartLogin-App. Die Seite meldet erst _DATEV-Sitzung wird gestartet_, dann _Belege werden aus DATEV abgerufen_. Das dauert ein bis zwei Minuten, und du kannst die Seite in der Zeit verlassen.
 
 Danach landest du auf **Import prüfen**: Limetax entpackt das Belegpaket aus DUO und listet die Dokumente mit Dokumentart, DATEV-Belegtyp, Status und Quelle. Belege, denen etwas fehlt, stehen unter **Aktion erforderlich** — bei Banktransaktionen typischerweise mit _Zuordnung bestätigen_. Erst wenn du die abgearbeitet hast, laufen sie weiter in die Belegliste.
 
-{/* TODO Screenshot D: Import prüfen mit der Dokumentenliste */}
+<Frame caption="Importierte Belege prüfen, bevor sie in die Belegliste laufen">
+  ![Seite Import prüfen mit der Dokumentenliste im Reiter Aktion erforderlich](/images/duo-import-pruefen.png "Seite Import prüfen mit der Dokumentenliste im Reiter Aktion erforderlich")
+</Frame>
 
 Zurück auf der Seite **Belegimport** klappst du unten den **Importverlauf** auf und siehst, wann der letzte Lauf war und was er gebracht hat.
 
