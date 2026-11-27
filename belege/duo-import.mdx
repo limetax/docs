@@ -22,11 +22,26 @@ Meldet der letzte Lauf „Der Mandant ist in diesem DATEV-Konto nicht verfügbar
 
 Warte nicht auf die Nacht, wenn der Mandant gerade etwas nachgereicht hat. Gehe zu **Buchhaltung → 1 Belege importieren**. Die Seite heißt **Belegimport**.
 
-Oben rechts siehst du zwei Dinge: den Status **Automatischer DUO-Import** mit der Marke _Aktiv_ oder _Inaktiv_, und daneben den Button **Belege importieren**. Der Button stößt den Abruf sofort an, unabhängig davon, ob der automatische Import eingeschaltet ist.
+Oben rechts siehst du zwei Dinge: den Status **Automatischer DUO-Import** mit der Marke _Aktiv_ oder _Inaktiv_, und daneben den Button **Belege importieren**.
 
 {/* TODO Screenshot B: Kopf der Seite Belegimport mit Status und Button */}
 
-Darunter liegen die Reiter **Wird verarbeitet**, **Aktion erforderlich** und **Verarbeitet**. Während der Abruf läuft, füllt sich _Wird verarbeitet_; Belege, bei denen etwas fehlt — etwa eine Zuordnung oder ein Bankkonto —, landen unter _Aktion erforderlich_ und warten auf dich. Ganz unten klappst du den **Importverlauf** auf und siehst, wann der letzte Lauf war und was er gebracht hat.
+Der Button startet noch keinen Abruf, sondern öffnet die Auswahl **Weitere Belege importieren** mit vier Wegen:
+
+- **DATEV Unternehmen online** — der Regelfall. Klicke auf **Jetzt aus DUO importieren**.
+- **DUO-Export manuell hochladen** — CSV + ZIP, wenn der Abruf nicht klappt oder du den Export schon hast.
+- **Dateien hochladen** — einzelne PDF- oder Bilddateien, die an DATEV übergeben und automatisch klassifiziert werden.
+- **RDS / Vorsystem-Export** — ZIP aus Moss, sevDesk oder Lexware Office, Belege plus Buchungsdaten.
+
+{/* TODO Screenshot C: Auswahl Weitere Belege importieren */}
+
+Nach **Jetzt aus DUO importieren** startet Limetax die DATEV-Sitzung selbst — du brauchst dafür weder QR-Code noch SmartLogin-App. Die Seite meldet erst _DATEV-Sitzung wird gestartet_, dann _Belege werden aus DATEV abgerufen_. Das dauert ein bis zwei Minuten, und du kannst die Seite in der Zeit verlassen.
+
+Danach landest du auf **Import prüfen**: Limetax entpackt das Belegpaket aus DUO und listet die Dokumente mit Dokumentart, DATEV-Belegtyp, Status und Quelle. Belege, denen etwas fehlt, stehen unter **Aktion erforderlich** — bei Banktransaktionen typischerweise mit _Zuordnung bestätigen_. Erst wenn du die abgearbeitet hast, laufen sie weiter in die Belegliste.
+
+{/* TODO Screenshot D: Import prüfen mit der Dokumentenliste */}
+
+Zurück auf der Seite **Belegimport** klappst du unten den **Importverlauf** auf und siehst, wann der letzte Lauf war und was er gebracht hat.
 
 ## Was der Import holt
 
