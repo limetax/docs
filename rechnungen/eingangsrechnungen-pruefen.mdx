@@ -16,9 +16,17 @@ Gehe in der Seitenleiste zu **Buchhaltung → 2 Eingangsrechnung**. Oben stehen 
 
 Die Rechnungen sind nach **Kreditor** gruppiert. Im Gruppenkopf stehen Kreditorenname, Kreditorenkonto, Anzahl der Belege und die Summe, etwa `Framer B.V. · 70012 · 3 Belege · 101,15 €`. Bereits übertragene Gruppen starten zugeklappt. Über **Alle einklappen** oben rechts räumst du die ganze Liste zusammen.
 
-Pro Zeile siehst du Betrag, Buchungszeilen, Belegfeld 1, Belegdatum, Leistungsdatum und Notiz. Die Buchungszeilen stehen als Badge `4964 · BU 401`. Ein `+1` daneben heißt: es gibt weitere Zeilen. Fahr mit der Maus über das Badge, dann siehst du alle Zeilen mit Konto, BU-Schlüssel, Betrag und Leistungsdatum, ohne den Beleg zu öffnen.
+Pro Zeile siehst du Betrag, Buchungszeilen, Belegfeld 1, Belegdatum, Leistungsdatum und **KI-Hinweise**. Die Buchungszeilen stehen als Badge `4964 · BU 401`. Ein `+1` daneben heißt: es gibt weitere Zeilen. Fahr mit der Maus über das Badge, dann siehst du alle Zeilen mit Konto, BU-Schlüssel, Betrag und Leistungsdatum, ohne den Beleg zu öffnen.
 
-{/* TODO Screenshot: gruppierte Liste im Status Zur Prüfung, eine Gruppe aufgeklappt (Mustermandant 45000) */}
+Die Spalte **KI-Hinweise** zeigt bis zu zwei Tags, warum die KI den Beleg nicht allein durchgewunken hat, etwa **Ohne Historie** oder **Abweichung Vorkontierung**. Ein `+2` daneben heißt: es gibt weitere Hinweise. Fahr mit der Maus darüber, dann siehst du alle. Die Farbe sagt, wie dringend es ist:
+
+- **Rot:** Der Hinweis hat den Beleg auf **Manuell** gesetzt.
+- **Gelb:** Der Hinweis hat den Beleg auf **Zur Prüfung** gesetzt.
+- **Grau:** Die KI hat etwas erkannt und schon passend gebucht, etwa **Skonto**, **§13b UStG** oder **Bewirtung**. Hier musst du nichts korrigieren.
+
+Die Tags sperren keine Freigabe. Sie zeigen dir nur, worauf du schauen sollst. Solange du keine Spalte sortierst, stehen die Kreditoren mit den meisten Belegen oben und innerhalb einer Gruppe die Belege mit den dringendsten Hinweisen zuerst.
+
+{/* TODO Screenshot: gruppierte Liste im Status Zur Prüfung, eine Gruppe aufgeklappt, Spalte KI-Hinweise mit roten, gelben und grauen Tags und einem +n (Testmandant 45000) -> images/rechnungen/eingangsrechnungen-ki-hinweise.png */}
 
 ## Einen Beleg prüfen
 
