@@ -1,7 +1,7 @@
 ---
 title: "Belegimport aus DATEV Unternehmen online"
 sidebarTitle: "Import aus DUO"
-description: "Wie der nächtliche Import arbeitet, warum längst gebuchte Belege wieder auftauchen und was du dagegen tust."
+description: "Wie der nächtliche Import arbeitet, wie du ihn von Hand anstößt, warum längst gebuchte Belege wieder auftauchen und was du dagegen tust."
 ---
 
 Limetax holt die Belege jede Nacht automatisch aus DATEV Unternehmen online (DUO). Du musst dafür nichts anstoßen — und du siehst am Morgen alles, was in DUO noch offen ist.
@@ -10,9 +10,23 @@ Limetax holt die Belege jede Nacht automatisch aus DATEV Unternehmen online (DUO
 
 Der Import funktioniert nur für Mandanten, die ihre Belege in DATEV Unternehmen online hochladen. Mandanten ohne DUO oder mit eigener Buchhaltungssoftware (z. B. Lexware) lassen sich so nicht importieren — dort bleibt der Import aus.
 
-Du schaltest ihn je Mandant auf der Mandantenseite unter **Automatischer Belegimport** ein oder aus. Ohne deine Wahl wird er aktiv, sobald der erste Beleg hochgeladen wurde.
+Du schaltest ihn je Mandant unter **Stammdaten → Automatischer Belegimport** mit dem Schalter **Automatischer Import** ein oder aus. Ohne deine Wahl wird er aktiv, sobald der erste Beleg hochgeladen wurde. Hast du selbst geschaltet, steht rechts **Manuell festgelegt**; über **Auf Standard zurücksetzen** gibst du die Entscheidung wieder ab.
+
+{/* TODO Screenshot A: Karte Automatischer Belegimport mit dem Schalter */}
+
+Ist für ein Bankkonto zusätzlich **Bank online** aktiviert, holt derselbe nächtliche Lauf auch dessen Umsätze ab — der Schalter betrifft also nicht nur Belege.
 
 Meldet der letzte Lauf „Der Mandant ist in diesem DATEV-Konto nicht verfügbar", zeigt die Mandantenseite das neben dem Schalter an. Nutzt der Mandant DUO nicht, schalte den Import aus. Sonst prüfe die Mandanten-Zuordnung und die DATEV-Berechtigungen.
+
+## Den Import von Hand starten
+
+Warte nicht auf die Nacht, wenn der Mandant gerade etwas nachgereicht hat. Gehe zu **Buchhaltung → 1 Belege importieren**. Die Seite heißt **Belegimport**.
+
+Oben rechts siehst du zwei Dinge: den Status **Automatischer DUO-Import** mit der Marke _Aktiv_ oder _Inaktiv_, und daneben den Button **Belege importieren**. Der Button stößt den Abruf sofort an, unabhängig davon, ob der automatische Import eingeschaltet ist.
+
+{/* TODO Screenshot B: Kopf der Seite Belegimport mit Status und Button */}
+
+Darunter liegen die Reiter **Wird verarbeitet**, **Aktion erforderlich** und **Verarbeitet**. Während der Abruf läuft, füllt sich _Wird verarbeitet_; Belege, bei denen etwas fehlt — etwa eine Zuordnung oder ein Bankkonto —, landen unter _Aktion erforderlich_ und warten auf dich. Ganz unten klappst du den **Importverlauf** auf und siehst, wann der letzte Lauf war und was er gebracht hat.
 
 ## Was der Import holt
 
