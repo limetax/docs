@@ -6,7 +6,7 @@ description: "Wie du eine Datei, die mehrere Rechnungen enthält, in einzelne Be
 
 Sammel-Downloads aus Lieferantenportalen enthalten oft mehrere Rechnungen in einer PDF — nicht selten von verschiedenen Kreditoren. Daraus lässt sich kein sauberer Buchungssatz bauen: Jede Rechnung braucht ihr eigenes Gegenkonto, ihre eigene Rechnungsnummer und ihr eigenes Belegdatum.
 
-Limetax erkennt das und hält den Beleg zurück, statt einen gemischten Vorschlag zu erzeugen. Er steht dann unter **Manuell**, und in der KI-Analyse findest du den Hinweis, dass der Beleg mehrere vollständige Rechnungen enthält — samt der zweiten erkannten Rechnung mit Nummer.
+Limetax erkennt das und hält den Beleg zurück, statt einen gemischten Vorschlag zu erzeugen. Er steht dann unter **Manuell** und trägt den roten Tag **Mehrere Belege**. In der KI-Analyse steht daneben, welche weitere Rechnung erkannt wurde, samt Nummer.
 
 ## So teilst du auf
 
@@ -26,7 +26,7 @@ Danach kommt die Freigabekarte **Teile Beleg in einzelne Rechnungen auf**. Sie z
 
 ## Was danach passiert
 
-Limetax legt pro Rechnung einen eigenen Beleg an, jeder mit nur seinen Seiten. Die Vorkontierung läuft neu, danach liegen die Teile unter **Zur Prüfung** und du buchst sie wie jeden anderen Beleg.
+Limetax legt pro Rechnung einen eigenen Beleg an, jeder mit nur seinen Seiten. Die Vorkontierung läuft neu, danach liegen die Teile unter **Zur Prüfung** mit dem gelben Tag **Aufgeteilter Beleg**. Prüf, ob die Seitengrenze stimmt, und buch sie dann wie jeden anderen Beleg.
 
 <Frame caption="Die beiden Teile als eigene Belege in der Liste">
   ![Belegliste mit den aufgeteilten Belegen von Bürobedarf Muster GmbH und IT-Service Beispiel KG, beide auf Sammelkonto 70000](/images/beleg-aufteilen-3.png "Belegliste mit den aufgeteilten Belegen von Bürobedarf Muster GmbH und IT-Service Beispiel KG, beide auf Sammelkonto 70000")
@@ -40,7 +40,9 @@ Nichts. Es wird keine Datei neu hochgeladen und nichts doppelt abgelegt.
 
 Beide Teile hängen am selben DATEV-Beleg — DATEV erlaubt mehrere Buchungen auf dasselbe Dokument. In DATEV Unternehmen online liegt also weiterhin die eine Original-PDF, an der später beide Buchungen hängen.
 
-Das Original in Limetax wird **archiviert**. Im Drawer steht dann *Dieser Beleg kann im aktuellen Status nicht bearbeitet werden*, und die KI-Analyse hält fest, in wie viele Belege aufgeteilt wurde. Das ist Absicht: So kann dieselbe Rechnung nicht zusätzlich als Ganzes in den Buchungsstapel laufen.
+Das Original in Limetax wird **archiviert**. Im Drawer steht dann *Dieser Beleg kann im aktuellen Status nicht bearbeitet werden*. Das ist Absicht: So kann dieselbe Rechnung nicht zusätzlich als Ganzes in den Buchungsstapel laufen.
+
+{/* TODO Lora: Bei Belegen von vor TEC-3067 steht in der KI-Analyse „In 2 Belege aufgeteilt“ (siehe Bild unten). Laut Code wird dieser Text weiter geschrieben, aber nur noch bei Belegen ohne Tags angezeigt. Bei neuen Belegen fehlt der Hinweis vermutlich. Mit Tech klären, dann Text und Bild anpassen. */}
 
 <Frame caption="Das archivierte Original mit dem Hinweis auf die Aufteilung">
   ![Archiviertes Original mit dem Hinweis Dieser Beleg kann im aktuellen Status nicht bearbeitet werden und In 2 Belege aufgeteilt in der KI-Analyse](/images/beleg-aufteilen-4.png "Archiviertes Original mit dem Hinweis Dieser Beleg kann im aktuellen Status nicht bearbeitet werden und In 2 Belege aufgeteilt in der KI-Analyse")
@@ -52,7 +54,7 @@ Das Original in Limetax wird **archiviert**. Im Drawer steht dann *Dieser Beleg 
 
 <AccordionGroup>
   <Accordion title="Der Button In Ava aufteilen wird nicht angezeigt">
-    Der Beleg wird aus einem anderen Grund gehalten. Lies die KI-Analyse: Geht es um ein Konto ohne Historie, eine Periodenabgrenzung oder Bewirtung, ist Aufteilen nicht der richtige Weg. Die Funktion ist keine allgemeine Schere für beliebige PDFs.
+    Der Beleg wird aus einem anderen Grund gehalten. Schau auf die Tags in der KI-Analyse: Steht dort **Ohne Historie**, **Rechnungsabgrenzung** oder **Bewirtung**, ist Aufteilen nicht der richtige Weg. Die Funktion ist keine allgemeine Schere für beliebige PDFs.
   </Accordion>
 
   <Accordion title="Mehrere Rechnungen desselben Kreditors in einer Datei">
