@@ -42,7 +42,8 @@
           "rechnungen/splitbuchungen",
           "rechnungen/kreditor-anlegen",
           "rechnungen/wiederkehrende-buchungen",
-          "rechnungen/ki-fragen"
+          "rechnungen/ki-fragen",
+          "rechnungen/beleg-aufteilen"
         ]
       },
       {
