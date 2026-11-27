@@ -84,7 +84,8 @@
         "pages": [
           "export/stapel-uebertragen",
           "export/stapel-in-datev",
-          "export/anlagenzugaenge"
+          "export/anlagenzugaenge",
+          "export/belegfelder-pro-mandant"
         ]
       },
       {

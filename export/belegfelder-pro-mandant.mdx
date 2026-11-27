@@ -1,0 +1,43 @@
+---
+title: "Belegfeld 2 und Leistungsdatum pro Mandant steuern"
+sidebarTitle: "Belegfeld 2 und Leistungsdatum"
+description: "Nicht jeder Mandant nutzt Belegfeld 2 und das Leistungsdatum. So entscheidet Limetax, was in den Stapel geht."
+---
+
+Zwei Felder im Buchungsstapel füllt Limetax nur, wenn der Mandant sie auch nutzt: **Belegfeld 2** und das **Leistungsdatum**. Beide werden unterschiedlich gesteuert — das eine in Limetax, das andere in DATEV.
+
+## Belegfeld 2: Schalter in den Stammdaten
+
+In Belegfeld 2 steht üblicherweise das **Zahlungsziel** der Rechnung. Kanzleien, die mit dem Feld nicht arbeiten, wollen es leer haben.
+
+Öffne den Mandanten und geh auf **Stammdaten**. Im Abschnitt **Belegfeld 2** steht der Schalter **Zahlungsziel in Belegfeld 2 übertragen**. Er ist bei allen Mandanten standardmäßig an.
+
+{/* TODO Screenshot: Abschnitt Belegfeld 2 in den Stammdaten (Mustermandant 45000) */}
+
+Ist der Schalter an, trägt Limetax das Zahlungsziel einer Rechnung in Belegfeld 2 ein und überträgt es an DATEV. Ist er aus, bleibt Belegfeld 2 leer — außer du trägst im Beleg selbst etwas ein. Die Einstellung gilt für **neue Belege**; bereits erfasste Belege ändert sie nicht.
+
+<Note>
+  Eine automatische Erkennung aus der Buchungshistorie gibt es bewusst nicht. Wenn der Mandant das Feld nicht nutzt, stell den Schalter einmal aus.
+</Note>
+
+## Leistungsdatum: kommt aus DATEV
+
+Beim Leistungsdatum gibt es keinen Schalter in Limetax. Die App liest die Einstellung **Leistungsdatum nutzen** aus dem Wirtschaftsjahr des Mandanten in DATEV.
+
+Steht sie auf aktiv, überträgt Limetax das Leistungsdatum wie bisher. Steht sie auf inaktiv, überträgt Limetax gar kein Leistungsdatum mehr und das Feld entfällt für diesen Mandanten. Das verhindert die Übertragungen, die DATEV bisher zurückgewiesen hat.
+
+<Warning>
+  **Beachte!** „Leistungsdatum nutzen" entscheidet ausschließlich, ob DATEV ein Leistungsdatum annimmt. Es entscheidet **nicht**, in welchen Monat beziehungsweise Stapel eine Buchung läuft — dafür ist weiterhin das Belegdatum maßgeblich.
+</Warning>
+
+Ob die Einstellung beim Mandanten aktiv ist, siehst du nicht in Limetax, sondern nur in DATEV in den Stammdaten des Wirtschaftsjahres.
+
+<Columns cols={2}>
+  <Card title="Stapel übertragen" icon="paper-plane" href="/export/stapel-uebertragen">
+    Der Export aus Limetax heraus.
+  </Card>
+
+  <Card title="Stammdaten und das Notiz-Feld" icon="address-card" href="/stammdaten/stammdaten-und-notiz">
+    Was sonst noch am Mandanten eingestellt wird.
+  </Card>
+</Columns>
